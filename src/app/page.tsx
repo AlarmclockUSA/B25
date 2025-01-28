@@ -348,7 +348,7 @@ export default function Home() {
                         </svg>
                       </div>
                       <p className="text-2xl text-[#F8F4F1]/90 leading-relaxed flex-1">
-                        You're ready to let go of the "one-off moments" with God that mark so many believers lifestyles.
+                        You're ready to let go of the "one-off moments" with God that mark so many believers' lifestyles.
                       </p>
                     </div>
 
@@ -359,7 +359,7 @@ export default function Home() {
                         </svg>
                       </div>
                       <p className="text-2xl text-[#F8F4F1]/90 leading-relaxed flex-1">
-                        You're tired of waiting for revival, and see that the world is heading in the opposite direction.
+                        You're tired of waiting for revival and see that the world is heading in the opposite direction.
                       </p>
                     </div>
 
@@ -712,7 +712,7 @@ export default function Home() {
                     <div className="flex-1">
                       <div className="flex justify-between items-start gap-4">
                         <span className="text-xl font-medium">Brilliance25 Experience<br />March 21st-23rd 2025</span>
-                        <span className="text-xl font-semibold text-gray-900 shrink-0">$197</span>
+                        <span className="text-xl font-semibold text-gray-900 shrink-0">Value: $197</span>
                       </div>
                       <span className="text-base text-gray-500 mt-1.5 block">Virtual front row seats to three days of transformational awakening with Graham Cooke & Team.</span>
                     </div>
@@ -726,7 +726,7 @@ export default function Home() {
                     <div className="flex-1">
                       <div className="flex justify-between items-start gap-4">
                         <span className="text-xl font-medium">Event Replays</span>
-                        <span className="text-xl font-semibold text-gray-900 shrink-0">$149</span>
+                        <span className="text-xl font-semibold text-gray-900 shrink-0">Value: $149</span>
                       </div>
                       <span className="text-base text-gray-500 mt-1.5 block">Relive your favourite moments from the event.</span>
                       <span className="inline-block px-4 py-1.5 bg-amber-50 text-amber-600 rounded-full text-sm font-medium mt-2">Early Bird Bonus</span>
@@ -741,7 +741,7 @@ export default function Home() {
                     <div className="flex-1">
                       <div className="flex justify-between items-start gap-4">
                         <span className="text-xl font-medium">Exclusive Extra Sessions<br />with Graham & Dionne</span>
-                        <span className="text-xl font-semibold text-gray-900 shrink-0">$97</span>
+                        <span className="text-xl font-semibold text-gray-900 shrink-0">Value: $97</span>
                       </div>
                       <span className="text-base text-gray-500 mt-1.5 block">Special intimate sessions with Graham & Dionne for deeper insights.</span>
                       <span className="inline-block px-4 py-1.5 bg-amber-50 text-amber-600 rounded-full text-sm font-medium mt-2">Early Bird Bonus</span>
@@ -754,7 +754,7 @@ export default function Home() {
                   <div className="bg-gray-50 -mx-10 -mb-10 p-8 rounded-b-[32px]">
                     <div className="space-y-8 mb-8">
                       <div>
-                        <span className="text-3xl text-gray-400 line-through">Total Value: $689</span>
+                        <span className="text-3xl text-gray-400 line-through">Total Value: $443</span>
                       </div>
                       <div className="space-y-6">
                         <div className="space-y-2">
@@ -762,7 +762,7 @@ export default function Home() {
                           <div className="flex flex-col items-center gap-4">
                             <span className="text-7xl font-bold text-green-600">$197</span>
                             <div className="bg-green-600 text-white px-5 py-2.5 rounded-full text-base font-bold">
-                              Save $492
+                              Save $246
                             </div>
                           </div>
                         </div>
