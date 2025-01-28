@@ -34,7 +34,7 @@ export default function RootLayout({
         <link 
           rel="icon" 
           type="image/png" 
-          href="https://images.clickfunnels.com/fe/46dfec615545178bffc063e8c4c966/Brilliant_ICON_Full-Color-50px.png"
+          href="/favicon.png"
         />
         <Script id="brilliant-tracking" strategy="beforeInteractive">
           {`
