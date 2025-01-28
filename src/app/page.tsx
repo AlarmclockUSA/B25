@@ -711,7 +711,7 @@ export default function Home() {
                     </div>
                     <div className="flex-1">
                       <div className="flex justify-between items-start gap-4">
-                        <span className="text-xl font-medium">Brilliance24 Experience<br />March 22nd-24th 2024</span>
+                        <span className="text-xl font-medium">Brilliance25 Experience<br />March 21st-23rd 2025</span>
                         <span className="text-xl font-semibold text-gray-900 shrink-0">$197</span>
                       </div>
                       <span className="text-base text-gray-500 mt-1.5 block">Virtual front row seats to three days of transformational awakening with Graham Cooke & Team.</span>
