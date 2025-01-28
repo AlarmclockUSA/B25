@@ -7,6 +7,7 @@ import FAQ from '../components/FAQ';
 import ImageScroll from '../components/ImageScroll';
 import Nav from '../components/Nav';
 import Speakers from '../components/Speakers';
+import EventDetailsBar from '../components/EventDetailsBar';
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 
@@ -128,6 +129,23 @@ export default function Home() {
               
               <p 
                 className="
+                  inline-block
+                  bg-[#DD8D00]/10 backdrop-blur-sm
+                  border border-[#DD8D00]/20
+                  rounded-full
+                  px-8 py-3
+                  text-[#F8F4F1]
+                  text-lg sm:text-xl md:text-2xl 
+                  font-medium tracking-wide 
+                  mb-8
+                  transform hover:scale-105 transition-all duration-300
+                "
+              >
+                March 21st-23rd | Virtual Event
+              </p>
+              
+              <p 
+                className="
                   mb-6 md:mb-8 text-[#F8F4F1] max-w-3xl mx-auto leading-relaxed font-light text-center px-4
                 "
                 style={{
@@ -138,98 +156,51 @@ export default function Home() {
                 Discover the proven path to discovering an extraordinary relationship with God.
               </p>
 
-              {/* Event Details Bar */}
-              <div 
-                className="
-                  event-details
-                  bg-[#222222]/80 backdrop-blur-xl 
-                  rounded-[24px] md:rounded-[32px]
-                  py-4 sm:py-8 px-4 sm:px-8
-                  border border-[#F8F4F1]/10
-                  shadow-[0_8px_32px_rgba(0,0,0,0.1)] 
-                  flex flex-col sm:flex-row 
-                  gap-4 sm:gap-8 md:gap-16 
-                  mb-8 md:mb-12
-                  items-center justify-center
-                  mx-auto
-                  w-[95%] sm:max-w-full
-                "
-              >
-                <div className="flex items-center gap-3 w-full sm:w-auto justify-center">
-                  <div className="w-12 h-12 rounded-full bg-[#74A78E]/20 flex items-center justify-center shrink-0">
-                    <svg className="w-6 h-6 text-[#74A78E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-sm text-[#F8F4F1]/60 uppercase tracking-wider">DATE</p>
-                    <p className="text-base font-medium text-[#F8F4F1]">Mar 13 - 16, 2025</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3 w-full sm:w-auto justify-center">
-                  <div className="w-12 h-12 rounded-full bg-[#74A78E]/20 flex items-center justify-center shrink-0">
-                    <svg className="w-6 h-6 text-[#74A78E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-sm text-[#F8F4F1]/60 uppercase tracking-wider">PLACE</p>
-                    <p className="text-base font-medium text-[#F8F4F1]">Virtual</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3 w-full sm:w-auto justify-center">
-                  <div className="w-12 h-12 rounded-full bg-[#74A78E]/20 flex items-center justify-center shrink-0">
-                    <svg className="w-6 h-6 text-[#74A78E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-sm text-[#F8F4F1]/60 uppercase tracking-wider">TIMEZONE</p>
-                    <p className="text-base font-medium text-[#F8F4F1]">Eastern</p>
-                  </div>
-                </div>
-              </div>
-
               <div className="relative flex flex-col items-center">
-                <button 
-                  className="
-                    group relative w-full sm:w-auto 
-                    transform hover:-translate-y-1 
-                    bg-gradient-to-br from-[#DD8D00] via-[#DD8D00] to-[#E3DDC9] 
-                    hover:from-[#E3DDC9] hover:via-[#DD8D00] hover:to-[#DD8D00] 
-                    text-[#F8F4F1] 
-                    px-4 sm:px-16 py-4 sm:py-6 
-                    rounded-xl 
-                    text-lg sm:text-2xl md:text-4xl 
-                    font-semibold 
-                    transition-all duration-500 
-                    hover:shadow-[0_20px_50px_rgba(221,141,0,0.3)] 
-                    active:scale-95
-                    z-20
-                    mx-auto
-                    mb-6 sm:mb-8
-                    min-h-[3.5rem]
-                    touch-manipulation
-                  "
+                <a 
+                  href="https://www.tickets.brilliance25.com"
+                  className="block w-full sm:w-auto"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#F8F4F1]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-                  <div className="relative flex flex-col items-center gap-2">
-                    <span className="flex items-center justify-center gap-2 sm:gap-3">
-                      Claim Your Seat
-                      <svg className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </span>
-                    <span className="text-xs sm:text-sm md:text-base font-normal italic opacity-90">"I'm finally aware that God is so, so for me. My self-condemnation is gone."</span>
-                  </div>
-                </button>
+                  <button 
+                    className="
+                      group relative w-full sm:w-auto 
+                      transform hover:-translate-y-1 
+                      bg-gradient-to-br from-[#DD8D00] via-[#DD8D00] to-[#E3DDC9] 
+                      hover:from-[#E3DDC9] hover:via-[#DD8D00] hover:to-[#DD8D00] 
+                      text-[#F8F4F1] 
+                      px-4 sm:px-16 py-4 sm:py-6 
+                      rounded-xl 
+                      text-lg sm:text-2xl md:text-4xl 
+                      font-semibold 
+                      transition-all duration-500 
+                      hover:shadow-[0_20px_50px_rgba(221,141,0,0.3)] 
+                      active:scale-95
+                      z-20
+                      mx-auto
+                      mb-6 sm:mb-8
+                      min-h-[3.5rem]
+                      touch-manipulation
+                    "
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#F8F4F1]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+                    <div className="relative flex flex-col items-center gap-2">
+                      <span className="flex items-center justify-center gap-2 sm:gap-3">
+                        Claim Your Seat
+                        <svg className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </span>
+                      <span className="text-xs sm:text-sm md:text-base font-normal italic opacity-90">"I'm finally aware that God is so, so for me. My self-condemnation is gone."</span>
+                    </div>
+                  </button>
+                </a>
               </div>
             </div>
           </div>
         </section>
 
         {/* Video Section */}
-        <section className="relative overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24 bg-[#222222]">
+        <section className="relative overflow-hidden pb-48 bg-[#222222]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-8 sm:mb-12 md:mb-16">
@@ -237,7 +208,7 @@ export default function Home() {
                   <div className="flex flex-col items-center">
                     <h2 className="mb-4 sm:mb-6 md:mb-8">
                       <span 
-                        className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#F8F4F1] mb-2 sm:mb-3 tracking-tight"
+                        className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#F8F4F1] mb-2 sm:mb-3 tracking-tight pt-8 sm:pt-12 md:pt-16"
                         style={{
                           textShadow: '0 2px 4px rgba(0,0,0,0.1)'
                         }}
@@ -283,7 +254,7 @@ export default function Home() {
         </section>
 
         {/* New CTA Section with Video Wall Background */}
-        <section className="relative overflow-hidden py-32 bg-[#222222]">
+        <section className="relative overflow-hidden py-32 bg-[#222222] -mt-32">
           <div className="absolute inset-0 w-full max-w-[100vw]">
             <Image
               src="/2M5A3176.jpg"
@@ -293,6 +264,8 @@ export default function Home() {
               priority
             />
             <div className="absolute inset-0 bg-gradient-to-br from-black/60 to-black/40"></div>
+            {/* Add top fade for smooth transition */}
+            <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#222222] to-transparent"></div>
           </div>
           
           <div className="relative z-10 w-min(100% - 2rem, 80rem) mx-auto px-4">
@@ -304,38 +277,43 @@ export default function Home() {
                 Join us for three extraordinary days that will forever change how you experience God's presence in your life.
               </p>
               <div className="relative flex flex-col items-center">
-                <button 
-                  className="
-                    group relative w-full sm:w-auto 
-                    transform hover:-translate-y-1 
-                    bg-gradient-to-br from-[#DD8D00] via-[#DD8D00] to-[#E3DDC9] 
-                    hover:from-[#E3DDC9] hover:via-[#DD8D00] hover:to-[#DD8D00] 
-                    text-[#F8F4F1] 
-                    px-4 sm:px-16 py-4 sm:py-6 
-                    rounded-xl 
-                    text-lg sm:text-2xl md:text-4xl 
-                    font-semibold 
-                    transition-all duration-500 
-                    hover:shadow-[0_20px_50px_rgba(221,141,0,0.3)] 
-                    active:scale-95
-                    z-20
-                    mx-auto
-                    mb-6 sm:mb-8
-                    min-h-[3.5rem]
-                    touch-manipulation
-                  "
+                <a 
+                  href="https://www.tickets.brilliance25.com"
+                  className="block w-full sm:w-auto"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#F8F4F1]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-                  <div className="relative flex flex-col items-center gap-2">
-                    <span className="flex items-center justify-center gap-2 sm:gap-3">
-                      Claim Your Seat
-                      <svg className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </span>
-                    <span className="text-xs sm:text-sm md:text-base font-normal italic opacity-90">"I'm finally aware that God is so, so for me. My self-condemnation is gone."</span>
-                  </div>
-                </button>
+                  <button 
+                    className="
+                      group relative w-full sm:w-auto 
+                      transform hover:-translate-y-1 
+                      bg-gradient-to-br from-[#DD8D00] via-[#DD8D00] to-[#E3DDC9] 
+                      hover:from-[#E3DDC9] hover:via-[#DD8D00] hover:to-[#DD8D00] 
+                      text-[#F8F4F1] 
+                      px-4 sm:px-16 py-4 sm:py-6 
+                      rounded-xl 
+                      text-lg sm:text-2xl md:text-4xl 
+                      font-semibold 
+                      transition-all duration-500 
+                      hover:shadow-[0_20px_50px_rgba(221,141,0,0.3)] 
+                      active:scale-95
+                      z-20
+                      mx-auto
+                      mb-6 sm:mb-8
+                      min-h-[3.5rem]
+                      touch-manipulation
+                    "
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#F8F4F1]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+                    <div className="relative flex flex-col items-center gap-2">
+                      <span className="flex items-center justify-center gap-2 sm:gap-3">
+                        Claim Your Seat
+                        <svg className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </span>
+                      <span className="text-xs sm:text-sm md:text-base font-normal italic opacity-90">"I'm finally aware that God is so, so for me. My self-condemnation is gone."</span>
+                    </div>
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -408,10 +386,10 @@ export default function Home() {
         </div>
 
         {/* Agenda Section */}
-        <section className="relative overflow-hidden py-16 sm:py-24 md:py-32 bg-[#F8F4F1] agenda-timeline">
+        <section className="relative overflow-hidden py-24 sm:py-32 md:py-40 bg-[#F8F4F1] agenda-timeline">
           <div className="w-min(100% - 2rem, 80rem) mx-auto px-4">
             <div className="max-w-7xl mx-auto">
-              <div className="mb-12 sm:mb-16 md:mb-24">
+              <div className="mb-12 sm:mb-16 md:mb-24 mt-8 sm:mt-12 md:mt-16">
                 <p className="text-sm sm:text-base tracking-widest text-[#222222]/60 font-medium mb-4 sm:mb-6">YOUR JOURNEY</p>
                 <div className="flex flex-col md:flex-row items-start md:items-end gap-6 sm:gap-8">
                   <h2 className="text-[3.5rem] sm:text-[5rem] md:text-[8rem] lg:text-[120px] font-bold leading-[0.9] md:flex-1">
@@ -454,7 +432,7 @@ export default function Home() {
                           </div>
                           <p className="text-lg sm:text-xl font-medium text-[#222222]/60">DAY ONE</p>
                         </div>
-                        <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 leading-tight">Awakening to His Delight</h3>
+                        <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 leading-tight">Embracing Your New Self in God</h3>
                         <p className="text-lg sm:text-xl text-[#222222]/80 leading-relaxed">
                           Begin your journey by discovering how deeply God delights in you. Break free from performance-based relationship and step into the joy of being His beloved. Experience the transformative power of seeing yourself through His eyes of love.
                         </p>
@@ -466,7 +444,7 @@ export default function Home() {
                         <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden">
                           <Image
                             src="/2M5A3176.jpg"
-                            alt="Day 1 - Awakening to His Delight"
+                            alt="Day 1 - Embracing Your New Self in God"
                             width={800}
                             height={1000}
                             className="object-cover w-full h-[400px] sm:h-[600px] md:h-[800px] hover:scale-105 transition-transform duration-700"
@@ -494,7 +472,7 @@ export default function Home() {
                           </div>
                           <p className="text-lg sm:text-xl font-medium text-[#222222]/60">DAY TWO</p>
                         </div>
-                        <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 leading-tight">Living from His Presence</h3>
+                        <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 leading-tight">Embracing a New Way of Living with God</h3>
                         <p className="text-lg sm:text-xl text-[#222222]/80 leading-relaxed">
                           Learn the art of living from His presence rather than for His presence. Discover practical ways to recognize and respond to His voice in every moment. Transform occasional encounters into continuous communion.
                         </p>
@@ -506,7 +484,7 @@ export default function Home() {
                         <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden">
                           <Image
                             src="/2M5A4455.jpg"
-                            alt="Day 2 - Living from His Presence"
+                            alt="Day 2 - Embracing a New Way of Living with God"
                             width={800}
                             height={1000}
                             className="object-cover w-full h-[400px] sm:h-[600px] md:h-[800px] hover:scale-105 transition-transform duration-700"
@@ -534,7 +512,7 @@ export default function Home() {
                           </div>
                           <p className="text-lg sm:text-xl font-medium text-[#222222]/60">DAY THREE</p>
                         </div>
-                        <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 leading-tight">Walking in Wonder</h3>
+                        <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 leading-tight">Embrace a New Way of Learning with God</h3>
                         <p className="text-lg sm:text-xl text-[#222222]/80 leading-relaxed">
                           Step into a lifestyle of continuous wonder and delight. Embrace the adventure of walking with God in every circumstance. Learn to see challenges as opportunities for deeper intimacy and discover the joy of partnering with Him in your everyday life.
                         </p>
@@ -546,7 +524,7 @@ export default function Home() {
                         <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden">
                           <Image
                             src="/2M5A1060-3.jpg"
-                            alt="Day 3 - Walking in Wonder"
+                            alt="Day 3 - Embrace a New Way of Learning with God"
                             width={800}
                             height={1000}
                             className="object-cover w-full h-[400px] sm:h-[600px] md:h-[800px] hover:scale-105 transition-transform duration-700"
@@ -664,13 +642,13 @@ export default function Home() {
 
           <div className="relative z-10 w-min(100% - 2rem, 80rem) mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center mb-16">
-              <h2 className="text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                Discover an<br />
-                Extraordinary<br />
-                Relationship<br />
-                With God
+              <h2 className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#F8F4F1] mb-6 leading-[1.1] tracking-tight">
+                <span className="inline sm:block">Discover an</span>{' '}
+                <span className="inline sm:block">Extraordinary</span>{' '}
+                <span className="inline sm:block">Relationship</span>{' '}
+                <span className="inline sm:block">With God</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              <p className="text-lg sm:text-xl text-[#F8F4F1]/80 mb-12 max-w-2xl mx-auto">
                 Join this transformative virtual gathering, connecting with seekers from around the world.
               </p>
 
@@ -683,7 +661,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-sm text-[#E3DDC9]/60 uppercase tracking-wider">DATE</p>
-                    <p className="text-base font-medium text-[#F8F4F1]">Mar 13 - 16, 2025</p>
+                    <p className="text-base font-medium text-[#F8F4F1]">March 21st-23rd, 2025</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
@@ -747,20 +725,6 @@ export default function Home() {
                     </div>
                     <div className="flex-1">
                       <div className="flex justify-between items-start gap-4">
-                        <span className="text-xl font-medium">Exclusive App + Community</span>
-                        <span className="text-xl font-semibold text-gray-900 shrink-0">$197</span>
-                      </div>
-                      <span className="text-base text-gray-500 mt-1.5 block">Join the Brilliant Community with easy access to connect with others around the world.</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-4">
-                    <div className="w-7 h-7 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-1">
-                      <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex justify-between items-start gap-4">
                         <span className="text-xl font-medium">Event Replays</span>
                         <span className="text-xl font-semibold text-gray-900 shrink-0">$149</span>
                       </div>
@@ -790,7 +754,7 @@ export default function Home() {
                   <div className="bg-gray-50 -mx-10 -mb-10 p-8 rounded-b-[32px]">
                     <div className="space-y-8 mb-8">
                       <div>
-                        <span className="text-3xl text-gray-400 line-through">Total Value: $789</span>
+                        <span className="text-3xl text-gray-400 line-through">Total Value: $689</span>
                       </div>
                       <div className="space-y-6">
                         <div className="space-y-2">
@@ -798,16 +762,21 @@ export default function Home() {
                           <div className="flex flex-col items-center gap-4">
                             <span className="text-7xl font-bold text-green-600">$197</span>
                             <div className="bg-green-600 text-white px-5 py-2.5 rounded-full text-base font-bold">
-                              Save $592
+                              Save $492
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
 
-                    <button className="w-full bg-black text-white py-6 rounded-full text-2xl font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-[1.02] mb-4">
-                      Secure Your Spot Now
-                    </button>
+                    <a 
+                      href="https://www.tickets.brilliance25.com"
+                      className="block w-full"
+                    >
+                      <button className="w-full bg-black text-white py-6 rounded-full text-2xl font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-[1.02] mb-4">
+                        Secure Your Seat Now
+                      </button>
+                    </a>
                     <p className="text-base text-gray-700 font-medium mb-2">March 21-23, 2025</p>
                     <p className="text-sm text-gray-500">Limited spots available for optimal experience</p>
                   </div>
