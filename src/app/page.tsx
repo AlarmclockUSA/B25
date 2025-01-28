@@ -102,9 +102,9 @@ export default function Home() {
                 <span 
                   className="
                     inline-block text-[#F8F4F1] 
-                    text-xs sm:text-sm md:text-base 
+                    text-[0.7rem] sm:text-sm md:text-base 
                     tracking-widest font-medium 
-                    px-3 py-2 sm:px-4 sm:py-2 md:px-6 md:py-3 
+                    px-2 py-1 sm:px-4 sm:py-2 md:px-6 md:py-3 
                     uppercase hover:scale-105 transition-transform duration-300
                   "
                 >
@@ -115,9 +115,9 @@ export default function Home() {
               </div>
 
               <h1 
-                className="font-bold mb-6 md:mb-8 leading-[1.1] tracking-tight"
+                className="font-bold mb-4 md:mb-8 leading-[1.1] tracking-tight px-2"
                 style={{
-                  fontSize: 'clamp(2.5rem, 5vw, 5rem)'
+                  fontSize: 'clamp(2rem, 8vw, 5rem)'
                 }}
               >
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#F8F4F1] via-[#F8F4F1] to-[#E3DDC9] mb-1">Discover an</span>
@@ -128,10 +128,10 @@ export default function Home() {
               
               <p 
                 className="
-                  mb-8 text-[#F8F4F1] max-w-3xl mx-auto leading-relaxed font-light text-center
+                  mb-6 md:mb-8 text-[#F8F4F1] max-w-3xl mx-auto leading-relaxed font-light text-center px-4
                 "
                 style={{
-                  fontSize: 'clamp(1rem, 3vw, 1.25rem)'
+                  fontSize: 'clamp(0.875rem, 4vw, 1.25rem)'
                 }}
               >
                 Step into a 3-day transformational online experience hosted by leading voice Graham Cooke + Team. 
@@ -143,16 +143,16 @@ export default function Home() {
                 className="
                   event-details
                   bg-[#222222]/80 backdrop-blur-xl 
-                  rounded-[32px]
-                  py-8 px-8
+                  rounded-[24px] md:rounded-[32px]
+                  py-4 sm:py-8 px-4 sm:px-8
                   border border-[#F8F4F1]/10
                   shadow-[0_8px_32px_rgba(0,0,0,0.1)] 
                   flex flex-col sm:flex-row 
-                  gap-6 sm:gap-8 md:gap-16 
-                  mb-12
+                  gap-4 sm:gap-8 md:gap-16 
+                  mb-8 md:mb-12
                   items-center justify-center
                   mx-auto
-                  max-w-[90%] sm:max-w-full
+                  w-[95%] sm:max-w-full
                 "
               >
                 <div className="flex items-center gap-3 w-full sm:w-auto justify-center">
@@ -198,22 +198,25 @@ export default function Home() {
                     bg-gradient-to-br from-[#DD8D00] via-[#DD8D00] to-[#E3DDC9] 
                     hover:from-[#E3DDC9] hover:via-[#DD8D00] hover:to-[#DD8D00] 
                     text-[#F8F4F1] 
-                    px-6 sm:px-16 py-4 sm:py-6 
+                    px-4 sm:px-16 py-4 sm:py-6 
                     rounded-xl 
-                    text-xl sm:text-2xl md:text-4xl 
+                    text-lg sm:text-2xl md:text-4xl 
                     font-semibold 
                     transition-all duration-500 
                     hover:shadow-[0_20px_50px_rgba(221,141,0,0.3)] 
+                    active:scale-95
                     z-20
                     mx-auto
-                    mb-8
+                    mb-6 sm:mb-8
+                    min-h-[3.5rem]
+                    touch-manipulation
                   "
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-[#F8F4F1]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
                   <div className="relative flex flex-col items-center gap-2">
-                    <span className="flex items-center justify-center gap-3">
+                    <span className="flex items-center justify-center gap-2 sm:gap-3">
                       Claim Your Seat
-                      <svg className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <svg className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>
                     </span>
@@ -226,25 +229,52 @@ export default function Home() {
         </section>
 
         {/* Video Section */}
-        <section className="relative overflow-hidden py-24 bg-[#222222]">
-          <div className="w-min(100% - 2rem, 80rem) mx-auto px-4">
+        <section className="relative overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24 bg-[#222222]">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-16">
-                <div className="max-w-3xl mx-auto">
-                  <h2 className="text-5xl md:text-6xl font-bold text-[#F8F4F1] mb-4">
-                    <span className="block">THREE DAYS OF</span>
-                    <span className="block">RADICAL TRANSFORMATION</span>
-                  </h2>
-                  <p className="text-xl md:text-2xl text-[#F8F4F1]/80 font-medium tracking-wide mb-12">
-                    IT'S TIME TO DELIGHT IN YOUR RELATIONSHIP WITH GOD
-                  </p>
-                  <div className="space-y-8 mt-12 text-left">
-                    <p className="text-2xl text-[#F8F4F1]/90 leading-relaxed">
-                      For three extraordinary days, you'll discover what your heart has always known was possible - a way of being with God that transforms everything it touches. This isn't about adding more knowledge; it's about awakening to a relationship that changes how you see God, yourself, and your world.
+              <div className="text-center mb-8 sm:mb-12 md:mb-16">
+                <div className="max-w-3xl mx-auto px-4 sm:px-6">
+                  <div className="flex flex-col items-center">
+                    <h2 className="mb-4 sm:mb-6 md:mb-8">
+                      <span 
+                        className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#F8F4F1] mb-2 sm:mb-3 tracking-tight"
+                        style={{
+                          textShadow: '0 2px 4px rgba(0,0,0,0.1)'
+                        }}
+                      >
+                        THREE DAYS OF
+                      </span>
+                      <span 
+                        className="block font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#DD8D00] via-[#DD8D00] to-[#E3DDC9] tracking-tight"
+                        style={{
+                          fontSize: 'clamp(2rem, 6vw, 4.5rem)',
+                          lineHeight: '1.1',
+                          textShadow: '0 2px 4px rgba(0,0,0,0.1)'
+                        }}
+                      >
+                        RADICAL TRANSFORMATION
+                      </span>
+                    </h2>
+                    
+                    <div className="w-24 h-1 bg-gradient-to-r from-[#DD8D00] to-[#E3DDC9] rounded-full mb-6 sm:mb-8 opacity-80"></div>
+                    
+                    <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#F8F4F1]/80 font-medium tracking-wide mb-8 sm:mb-12 max-w-2xl">
+                      IT'S TIME TO DELIGHT IN YOUR RELATIONSHIP WITH GOD
                     </p>
-                    <p className="text-2xl text-[#F8F4F1]/90 leading-relaxed">
-                      We want to be clear about something - what you're about to step into isn't just another Christian event. It's an invitation to completely rewire the way you see your relationship with God.
-                    </p>
+                  </div>
+
+                  <div className="space-y-6 sm:space-y-8 mt-8 sm:mt-12 text-left">
+                    <div className="bg-[#F8F4F1]/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#F8F4F1]/10">
+                      <p className="text-base sm:text-lg md:text-xl text-[#F8F4F1]/90 leading-relaxed">
+                        For three extraordinary days, you'll discover what your heart has always known was possible - a way of being with God that transforms everything it touches. This isn't about adding more knowledge; it's about awakening to a relationship that changes how you see God, yourself, and your world.
+                      </p>
+                    </div>
+                    
+                    <div className="bg-[#F8F4F1]/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-[#F8F4F1]/10">
+                      <p className="text-base sm:text-lg md:text-xl text-[#F8F4F1]/90 leading-relaxed">
+                        We want to be clear about something - what you're about to step into isn't just another Christian event. It's an invitation to completely rewire the way you see your relationship with God.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -281,22 +311,25 @@ export default function Home() {
                     bg-gradient-to-br from-[#DD8D00] via-[#DD8D00] to-[#E3DDC9] 
                     hover:from-[#E3DDC9] hover:via-[#DD8D00] hover:to-[#DD8D00] 
                     text-[#F8F4F1] 
-                    px-6 sm:px-16 py-4 sm:py-6 
+                    px-4 sm:px-16 py-4 sm:py-6 
                     rounded-xl 
-                    text-xl sm:text-2xl md:text-4xl 
+                    text-lg sm:text-2xl md:text-4xl 
                     font-semibold 
                     transition-all duration-500 
                     hover:shadow-[0_20px_50px_rgba(221,141,0,0.3)] 
+                    active:scale-95
                     z-20
                     mx-auto
-                    mb-8
+                    mb-6 sm:mb-8
+                    min-h-[3.5rem]
+                    touch-manipulation
                   "
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-[#F8F4F1]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
                   <div className="relative flex flex-col items-center gap-2">
-                    <span className="flex items-center justify-center gap-3">
+                    <span className="flex items-center justify-center gap-2 sm:gap-3">
                       Claim Your Seat
-                      <svg className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <svg className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>
                     </span>
