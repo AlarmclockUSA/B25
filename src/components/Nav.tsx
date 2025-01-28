@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { trackButtonClick } from '../utils/analytics';
 
 export default function Nav({ scrolled }: { scrolled: boolean }) {
   return (
@@ -22,6 +23,7 @@ export default function Nav({ scrolled }: { scrolled: boolean }) {
             className="ml-auto"
           >
             <button 
+              onClick={() => trackButtonClick('Claim Your Seat', 'Navigation')}
               className="
                 group relative 
                 bg-gradient-to-br from-[#DD8D00] via-[#DD8D00] to-[#E3DDC9] 

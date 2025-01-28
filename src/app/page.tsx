@@ -8,6 +8,7 @@ import Nav from '../components/Nav';
 import Speakers from '../components/Speakers';
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
+import { trackButtonClick } from '../utils/analytics';
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -159,6 +160,7 @@ export default function Home() {
                   className="block w-full sm:w-auto"
                 >
                   <button 
+                    onClick={() => trackButtonClick('Claim Your Seat', 'Hero Section')}
                     className="
                       group relative w-full sm:w-auto 
                       transform hover:-translate-y-1 
@@ -279,6 +281,7 @@ export default function Home() {
                   className="block w-full sm:w-auto"
                 >
                   <button 
+                    onClick={() => trackButtonClick('Claim Your Seat', 'Middle CTA Section')}
                     className="
                       group relative w-full sm:w-auto 
                       transform hover:-translate-y-1 
@@ -770,7 +773,10 @@ export default function Home() {
                       href="https://www.tickets.brilliance25.com"
                       className="block w-full"
                     >
-                      <button className="w-full bg-black text-white py-6 rounded-full text-2xl font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-[1.02] mb-4">
+                      <button 
+                        onClick={() => trackButtonClick('Secure Your Seat', 'Pricing Section')}
+                        className="w-full bg-black text-white py-6 rounded-full text-2xl font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-[1.02] mb-4"
+                      >
                         Secure Your Seat Now
                       </button>
                     </a>
