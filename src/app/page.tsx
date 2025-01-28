@@ -430,10 +430,10 @@ export default function Home() {
                           <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#DD8D00] flex items-center justify-center">
                             <span className="text-xl sm:text-2xl font-bold text-white">01</span>
                           </div>
-                          <p className="text-lg sm:text-xl font-medium text-[#222222]/60">DAY ONE</p>
+                          <p className="text-lg sm:text-xl font-medium text-[#222222]">DAY ONE</p>
                         </div>
-                        <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 leading-tight">Embracing Your New Self in God</h3>
-                        <p className="text-lg sm:text-xl text-[#222222]/80 leading-relaxed">
+                        <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 leading-tight text-[#222222]">Embracing Your New Self in God</h3>
+                        <p className="text-lg sm:text-xl text-[#222222] leading-relaxed">
                           Begin your journey by discovering how deeply God delights in you. Break free from performance-based relationship and step into the joy of being His beloved. Experience the transformative power of seeing yourself through His eyes of love.
                         </p>
                       </div>
@@ -470,10 +470,10 @@ export default function Home() {
                           <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#DD8D00] flex items-center justify-center">
                             <span className="text-xl sm:text-2xl font-bold text-white">02</span>
                           </div>
-                          <p className="text-lg sm:text-xl font-medium text-[#222222]/60">DAY TWO</p>
+                          <p className="text-lg sm:text-xl font-medium text-[#222222]">DAY TWO</p>
                         </div>
-                        <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 leading-tight">Embracing a New Way of Living with God</h3>
-                        <p className="text-lg sm:text-xl text-[#222222]/80 leading-relaxed">
+                        <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 leading-tight text-[#222222]">Embracing a New Way of Living with God</h3>
+                        <p className="text-lg sm:text-xl text-[#222222] leading-relaxed">
                           Learn the art of living from His presence rather than for His presence. Discover practical ways to recognize and respond to His voice in every moment. Transform occasional encounters into continuous communion.
                         </p>
                       </div>
@@ -510,10 +510,10 @@ export default function Home() {
                           <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#DD8D00] flex items-center justify-center">
                             <span className="text-xl sm:text-2xl font-bold text-white">03</span>
                           </div>
-                          <p className="text-lg sm:text-xl font-medium text-[#222222]/60">DAY THREE</p>
+                          <p className="text-lg sm:text-xl font-medium text-[#222222]">DAY THREE</p>
                         </div>
-                        <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 leading-tight">Embrace a New Way of Learning with God</h3>
-                        <p className="text-lg sm:text-xl text-[#222222]/80 leading-relaxed">
+                        <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 leading-tight text-[#222222]">Embrace a New Way of Learning with God</h3>
+                        <p className="text-lg sm:text-xl text-[#222222] leading-relaxed">
                           Step into a lifestyle of continuous wonder and delight. Embrace the adventure of walking with God in every circumstance. Learn to see challenges as opportunities for deeper intimacy and discover the joy of partnering with Him in your everyday life.
                         </p>
                       </div>
