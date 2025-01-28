@@ -1,13 +1,11 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import Footer from '../components/Footer';
 import FAQ from '../components/FAQ';
 import ImageScroll from '../components/ImageScroll';
 import Nav from '../components/Nav';
 import Speakers from '../components/Speakers';
-import EventDetailsBar from '../components/EventDetailsBar';
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 
