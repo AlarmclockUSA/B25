@@ -1,13 +1,1 @@
-{
-  "extends": "next/core-web-vitals",
-  "rules": {
-    "quotes": "off",
-    "@typescript-eslint/quotes": "off",
-    "react/no-unescaped-entities": "off",
-    "max-len": "off",
-    "@typescript-eslint/no-explicit-any": "off",
-    "jsx-quotes": "off",
-    "no-irregular-whitespace": "off",
-    "@next/next/no-img-element": "off"
-  }
-} 
+{ "extends": "next/core-web-vitals", "rules": { "react/no-unescaped-entities": "off" } }

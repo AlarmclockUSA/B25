@@ -30,7 +30,6 @@ export default function Home() {
       const timeline = agendaSection?.querySelector('.space-y-48');
       if (!timeline || !agendaSection) return;
       
-      const timelineRect = timeline.getBoundingClientRect();
       const agendaRect = agendaSection.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
       const timelineStart = agendaRect.top;
