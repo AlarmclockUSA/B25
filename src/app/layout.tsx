@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from 'next/script';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -19,16 +20,27 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className="scroll-smooth">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <Script id="brilliant-tracking" strategy="beforeInteractive">
+          {`
+            var head = document.head;
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = "https://t.mybrilliant.app/v1/lst/universal-script?ph=2e5b64900a084ea4a2c585fdd71057b618ff67818720df62e56696dee06253f0&tag=!clicked&ref_url=" + encodeURI(document.URL);
+            head.appendChild(script);
+          `}
+        </Script>
+      </head>
+      <body className={`overflow-x-hidden min-h-screen bg-[#222222] antialiased ${geistSans.variable} ${geistMono.variable}`}>
         {children}
+        <script src="https://cdn.popupsmart.com/bundle.js" data-id="790100" async defer></script>
       </body>
     </html>
-  );
+  )
 }
