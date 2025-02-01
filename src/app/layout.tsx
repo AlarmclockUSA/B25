@@ -50,6 +50,18 @@ export default function RootLayout({
         {children}
         <Analytics />
         <script src="https://cdn.popupsmart.com/bundle.js" data-id="790100" async defer></script>
+        <Script id="cart-url-handler" strategy="afterInteractive">
+          {`
+            const cartButtons = document.querySelectorAll('a[href*="secure.brilliance25.com/cart"]');
+            const currentEl = new URLSearchParams(window.location.search).get('el');
+
+            if (currentEl) {
+                cartButtons.forEach(button => {
+                    button.href = \`https://secure.brilliance25.com/cart?el=\${currentEl}\`;
+                });
+            }
+          `}
+        </Script>
       </body>
     </html>
   )
