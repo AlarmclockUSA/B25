@@ -701,7 +701,7 @@ function MainContent() {
                 <div className="space-y-2">
                   <span className="text-base text-gray-600 font-medium">STANDARD TICKET</span>
                   <div className="flex flex-col items-center">
-                    <span className="text-7xl font-bold text-black tracking-tight">$97</span>
+                    <span className="text-7xl font-bold text-black tracking-tight">$197</span>
                     <span className="text-base font-medium text-green-600 mt-2 mb-8">All Access Ticket</span>
                   </div>
                 </div>
@@ -777,9 +777,9 @@ function MainContent() {
                         <div className="space-y-2">
                           <p className="text-2xl font-bold">Full Weekend Ticket:</p>
                           <div className="flex flex-col items-center gap-4">
-                            <span className="text-7xl font-bold text-green-600">$97</span>
+                            <span className="text-7xl font-bold text-green-600">$197</span>
                             <div className="bg-green-600 text-white px-5 py-2.5 rounded-full text-base font-bold">
-                              Save $500
+                              Save $400
                             </div>
                           </div>
                         </div>
