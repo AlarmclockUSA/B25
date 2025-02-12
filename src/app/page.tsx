@@ -6,13 +6,13 @@ import FAQ from '../components/FAQ';
 import ImageScroll from '../components/ImageScroll';
 import Nav from '../components/Nav';
 import Speakers from '../components/Speakers';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import Head from 'next/head';
 import { trackButtonClick } from '../utils/analytics';
 import { useSearchParams } from 'next/navigation';
 import { getCartUrl } from '../utils/urls';
 
-export default function Home() {
+function MainContent() {
   const [scrolled, setScrolled] = useState(false);
   const searchParams = useSearchParams();
   const cartUrl = getCartUrl(Object.fromEntries(searchParams.entries()));
@@ -811,5 +811,13 @@ export default function Home() {
         <Footer />
       </main>
     </>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <MainContent />
+    </Suspense>
   );
 }
