@@ -1,7 +1,12 @@
 import Link from 'next/link';
 import { trackButtonClick } from '../utils/analytics';
 
-export default function Nav({ scrolled }: { scrolled: boolean }) {
+interface NavProps {
+  scrolled: boolean;
+  cartUrl: string;
+}
+
+export default function Nav({ scrolled, cartUrl }: NavProps) {
   return (
     <nav className={`
       fixed top-0 left-0 right-0 z-50 
@@ -19,12 +24,13 @@ export default function Nav({ scrolled }: { scrolled: boolean }) {
 
           {/* CTA Button */}
           <a 
-            href="https://www.tickets.brilliance25.com"
+            href={cartUrl}
             className="ml-auto"
           >
             <button 
               onClick={() => trackButtonClick('Claim Your Seat', 'Navigation')}
               className="
+                cart-button
                 group relative 
                 bg-gradient-to-br from-[#DD8D00] via-[#DD8D00] to-[#E3DDC9] 
                 hover:from-[#E3DDC9] hover:via-[#DD8D00] hover:to-[#DD8D00] 

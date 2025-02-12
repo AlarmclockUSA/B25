@@ -9,9 +9,13 @@ import Speakers from '../components/Speakers';
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { trackButtonClick } from '../utils/analytics';
+import { useSearchParams } from 'next/navigation';
+import { getCartUrl } from '../utils/urls';
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
+  const searchParams = useSearchParams();
+  const cartUrl = getCartUrl(Object.fromEntries(searchParams.entries()));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,7 +75,7 @@ export default function Home() {
       </Head>
 
       <main className="relative overflow-x-hidden">
-        <Nav scrolled={scrolled} />
+        <Nav scrolled={scrolled} cartUrl={cartUrl} />
         
         {/* Hero Section */}
         <section 
@@ -156,12 +160,13 @@ export default function Home() {
 
               <div className="relative flex flex-col items-center">
                 <a 
-                  href="https://www.tickets.brilliance25.com"
+                  href={cartUrl}
                   className="block w-full sm:w-auto"
                 >
                   <button 
                     onClick={() => trackButtonClick('Claim Your Seat', 'Hero Section')}
                     className="
+                      cart-button
                       group relative w-full sm:w-auto 
                       transform hover:-translate-y-1 
                       bg-gradient-to-br from-[#DD8D00] via-[#DD8D00] to-[#E3DDC9] 
@@ -277,12 +282,13 @@ export default function Home() {
               </p>
               <div className="relative flex flex-col items-center">
                 <a 
-                  href="https://www.tickets.brilliance25.com"
+                  href={cartUrl}
                   className="block w-full sm:w-auto"
                 >
                   <button 
                     onClick={() => trackButtonClick('Claim Your Seat', 'Middle CTA Section')}
                     className="
+                      cart-button
                       group relative w-full sm:w-auto 
                       transform hover:-translate-y-1 
                       bg-gradient-to-br from-[#DD8D00] via-[#DD8D00] to-[#E3DDC9] 
@@ -692,12 +698,11 @@ export default function Home() {
             <div className="max-w-xl mx-auto bg-white rounded-[32px] p-12 shadow-2xl">
               {/* Price Header */}
               <div className="text-center mb-12">
-                <span className="inline-block px-4 py-1.5 bg-green-50 text-green-600 rounded-full text-sm font-medium mb-4">Limited Time Offer</span>
                 <div className="space-y-2">
-                  <span className="text-base text-gray-600 font-medium">EARLY BIRD OFFER</span>
+                  <span className="text-base text-gray-600 font-medium">STANDARD TICKET</span>
                   <div className="flex flex-col items-center">
-                    <span className="text-7xl font-bold text-black tracking-tight">$197</span>
-                    <span className="text-base font-medium text-green-600 mt-2 mb-8">Exclusive savings on All Access Tickets</span>
+                    <span className="text-7xl font-bold text-black tracking-tight">$97</span>
+                    <span className="text-base font-medium text-green-600 mt-2 mb-8">All Access Ticket</span>
                   </div>
                 </div>
 
@@ -711,10 +716,10 @@ export default function Home() {
                     </div>
                     <div className="flex-1">
                       <div className="flex justify-between items-start gap-4">
-                        <span className="text-xl font-medium">Brilliance25 Experience<br />March 21st-23rd 2025</span>
-                        <span className="text-xl font-semibold text-gray-900 shrink-0">Value: $197</span>
+                        <span className="text-xl font-medium">Three Days of Radical Transformation<br />March 21st-23rd 2025</span>
+                        <span className="text-xl font-semibold text-gray-900 shrink-0">Value: $297</span>
                       </div>
-                      <span className="text-base text-gray-500 mt-1.5 block">Virtual front row seats to three days of transformational awakening with Graham Cooke & Team.</span>
+                      <span className="text-base text-gray-500 mt-1.5 block">Virtual front row seats to three days of transformational awakening with Graham Cooke, Ray Higdon & Team.</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
@@ -725,11 +730,10 @@ export default function Home() {
                     </div>
                     <div className="flex-1">
                       <div className="flex justify-between items-start gap-4">
-                        <span className="text-xl font-medium">Event Replays</span>
-                        <span className="text-xl font-semibold text-gray-900 shrink-0">Value: $149</span>
+                        <span className="text-xl font-medium">Breakout & Activation Sessions</span>
+                        <span className="text-xl font-semibold text-gray-900 shrink-0">Value: $147</span>
                       </div>
-                      <span className="text-base text-gray-500 mt-1.5 block">Relive your favourite moments from the event.</span>
-                      <span className="inline-block px-4 py-1.5 bg-amber-50 text-amber-600 rounded-full text-sm font-medium mt-2">Early Bird Bonus</span>
+                      <span className="text-base text-gray-500 mt-1.5 block">Practical sessions designed to help you activate and apply the transformational principles in your daily life.</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
@@ -740,11 +744,24 @@ export default function Home() {
                     </div>
                     <div className="flex-1">
                       <div className="flex justify-between items-start gap-4">
-                        <span className="text-xl font-medium">Exclusive Extra Sessions<br />with Graham & Dionne</span>
-                        <span className="text-xl font-semibold text-gray-900 shrink-0">Value: $97</span>
+                        <span className="text-xl font-medium">Interactive Q&A Sessions<br />with Dionne & Team</span>
+                        <span className="text-xl font-semibold text-gray-900 shrink-0">Value: $153</span>
                       </div>
-                      <span className="text-base text-gray-500 mt-1.5 block">Special intimate sessions with Graham & Dionne for deeper insights.</span>
-                      <span className="inline-block px-4 py-1.5 bg-amber-50 text-amber-600 rounded-full text-sm font-medium mt-2">Early Bird Bonus</span>
+                      <span className="text-base text-gray-500 mt-1.5 block">Live Q&A opportunities to deepen your understanding and get personalized insights.</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <div className="w-7 h-7 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-1">
+                      <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex justify-between items-start gap-4">
+                        <span className="text-xl font-medium">Global Community Connection</span>
+                        <span className="text-xl font-semibold text-gray-900 shrink-0">Priceless</span>
+                      </div>
+                      <span className="text-base text-gray-500 mt-1.5 block">Connect with believers from around the world, sharing experiences and building lasting relationships.</span>
                     </div>
                   </li>
                 </ul>
@@ -754,15 +771,15 @@ export default function Home() {
                   <div className="bg-gray-50 -mx-10 -mb-10 p-8 rounded-b-[32px]">
                     <div className="space-y-8 mb-8">
                       <div>
-                        <span className="text-3xl text-gray-400 line-through">Total Value: $443</span>
+                        <span className="text-3xl text-gray-400 line-through">Total Value: $597</span>
                       </div>
                       <div className="space-y-6">
                         <div className="space-y-2">
                           <p className="text-2xl font-bold">Full Weekend Ticket:</p>
                           <div className="flex flex-col items-center gap-4">
-                            <span className="text-7xl font-bold text-green-600">$197</span>
+                            <span className="text-7xl font-bold text-green-600">$97</span>
                             <div className="bg-green-600 text-white px-5 py-2.5 rounded-full text-base font-bold">
-                              Save $246
+                              Save $500
                             </div>
                           </div>
                         </div>
@@ -770,12 +787,12 @@ export default function Home() {
                     </div>
 
                     <a 
-                      href="https://www.tickets.brilliance25.com"
+                      href={cartUrl}
                       className="block w-full"
                     >
                       <button 
                         onClick={() => trackButtonClick('Secure Your Seat', 'Pricing Section')}
-                        className="w-full bg-black text-white py-6 rounded-full text-2xl font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-[1.02] mb-4"
+                        className="cart-button w-full bg-black text-white py-6 rounded-full text-2xl font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-[1.02] mb-4"
                       >
                         Secure Your Seat Now
                       </button>

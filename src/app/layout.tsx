@@ -38,11 +38,11 @@ export default function RootLayout({
         />
         <Script id="brilliant-tracking" strategy="beforeInteractive">
           {`
-            var head = document.head;
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.src = "https://t.mybrilliant.app/v1/lst/universal-script?ph=2e5b64900a084ea4a2c585fdd71057b618ff67818720df62e56696dee06253f0&tag=!clicked&ref_url=" + encodeURI(document.URL);
-            head.appendChild(script);
+              var head = document.head;
+              var script = document.createElement('script');
+              script.type = 'text/javascript';
+              script.src = "https://t.mybrilliant.app/v1/lst/universal-script?ph=2e5b64900a084ea4a2c585fdd71057b618ff67818720df62e56696dee06253f0&tag=!clicked&ref_url=" + encodeURI(document.URL);
+              head.appendChild(script);
           `}
         </Script>
       </head>
@@ -50,18 +50,6 @@ export default function RootLayout({
         {children}
         <Analytics />
         <script src="https://cdn.popupsmart.com/bundle.js" data-id="790100" async defer></script>
-        <Script id="cart-url-handler" strategy="afterInteractive">
-          {`
-            const cartButtons = document.querySelectorAll('a[href*="secure.brilliance25.com/cart"]');
-            const currentEl = new URLSearchParams(window.location.search).get('el');
-
-            if (currentEl) {
-                cartButtons.forEach(button => {
-                    button.href = \`https://secure.brilliance25.com/cart?el=\${currentEl}\`;
-                });
-            }
-          `}
-        </Script>
       </body>
     </html>
   )
