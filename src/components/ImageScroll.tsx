@@ -52,7 +52,7 @@ export default function ImageScroll() {
   };
 
   return (
-    <div className="w-full overflow-hidden bg-[#222222]">
+    <div className="w-full overflow-hidden bg-black">
       <div 
         ref={scrollRef}
         className="flex gap-4 overflow-x-hidden -mx-4"

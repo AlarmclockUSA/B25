@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no" />
-        <meta name="theme-color" content="#222222" />
+        <meta name="theme-color" content="#000000" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <link 
@@ -46,7 +46,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={`overflow-x-hidden min-h-screen bg-[#222222] antialiased ${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`overflow-x-hidden min-h-screen bg-black antialiased ${geistSans.variable} ${geistMono.variable}`}>
         {children}
         <Analytics />
         <script src="https://cdn.popupsmart.com/bundle.js" data-id="790100" async defer></script>
