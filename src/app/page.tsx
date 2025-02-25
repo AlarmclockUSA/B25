@@ -66,7 +66,7 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Event",
-            "name": "Brilliance 2025 - Discover an Extraordinary Relationship With God",
+            "name": "Brilliance 2025 with Graham Cooke - Discover an Extraordinary Relationship With God",
             "startDate": "2025-03-21T11:00:00-04:00",
             "endDate": "2025-03-23T17:00:00-04:00",
             "eventStatus": "https://schema.org/EventScheduled",
@@ -113,7 +113,7 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
         <VerticalNav />
         
         {/* Hero Section */}
-        <section id="hero" className="relative min-h-screen bg-black bg-radial-gradient flex flex-col items-center justify-center py-32 md:py-24 px-4 overflow-hidden">
+        <section id="hero" className="relative min-h-[100vh] bg-black bg-radial-gradient flex flex-col items-center justify-center py-16 md:py-12 px-4 overflow-hidden">
           {/* Background Image with Gradient Overlay */}
           <div className="absolute inset-0 w-full max-w-[100vw]">
             <Image
@@ -130,13 +130,16 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
             <div className="absolute inset-0 bg-gradient-radial from-[#DD8D00]/5 via-transparent to-transparent opacity-70" style={{ backgroundPosition: '50% 30%' }}></div>
           </div>
           
-          <div className="relative container mx-auto px-4 md:px-12 flex-1 flex flex-col justify-center z-20">
+          <div className="relative container mx-auto px-4 md:px-8 flex-1 flex flex-col justify-center z-20">
             {/* Content centered instead of left-aligned */}
-            <div className="max-w-4xl mx-auto pt-16 md:pt-24 pb-16 md:pb-32 text-center">
+            <div className="max-w-4xl mx-auto pt-12 md:pt-16 pb-12 md:pb-16 text-center">
               
               {/* Main Headline - Enhanced with subtle animation and better spacing */}
-              <h1 className="font-bold mb-10 mx-auto">
-                <span className="block text-[2.618rem] sm:text-[3.618rem] md:text-[4.236rem] lg:text-[5.236rem] text-[#F8F4F1] leading-[1.05] tracking-tight mb-6 relative animate-fade-in-up">
+              <h1 className="font-bold mb-6 mx-auto">
+                <span className="block text-sm sm:text-base md:text-lg tracking-widest text-[#F8F4F1]/80 mb-4 font-medium animate-fade-in-up">
+                  INTRODUCING BRILLIANCE25 WITH GRAHAM COOKE
+                </span>
+                <span className="block text-[2.2rem] sm:text-[3rem] md:text-[3.6rem] lg:text-[4.2rem] text-[#F8F4F1] leading-[1.05] tracking-tight mb-4 relative animate-fade-in-up animation-delay-300">
                   The Most <span className="relative inline-block">
                     Transformational
                     <span className="absolute -bottom-1 left-0 right-0 h-[0.15em] bg-[#DD8D00]" style={{
@@ -146,36 +149,36 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                     }}></span>
                   </span> Experience
                 </span>
-                <span className="block text-[1.618rem] sm:text-[2.236rem] md:text-[2.618rem] lg:text-[3.236rem] text-[#DD8D00] font-extrabold leading-[1.15] relative animate-fade-in-up animation-delay-300">
+                <span className="block text-[1.4rem] sm:text-[1.8rem] md:text-[2.2rem] lg:text-[2.6rem] text-[#DD8D00] font-extrabold leading-[1.15] relative animate-fade-in-up animation-delay-500">
                   For Kingdom Believers Returns
                   <span className="absolute -z-10 inset-0 bg-[#DD8D00]/10 skew-x-3 rounded-lg translate-x-1 translate-y-1 hidden md:block"></span>
                 </span>
               </h1>
               
               {/* Date & Location - With improved contrast and animation */}
-              <div className="mb-8 animate-fade-in-up animation-delay-500">
-                <div className="text-[#DD8D00] text-3xl sm:text-4xl md:text-5xl font-bold tracking-wide mb-3">
+              <div className="mb-4 animate-fade-in-up animation-delay-700">
+                <div className="text-[#DD8D00] text-2xl sm:text-3xl md:text-4xl font-bold tracking-wide mb-2">
                   MARCH 21-23, 2025
                 </div>
-                <div className="text-[#F8F4F1] text-lg sm:text-xl">
+                <div className="text-[#F8F4F1] text-base sm:text-lg">
                   Virtual Experience • Eastern Time
                 </div>
               </div>
               
               {/* Descriptive Copy - Enhanced with better spacing and line height */}
-              <div className="max-w-2xl mb-10 mx-auto animate-fade-in-up animation-delay-700">
-                <p className="text-xl md:text-2xl text-[#F8F4F1]/90 leading-[1.6]">
+              <div className="max-w-2xl mb-6 mx-auto animate-fade-in-up animation-delay-900">
+                <p className="text-lg md:text-xl text-[#F8F4F1]/90 leading-[1.5]">
                   Step into a 3-day transformational online experience hosted by leading voice Graham Cooke, Dionne van Zyl and special guests. Discover the proven path to an extraordinary relationship with God.
                 </p>
               </div>
               
               {/* CTA Button - Enhanced with animation and subtle hover effect */}
-              <div className="mb-4 flex justify-center animate-fade-in-up animation-delay-900">
+              <div className="mb-4 flex justify-center animate-fade-in-up animation-delay-1000">
                 {/* Countdown Timer */}
                 <HeroCountdown />
               </div>
               
-              <div className="mb-6 flex justify-center animate-fade-in-up animation-delay-900">
+              <div className="mb-6 flex justify-center animate-fade-in-up animation-delay-1200">
                 <a 
                   href={cartUrl}
                   className="inline-block w-full sm:w-auto relative overflow-hidden group"

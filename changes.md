@@ -276,3 +276,11 @@ This file tracks all modifications made to the project.
 - Provides clearer information about the key speakers featured in the event
 - File modified: `src/app/page.tsx`
 - This change highlights Dionne van Zyl's importance as a featured speaker alongside Graham Cooke 
+
+## 31. Added Pre-line to Hero Header
+
+- Added "INTRODUCING BRILLIANCE25 WITH GRAHAM COOKE" as a pre-line above the main hero headline
+- Updated the animation sequences to accommodate the new element (adjusted animation delays)
+- Updated the JSON-LD structured data to include Graham Cooke in the event name
+- File modified: `src/app/page.tsx`
+- This addition provides immediate context about the event and emphasizes Graham Cooke as the main speaker 

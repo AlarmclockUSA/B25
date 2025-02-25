@@ -67,10 +67,10 @@ export default function HeroCountdown() {
   const formatNumber = (num: number) => num.toString().padStart(2, '0');
 
   return (
-    <div className="w-full max-w-md text-center mb-4">
-      <div className="flex items-center justify-center gap-3 text-sm uppercase tracking-widest text-[#F8F4F1]/80 mb-4 font-medium">
-        <div className="flex items-center mr-1 bg-[#DD8D00]/10 backdrop-blur-sm border border-green-400/30 rounded-full px-3 py-1.5">
-          <div className="w-2.5 h-2.5 bg-green-400 rounded-full animate-pulse mr-1.5"></div>
+    <div className="w-full max-w-sm text-center mb-3">
+      <div className="flex items-center justify-center gap-2 text-xs uppercase tracking-widest text-[#F8F4F1]/80 mb-2 font-medium">
+        <div className="flex items-center mr-1 bg-[#DD8D00]/10 backdrop-blur-sm border border-green-400/30 rounded-full px-2 py-1">
+          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse mr-1"></div>
           <span className="text-green-400 font-bold">LIVE</span>
         </div>
         <span className="relative">
@@ -79,30 +79,30 @@ export default function HeroCountdown() {
         </span>
       </div>
       
-      <div className="flex justify-center gap-4">
+      <div className="flex justify-center gap-3">
         <div className="flex flex-col items-center">
-          <div className={`bg-[#DD8D00]/10 backdrop-blur-sm border border-[#DD8D00]/20 rounded-lg w-16 h-16 flex items-center justify-center font-bold text-3xl text-[#DD8D00] transition-all duration-300 ${changed.days ? 'scale-110 border-[#DD8D00]' : ''}`}>
+          <div className={`bg-[#DD8D00]/10 backdrop-blur-sm border border-[#DD8D00]/20 rounded-lg w-14 h-14 flex items-center justify-center font-bold text-2xl text-[#DD8D00] transition-all duration-300 ${changed.days ? 'scale-110 border-[#DD8D00]' : ''}`}>
             {timeLeft.days}
           </div>
           <div className="text-xs text-[#F8F4F1]/70 mt-1">Days</div>
         </div>
         <div className="flex flex-col items-center">
-          <div className={`bg-[#DD8D00]/10 backdrop-blur-sm border border-[#DD8D00]/20 rounded-lg w-16 h-16 flex items-center justify-center font-bold text-3xl text-[#DD8D00] transition-all duration-300 ${changed.hours ? 'scale-110 border-[#DD8D00]' : ''}`}>
+          <div className={`bg-[#DD8D00]/10 backdrop-blur-sm border border-[#DD8D00]/20 rounded-lg w-14 h-14 flex items-center justify-center font-bold text-2xl text-[#DD8D00] transition-all duration-300 ${changed.hours ? 'scale-110 border-[#DD8D00]' : ''}`}>
             {formatNumber(timeLeft.hours)}
           </div>
           <div className="text-xs text-[#F8F4F1]/70 mt-1">Hours</div>
         </div>
         <div className="flex flex-col items-center">
-          <div className={`bg-[#DD8D00]/10 backdrop-blur-sm border border-[#DD8D00]/20 rounded-lg w-16 h-16 flex items-center justify-center font-bold text-3xl text-[#DD8D00] transition-all duration-300 ${changed.minutes ? 'scale-110 border-[#DD8D00]' : ''}`}>
+          <div className={`bg-[#DD8D00]/10 backdrop-blur-sm border border-[#DD8D00]/20 rounded-lg w-14 h-14 flex items-center justify-center font-bold text-2xl text-[#DD8D00] transition-all duration-300 ${changed.minutes ? 'scale-110 border-[#DD8D00]' : ''}`}>
             {formatNumber(timeLeft.minutes)}
           </div>
-          <div className="text-xs text-[#F8F4F1]/70 mt-1">Minutes</div>
+          <div className="text-xs text-[#F8F4F1]/70 mt-1">Mins</div>
         </div>
         <div className="flex flex-col items-center">
-          <div className={`bg-[#DD8D00]/10 backdrop-blur-sm border border-[#DD8D00]/20 rounded-lg w-16 h-16 flex items-center justify-center font-bold text-3xl text-[#DD8D00] transition-all duration-300 ${changed.seconds ? 'scale-110 border-[#DD8D00]' : ''}`}>
+          <div className={`bg-[#DD8D00]/10 backdrop-blur-sm border border-[#DD8D00]/20 rounded-lg w-14 h-14 flex items-center justify-center font-bold text-2xl text-[#DD8D00] transition-all duration-300 ${changed.seconds ? 'scale-110 border-[#DD8D00]' : ''}`}>
             {formatNumber(timeLeft.seconds)}
           </div>
-          <div className="text-xs text-[#F8F4F1]/70 mt-1">Seconds</div>
+          <div className="text-xs text-[#F8F4F1]/70 mt-1">Secs</div>
         </div>
       </div>
     </div>
