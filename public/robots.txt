@@ -1,0 +1,11 @@
+# Brilliance 2025 robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://brilliance25.com/sitemap.xml
+
+# Disallow any potential administrative paths
+Disallow: /admin/
+Disallow: /checkout/
+Disallow: /account/ 

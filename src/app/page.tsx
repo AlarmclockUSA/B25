@@ -6,15 +6,17 @@ import FAQ from '../components/FAQ';
 import ImageScroll from '../components/ImageScroll';
 import Nav from '../components/Nav';
 import { useEffect, useState, Suspense } from 'react';
-import Head from 'next/head';
 import { trackButtonClick } from '../utils/analytics';
 import { useSearchParams } from 'next/navigation';
 import { getCartUrl } from '../utils/urls';
+import EventDetailsBar from '@/components/EventDetailsBar';
+import HeroCountdown from '@/components/HeroCountdown';
+import { Metadata } from 'next';
+import Script from 'next/script';
+import VerticalNav from "@/components/VerticalNav";
 
-function MainContent() {
+function MainContent({ cartUrl }: { cartUrl: string }) {
   const [scrolled, setScrolled] = useState(false);
-  const searchParams = useSearchParams();
-  const cartUrl = getCartUrl(Object.fromEntries(searchParams.entries()));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,214 +58,178 @@ function MainContent() {
 
   return (
     <>
-      <Head>
-        <title>Brilliance 2025 - Discover an Extraordinary Relationship With God</title>
-        <meta name="description" content="Join us March 21st-23rd 2025 for a transformative 3-day virtual experience with Graham Cooke + Team. Discover the proven path to an extraordinary relationship with God." />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Brilliance 2025 - March 21st-23rd 2025" />
-        <meta property="og:description" content="Step into a 3-day transformational online experience hosted by leading voice Graham Cooke + Team. Discover the proven path to an extraordinary relationship with God." />
-        <meta property="og:image" content="/hero-bg.jpg" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Brilliance 2025 - March 21st-23rd 2025" />
-        <meta name="twitter:description" content="Step into a 3-day transformational online experience hosted by leading voice Graham Cooke + Team. Discover the proven path to an extraordinary relationship with God." />
-        <meta name="twitter:image" content="/hero-bg.jpg" />
-      </Head>
+      {/* JSON-LD Structured Data for Event */}
+      <Script
+        id="event-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Event",
+            "name": "Brilliance 2025 - Discover an Extraordinary Relationship With God",
+            "startDate": "2025-03-21T11:00:00-04:00",
+            "endDate": "2025-03-23T17:00:00-04:00",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+            "location": {
+              "@type": "VirtualLocation",
+              "url": "https://brilliance25.com"
+            },
+            "image": [
+              "https://brilliance25.com/hero-bg.jpg"
+            ],
+            "description": "Step into a 3-day transformational online experience hosted by leading voice Graham Cooke, Dionne van Zyl and special guests. Discover the proven path to an extraordinary relationship with God.",
+            "offers": {
+              "@type": "Offer",
+              "url": "https://brilliance25.com",
+              "price": "97",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "validFrom": "2024-01-15T00:00:00-05:00"
+            },
+            "performer": [
+              {
+                "@type": "Person",
+                "name": "Graham Cooke",
+                "image": "https://brilliance25.com/Graham.png"
+              },
+              {
+                "@type": "Person",
+                "name": "Dionne van Zyl",
+                "image": "https://brilliance25.com/Dionne.jpg"
+              }
+            ],
+            "organizer": {
+              "@type": "Organization",
+              "name": "Brilliant Perspectives",
+              "url": "https://brilliantperspectives.com"
+            }
+          })
+        }}
+      />
 
       <main className="relative overflow-hidden">
         <Nav scrolled={scrolled} cartUrl={cartUrl} />
+        <VerticalNav />
         
         {/* Hero Section */}
-        <section 
-          className="
-            relative overflow-hidden
-            min-h-[85vh] bg-black text-[#F8F4F1]
-            pt-safe
-          "
-          style={{
-            paddingTop: 'calc(env(safe-area-inset-top) + 6rem)'
-          }}
-        >
-          {/* Background Image */}
+        <section id="hero" className="relative min-h-screen bg-black bg-radial-gradient flex flex-col items-center justify-center py-32 md:py-24 px-4 overflow-hidden">
+          {/* Background Image with Gradient Overlay */}
           <div className="absolute inset-0 w-full max-w-[100vw]">
             <Image
               src="/hero-bg.jpg"
-              alt="Virtual Event"
+              alt="Virtual Event - Brilliance 2025 with Graham Cooke and Team"
               fill
-              className="object-cover opacity-90 scale-105"
+              className="object-cover opacity-40 scale-105"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/30"></div>
-            {/* Add bottom fade */}
-            <div className="absolute inset-x-0 bottom-0 h-96 bg-gradient-to-t from-black/90 via-black/70 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/80 to-black/70"></div>
+            {/* Subtle radial gradient for depth */}
+            <div className="absolute inset-0 bg-radial-gradient"></div>
+            {/* Centered spotlight effect */}
+            <div className="absolute inset-0 bg-gradient-radial from-[#DD8D00]/5 via-transparent to-transparent opacity-70" style={{ backgroundPosition: '50% 30%' }}></div>
           </div>
           
-          <div className="relative container mx-auto px-4 h-full">
-            <div className="flex flex-col lg:flex-row items-center h-full">
-              {/* Left Column - Content */}
-              <div className="w-full lg:w-7/12 relative z-10 py-12">
-                <div className="mb-4 md:mb-6">
-                  <span 
-                    className="
-                      inline-block text-[#F8F4F1] 
-                      text-[0.7rem] sm:text-sm md:text-base 
-                      tracking-widest font-medium 
-                      px-2 py-1 sm:px-4 sm:py-2 md:px-6 md:py-3 
-                      uppercase hover:scale-105 transition-transform duration-300
-                      drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]
-                    "
-                  >
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#F8F4F1] via-[#F8F4F1] to-[#F8F4F1]">
-                      Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#DD8D00] via-[#DD8D00] to-[#E3DDC9] font-bold">Biggest</span> Virtual Event Yet
-                    </span>
-                  </span>
+          <div className="relative container mx-auto px-4 md:px-12 flex-1 flex flex-col justify-center z-20">
+            {/* Content centered instead of left-aligned */}
+            <div className="max-w-4xl mx-auto pt-16 md:pt-24 pb-16 md:pb-32 text-center">
+              
+              {/* Main Headline - Enhanced with subtle animation and better spacing */}
+              <h1 className="font-bold mb-10 mx-auto">
+                <span className="block text-[2.618rem] sm:text-[3.618rem] md:text-[4.236rem] lg:text-[5.236rem] text-[#F8F4F1] leading-[1.05] tracking-tight mb-6 relative animate-fade-in-up">
+                  The Most <span className="relative inline-block">
+                    Transformational
+                    <span className="absolute -bottom-1 left-0 right-0 h-[0.15em] bg-[#DD8D00]" style={{
+                      backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,5 Q25,2 50,5 T100,5' stroke='%23DD8D00' stroke-width='3' fill='none' stroke-linecap='round' stroke-dasharray='0,0'/%3E%3C/svg%3E\")",
+                      backgroundRepeat: "repeat-x",
+                      backgroundSize: "100% 100%"
+                    }}></span>
+                  </span> Experience
+                </span>
+                <span className="block text-[1.618rem] sm:text-[2.236rem] md:text-[2.618rem] lg:text-[3.236rem] text-[#DD8D00] font-extrabold leading-[1.15] relative animate-fade-in-up animation-delay-300">
+                  For Kingdom Believers Returns
+                  <span className="absolute -z-10 inset-0 bg-[#DD8D00]/10 skew-x-3 rounded-lg translate-x-1 translate-y-1 hidden md:block"></span>
+                </span>
+              </h1>
+              
+              {/* Date & Location - With improved contrast and animation */}
+              <div className="mb-8 animate-fade-in-up animation-delay-500">
+                <div className="text-[#DD8D00] text-3xl sm:text-4xl md:text-5xl font-bold tracking-wide mb-3">
+                  MARCH 21-23, 2025
                 </div>
-
-                <h1 
-                  className="font-bold mb-6 leading-[1.1] tracking-tight drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]"
-                  style={{
-                    fontSize: 'clamp(2.5rem, 8vw, 5.5rem)'
-                  }}
-                >
-                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#F8F4F1] via-[#F8F4F1] to-[#F8F4F1] mb-1">Discover an</span>
-                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#F8F4F1] via-[#F8F4F1] to-[#F8F4F1] mb-1">Extraordinary</span>
-                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#F8F4F1] via-[#F8F4F1] to-[#F8F4F1]">Relationship</span>
-                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#F8F4F1] via-[#F8F4F1] to-[#F8F4F1]">With God</span>
-                </h1>
-
-                <p 
-                  className="
-                    mb-8 text-[#F8F4F1] max-w-xl
-                    leading-relaxed font-light
-                    drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]
-                  "
-                  style={{
-                    fontSize: 'clamp(0.875rem, 3vw, 1.125rem)'
-                  }}
-                >
-                  Step into a 3-day transformational online experience hosted by leading voice Graham Cooke + Team. 
-                  Discover the proven path to discovering an extraordinary relationship with God.
-                </p>
-
-                <div className="space-y-8">
-                  <p 
-                    className="
-                      inline-block
-                      bg-[#DD8D00]/10 backdrop-blur-sm
-                      border border-[#DD8D00]/20
-                      rounded-full
-                      px-8 py-3
-                      text-[#F8F4F1]
-                      text-lg sm:text-xl
-                      font-medium tracking-wide 
-                      transform hover:scale-105 transition-all duration-300
-                    "
-                  >
-                    March 21st-23rd | Virtual Event
-                  </p>
-
-                  <div className="relative flex flex-col items-start">
-                    <a 
-                      href={cartUrl}
-                      className="block"
-                    >
-                      <button 
-                        onClick={() => trackButtonClick('Claim Your Seat', 'Hero Section')}
-                        className="
-                          cart-button
-                          group relative
-                          transform hover:-translate-y-1 
-                          bg-gradient-to-br from-[#DD8D00] via-[#DD8D00] to-[#E3DDC9] 
-                          hover:from-[#E3DDC9] hover:via-[#DD8D00] hover:to-[#DD8D00] 
-                          text-[#F8F4F1] 
-                          px-12 py-6
-                          rounded-xl 
-                          text-2xl sm:text-3xl
-                          font-semibold 
-                          transition-all duration-500 
-                          hover:shadow-[0_20px_50px_rgba(221,141,0,0.3)] 
-                          active:scale-95
-                          z-20
-                          min-h-[4rem]
-                          touch-manipulation
-                          w-full sm:w-auto
-                        "
-                      >
-                        <div className="absolute inset-0 bg-gradient-to-r from-[#F8F4F1]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-                        <div className="relative flex items-center gap-3">
-                          <span>Claim Your Seat</span>
-                          <svg className="w-5 h-5 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                          </svg>
-                        </div>
-                      </button>
-                    </a>
-                  </div>
+                <div className="text-[#F8F4F1] text-lg sm:text-xl">
+                  Virtual Experience • Eastern Time
                 </div>
               </div>
-
-              {/* Right Column - Keynote Speakers */}
-              <div className="w-full lg:w-5/12 h-full relative">
-                <div className="space-y-6">
-                  <div className="text-center mb-6">
-                    <span className="text-sm tracking-widest uppercase text-[#DD8D00]">Keynote Speakers</span>
-                  </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    {/* Graham */}
-                    <div className="relative group">
-                      <div className="relative rounded-2xl overflow-hidden aspect-square">
-                        <Image
-                          src="/Graham.png"
-                          alt="Graham Cooke"
-                          fill
-                          className="object-cover object-[50%_30%] scale-[1.4] hover:scale-[1.45] transition-transform duration-500"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                        <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
-                          <h3 className="text-lg font-semibold text-[#F8F4F1]">Graham Cooke</h3>
-                          <p className="text-sm text-[#F8F4F1]/80">Keynote Speaker</p>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Dionne */}
-                    <div className="relative group">
-                      <div className="relative rounded-2xl overflow-hidden aspect-square">
-                        <Image
-                          src="/Dionne.jpg"
-                          alt="Dionne van Zyl"
-                          fill
-                          className="object-cover hover:scale-105 transition-transform duration-500"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                        <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
-                          <h3 className="text-lg font-semibold text-[#F8F4F1]">Dionne van Zyl</h3>
-                          <p className="text-sm text-[#F8F4F1]/80">Keynote Speaker</p>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Ray */}
-                    <div className="relative group col-span-2">
-                      <div className="relative rounded-2xl overflow-hidden aspect-[2/1]">
-                        <Image
-                          src="/Ray.png"
-                          alt="Ray Higdon"
-                          fill
-                          className="object-cover object-top hover:scale-105 transition-transform duration-500"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                        <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
-                          <h3 className="text-lg font-semibold text-[#F8F4F1]">Ray Higdon</h3>
-                          <p className="text-sm text-[#F8F4F1]/80">Guest Speaker</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              
+              {/* Descriptive Copy - Enhanced with better spacing and line height */}
+              <div className="max-w-2xl mb-10 mx-auto animate-fade-in-up animation-delay-700">
+                <p className="text-xl md:text-2xl text-[#F8F4F1]/90 leading-[1.6]">
+                  Step into a 3-day transformational online experience hosted by leading voice Graham Cooke, Dionne van Zyl and special guests. Discover the proven path to an extraordinary relationship with God.
+                </p>
+              </div>
+              
+              {/* CTA Button - Enhanced with animation and subtle hover effect */}
+              <div className="mb-4 flex justify-center animate-fade-in-up animation-delay-900">
+                {/* Countdown Timer */}
+                <HeroCountdown />
+              </div>
+              
+              <div className="mb-6 flex justify-center animate-fade-in-up animation-delay-900">
+                <a 
+                  href={cartUrl}
+                  className="inline-block w-full sm:w-auto relative overflow-hidden group"
+                >
+                  <span className="absolute inset-0 bg-white/10 transform -skew-x-12 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-1000 ease-out"></span>
+                  <button 
+                    onClick={() => trackButtonClick('Get Your Tickets', 'Hero Section')}
+                    className="
+                      group relative
+                      w-full sm:w-auto
+                      transform hover:-translate-y-1 
+                      bg-gradient-to-br from-[#DD8D00] via-[#DD8D00] to-[#E3DDC9]
+                      hover:from-[#E3DDC9] hover:via-[#DD8D00] hover:to-[#DD8D00] 
+                      text-[#F8F4F1] 
+                      px-8 sm:px-12 py-6 sm:py-8
+                      rounded-xl 
+                      text-2xl sm:text-3xl
+                      font-bold
+                      transition-all duration-300 
+                      hover:shadow-[0_20px_50px_rgba(221,141,0,0.3)] 
+                      active:scale-95
+                    "
+                  >
+                    <span className="relative flex flex-col items-center justify-center">
+                      <span className="flex items-center justify-center gap-3">
+                        GET YOUR TICKET
+                        <svg className="w-6 h-6 transform transition-transform group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </span>
+                      <span className="text-sm font-medium mt-2">March 21-23, 2025</span>
+                      <span className="text-xs font-normal mt-1 flex items-center gap-1">
+                        <svg className="w-3 h-3 text-[#74A78E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                        100% Satisfaction Guaranteed
+                      </span>
+                    </span>
+                  </button>
+                </a>
               </div>
             </div>
+          </div>
+          
+          {/* Decorative Element - Centered at bottom with adjusted position */}
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-[90vw] max-w-[800px] h-[32vh] max-h-[320px] opacity-100 pointer-events-none z-30 transition-all duration-700 hover:scale-[1.02] animate-fade-in animation-delay-1200">
+            <Image 
+              src="/SpeakerSpread.png"
+              alt="Brilliance 2025 Featured Speakers - Graham Cooke and Team"
+              fill
+              className="object-contain object-bottom"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-radial from-transparent to-black/40 opacity-0 hover:opacity-20 transition-opacity duration-500"></div>
           </div>
         </section>
 
@@ -343,11 +309,14 @@ function MainContent() {
                         "
                       >
                         <div className="absolute inset-0 bg-gradient-to-r from-[#F8F4F1]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-                        <span className="relative flex items-center justify-center gap-3">
-                          Begin Your Journey
-                          <svg className="w-5 h-5 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                          </svg>
+                        <span className="relative flex flex-col items-center justify-center">
+                          <span className="flex items-center justify-center gap-3">
+                            Begin Your Journey
+                            <svg className="w-5 h-5 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                          </span>
+                          <span className="text-sm font-normal mt-2">March 21-23, 2025</span>
                         </span>
                       </button>
                     </a>
@@ -429,7 +398,7 @@ function MainContent() {
                       "
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-[#F8F4F1]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-                      <span className="relative flex items-center gap-3">
+                      <span className="relative flex items-center justify-center gap-3">
                         Join the Journey
                         <svg className="w-5 h-5 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -455,8 +424,69 @@ function MainContent() {
           </div>
         </section>
 
+        {/* Event Schedule Section */}
+        <section id="schedule" className="relative overflow-hidden py-24 bg-gradient-to-b from-black to-[#111]">
+          <div className="w-min(100% - 2rem, 80rem) mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-5xl md:text-6xl font-bold text-[#F8F4F1] mb-8">
+                  <span className="block">EVENT</span>
+                  <span className="block">SCHEDULE</span>
+                </h2>
+                <p className="text-xl text-[#F8F4F1]/80 mb-12 max-w-2xl mx-auto">
+                  Mark your calendar for three transformative days of connection and growth
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                  {/* Friday */}
+                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 hover:transform hover:scale-105 transition-all duration-300">
+                    <div className="inline-block px-4 py-2 rounded-full bg-[#DD8D00]/20 text-[#DD8D00] font-bold mb-4">
+                      DAY 1
+                    </div>
+                    <h3 className="text-2xl font-bold text-[#F8F4F1] mb-3">Friday</h3>
+                    <div className="text-xl font-medium text-[#DD8D00]">
+                      11AM - 7PM Eastern
+                    </div>
+                    <p className="text-[#F8F4F1]/70 mt-4">
+                      Begin your journey with powerful opening sessions and inspiring teachings
+                    </p>
+                  </div>
+                  
+                  {/* Saturday */}
+                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 hover:transform hover:scale-105 transition-all duration-300">
+                    <div className="inline-block px-4 py-2 rounded-full bg-[#DD8D00]/20 text-[#DD8D00] font-bold mb-4">
+                      DAY 2
+                    </div>
+                    <h3 className="text-2xl font-bold text-[#F8F4F1] mb-3">Saturday</h3>
+                    <div className="text-xl font-medium text-[#DD8D00]">
+                      11AM - 7:30PM Eastern
+                    </div>
+                    <p className="text-[#F8F4F1]/70 mt-4">
+                      Dive deeper with immersive workshops and breakthrough moments
+                    </p>
+                  </div>
+                  
+                  {/* Sunday */}
+                  <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 hover:transform hover:scale-105 transition-all duration-300">
+                    <div className="inline-block px-4 py-2 rounded-full bg-[#DD8D00]/20 text-[#DD8D00] font-bold mb-4">
+                      DAY 3
+                    </div>
+                    <h3 className="text-2xl font-bold text-[#F8F4F1] mb-3">Sunday</h3>
+                    <div className="text-xl font-medium text-[#DD8D00]">
+                      11AM - 5PM Eastern
+                    </div>
+                    <p className="text-[#F8F4F1]/70 mt-4">
+                      Complete your experience with transformative final sessions
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* This Event Is For You If Section */}
-        <section className="relative overflow-hidden py-24 bg-black">
+        <section id="for-you" className="relative overflow-hidden py-24 bg-black">
           <div className="w-min(100% - 2rem, 80rem) mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
@@ -597,6 +627,7 @@ function MainContent() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
                       </span>
+                      <span className="text-sm sm:text-base md:text-lg font-medium">March 21-23, 2025</span>
                       <span className="text-xs sm:text-sm md:text-base font-normal italic opacity-90">"I'm finally aware that God is so, so for me. My self-condemnation is gone."</span>
                     </div>
                   </button>
@@ -612,7 +643,7 @@ function MainContent() {
         </div>
 
         {/* Speakers Section */}
-        <section className="relative overflow-hidden py-32 bg-black text-[#F8F4F1]">
+        <section id="speakers" className="relative overflow-hidden py-32 bg-black text-[#F8F4F1]">
           <div className="container mx-auto px-4">
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-24">
@@ -721,6 +752,34 @@ function MainContent() {
                   </div>
                 </div>
 
+                {/* Jim Baker */}
+                <div className="relative rounded-3xl overflow-hidden aspect-[4/5] bg-[#1A1A1A] group">
+                  <Image
+                    src="/JimBaker.webp"
+                    alt="Jim Baker"
+                    fill
+                    className="object-cover object-top transition-transform duration-700 group-hover:scale-105 group-hover:opacity-30"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                  
+                  {/* Bio Overlay - Appears on Hover */}
+                  <div className="absolute inset-0 p-8 flex flex-col justify-center bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                      <p className="text-lg text-[#F8F4F1]/90 leading-relaxed">
+                        Jim Baker and Mary, his wife of over 30 years, are the senior leaders of Zion Christian Fellowship in Powell, Ohio. The church is marked by worship, a strong presence of God, healings, miracles, several dead raisings and a passion for personal and regional transformation. Jim is known for his humor and revelatory teaching.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="absolute bottom-0 left-0 right-0 p-8 z-10">
+                    <span className="inline-block text-xs tracking-[0.2em] uppercase text-[#74A78E] bg-[#74A78E]/10 px-3 py-1 rounded-full mb-4">
+                      Special Guest
+                    </span>
+                    <h3 className="text-2xl font-bold text-white mb-2">Jim Baker</h3>
+                    <p className="text-sm text-white/60">Pastor & Entrepreneur</p>
+                  </div>
+                </div>
+
                 {/* Jenny */}
                 <div className="relative rounded-3xl overflow-hidden aspect-[4/5] bg-[#1A1A1A] group">
                   <Image
@@ -823,32 +882,18 @@ function MainContent() {
                     <p className="text-sm text-white/60">Event Host</p>
                   </div>
                 </div>
-
-                {/* Mystery Speaker 1 */}
-                <div className="relative rounded-3xl overflow-hidden aspect-[4/5] bg-[#1A1A1A] group">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <svg className="w-24 h-24 text-white/20" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
-                    </svg>
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 right-0 p-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">Special Guest</h3>
-                    <p className="text-sm text-white/60">To Be Announced</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Agenda Section */}
-        <section className="relative overflow-hidden py-24 sm:py-32 bg-[#F8F4F1]">
+        <section id="agenda" className="relative overflow-hidden py-24 sm:py-32 bg-[#F8F4F1]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
               <div className="mb-16">
                 <span className="text-sm uppercase tracking-widest text-black/60 font-medium">AGENDA</span>
-                <h2 className="text-[3.5rem] sm:text-[4rem] md:text-[5rem] font-bold mt-4 leading-[1.1]">
+                <h2 className="text-[3.5rem] sm:text-[4rem] md:text-[5rem] font-bold mt-4 leading-[1.1] text-black">
                   Three Days of<br />Wonder
                 </h2>
                 <p className="text-lg sm:text-xl md:text-2xl text-black/80 md:max-w-2xl mt-6">
@@ -862,7 +907,7 @@ function MainContent() {
                   <div className="w-full md:w-1/3 sticky top-8">
                     <div className="flex items-baseline gap-4">
                       <span className="text-4xl font-bold text-black/20">01</span>
-                      <h3 className="text-3xl font-bold">Embracing Your New Self in God</h3>
+                      <h3 className="text-3xl font-bold text-black">Embracing Your New Self in God</h3>
                     </div>
                   </div>
                   <div className="w-full md:w-2/3">
@@ -877,7 +922,7 @@ function MainContent() {
                   <div className="w-full md:w-1/3 sticky top-8">
                     <div className="flex items-baseline gap-4">
                       <span className="text-4xl font-bold text-black/20">02</span>
-                      <h3 className="text-3xl font-bold">Embracing a New Way of Living with God</h3>
+                      <h3 className="text-3xl font-bold text-black">Embracing a New Way of Living with God</h3>
                     </div>
                   </div>
                   <div className="w-full md:w-2/3">
@@ -892,7 +937,7 @@ function MainContent() {
                   <div className="w-full md:w-1/3 sticky top-8">
                     <div className="flex items-baseline gap-4">
                       <span className="text-4xl font-bold text-black/20">03</span>
-                      <h3 className="text-3xl font-bold">Embrace a New Way of Learning with God</h3>
+                      <h3 className="text-3xl font-bold text-black">Embrace a New Way of Learning with God</h3>
                     </div>
                   </div>
                   <div className="w-full md:w-2/3">
@@ -937,7 +982,7 @@ function MainContent() {
         </section>
 
         {/* CTA Section */}
-        <section className="relative overflow-hidden w-full bg-[#222] py-32">
+        <section id="pricing" className="relative overflow-hidden w-full bg-[#222] py-32">
           <div className="absolute inset-0 w-full max-w-[100vw]">
             <Image
               src="/2M5A4184.jpg"
@@ -964,7 +1009,7 @@ function MainContent() {
               <div className="bg-[#2A2A2A]/80 backdrop-blur-xl rounded-[32px] py-5 px-8 inline-flex gap-16 transition-all duration-300 flex-wrap justify-center gap-8 mx-auto mt-8">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-[#74A78E]/20 flex items-center justify-center shrink-0">
-                    <svg className="w-6 h-6 text-[#74A78E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-6 h-6 text-[#74A78E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
                   </div>
@@ -975,7 +1020,7 @@ function MainContent() {
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-[#74A78E]/20 flex items-center justify-center shrink-0">
-                    <svg className="w-6 h-6 text-[#74A78E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-6 h-6 text-[#74A78E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1m-6 0h6" />
                     </svg>
                   </div>
@@ -986,7 +1031,7 @@ function MainContent() {
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-[#74A78E]/20 flex items-center justify-center shrink-0">
-                    <svg className="w-6 h-6 text-[#74A78E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-6 h-6 text-[#74A78E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
@@ -1002,10 +1047,10 @@ function MainContent() {
               {/* Price Header */}
               <div className="text-center mb-12">
                 <div className="space-y-2">
-                  <span className="text-base text-gray-600 font-medium">STANDARD TICKET</span>
+                  <span className="text-base text-gray-600 font-medium">FULL ACCESS TICKET</span>
                   <div className="flex flex-col items-center">
                     <span className="text-7xl font-bold text-black tracking-tight">$97</span>
-                    <span className="text-base font-medium text-green-600 mt-2 mb-8">All Access Ticket</span>
+                    <span className="text-base font-medium text-green-600 mt-2 mb-8">All-Inclusive Experience</span>
                   </div>
                 </div>
 
@@ -1019,7 +1064,7 @@ function MainContent() {
                     </div>
                     <div className="flex-1">
                       <div className="flex justify-between items-start gap-4">
-                        <span className="text-xl font-medium">Three Days of Radical Transformation<br />March 21st-23rd 2025</span>
+                        <span className="text-xl font-medium text-black">Three Days of Radical Transformation<br />March 21st-23rd 2025</span>
                         <span className="text-xl font-semibold text-gray-900 shrink-0">Value: $297</span>
                       </div>
                       <span className="text-base text-gray-500 mt-1.5 block">Virtual front row seats to three days of transformational awakening with Graham Cooke, Ray Higdon & Team.</span>
@@ -1033,7 +1078,7 @@ function MainContent() {
                     </div>
                     <div className="flex-1">
                       <div className="flex justify-between items-start gap-4">
-                        <span className="text-xl font-medium">Breakout & Activation Sessions</span>
+                        <span className="text-xl font-medium text-black">Breakout & Activation Sessions</span>
                         <span className="text-xl font-semibold text-gray-900 shrink-0">Value: $147</span>
                       </div>
                       <span className="text-base text-gray-500 mt-1.5 block">Practical sessions designed to help you activate and apply the transformational principles in your daily life.</span>
@@ -1047,7 +1092,7 @@ function MainContent() {
                     </div>
                     <div className="flex-1">
                       <div className="flex justify-between items-start gap-4">
-                        <span className="text-xl font-medium">Interactive Q&A Sessions<br />with Dionne & Team</span>
+                        <span className="text-xl font-medium text-black">Interactive Q&A Sessions<br />with Dionne & Team</span>
                         <span className="text-xl font-semibold text-gray-900 shrink-0">Value: $153</span>
                       </div>
                       <span className="text-base text-gray-500 mt-1.5 block">Live Q&A opportunities to deepen your understanding and get personalized insights.</span>
@@ -1061,7 +1106,7 @@ function MainContent() {
                     </div>
                     <div className="flex-1">
                       <div className="flex justify-between items-start gap-4">
-                        <span className="text-xl font-medium">Global Community Connection</span>
+                        <span className="text-xl font-medium text-black">Global Community Connection</span>
                         <span className="text-xl font-semibold text-gray-900 shrink-0">Priceless</span>
                       </div>
                       <span className="text-base text-gray-500 mt-1.5 block">Connect with believers from around the world, sharing experiences and building lasting relationships.</span>
@@ -1078,12 +1123,9 @@ function MainContent() {
                       </div>
                       <div className="space-y-6">
                         <div className="space-y-2">
-                          <p className="text-2xl font-bold">Full Weekend Ticket:</p>
+                          <p className="text-2xl font-bold">Full Access Ticket:</p>
                           <div className="flex flex-col items-center gap-4">
                             <span className="text-7xl font-bold text-green-600">$97</span>
-                            <div className="bg-green-600 text-white px-5 py-2.5 rounded-full text-base font-bold">
-                              Save $500
-                            </div>
                           </div>
                         </div>
                       </div>
@@ -1097,10 +1139,12 @@ function MainContent() {
                         onClick={() => trackButtonClick('Secure Your Seat', 'Pricing Section')}
                         className="cart-button w-full bg-black text-white py-6 rounded-full text-2xl font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-[1.02] mb-4"
                       >
-                        Secure Your Seat Now
+                        <span className="flex flex-col items-center">
+                          <span>Secure Your Seat Now</span>
+                          <span className="text-base font-medium mt-1">March 21-23, 2025</span>
+                        </span>
                       </button>
                     </a>
-                    <p className="text-base text-gray-700 font-medium mb-2">March 21-23, 2025</p>
                     <p className="text-sm text-gray-500">Limited spots available for optimal experience</p>
                   </div>
                 </div>
@@ -1109,7 +1153,9 @@ function MainContent() {
           </div>
         </section>
 
-        <FAQ />
+        <div id="faq">
+          <FAQ />
+        </div>
 
         <Footer />
       </main>
@@ -1118,9 +1164,15 @@ function MainContent() {
 }
 
 export default function Home() {
+  const searchParams = useSearchParams();
+  const cartUrl = getCartUrl(Object.fromEntries(searchParams.entries()));
+  
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <MainContent />
+      <main className="bg-black text-[#F8F4F1]">
+        <VerticalNav />
+        <MainContent cartUrl={cartUrl} />
+      </main>
     </Suspense>
   );
 }

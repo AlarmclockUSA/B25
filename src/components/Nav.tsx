@@ -14,7 +14,7 @@ export default function Nav({ scrolled, cartUrl }: NavProps) {
       transition-colors duration-300 py-6
     `}>
       <div className="w-min(100% - 2rem, 80rem) mx-auto px-4">
-        <div className="flex items-center justify-between">
+        <div className="grid grid-cols-2 items-center">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="hidden md:block text-[#F8F4F1] text-2xl font-bold tracking-wide">
@@ -23,7 +23,7 @@ export default function Nav({ scrolled, cartUrl }: NavProps) {
           </div>
 
           {/* Right Side: Dates + CTA */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 justify-end">
             {/* Event Dates */}
             <div className="hidden md:flex items-center">
               <div className="bg-[#DD8D00]/10 backdrop-blur-sm border border-[#DD8D00]/20 rounded-full px-6 py-2">
@@ -51,11 +51,14 @@ export default function Nav({ scrolled, cartUrl }: NavProps) {
                 "
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-[#F8F4F1]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-                <span className="relative flex items-center justify-center gap-2">
-                  Claim Your Seat
-                  <svg className="w-4 h-4 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
+                <span className="relative flex flex-col items-center justify-center">
+                  <span className="flex items-center justify-center gap-2">
+                    Claim Your Seat
+                    <svg className="w-4 h-4 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </span>
+                  <span className="text-[10px] font-normal mt-1">March 21-23, 2025</span>
                 </span>
               </button>
             </a>

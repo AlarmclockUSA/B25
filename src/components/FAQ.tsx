@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Script from 'next/script';
 
 const faqs = [
   {
@@ -28,8 +29,29 @@ const faqs = [
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
+  // Create structured data for FAQ
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer.replace(/\n\n/g, ' ')
+      }
+    }))
+  };
+
   return (
     <section className="py-32 bg-[#F8F4F1]">
+      {/* FAQ Structured Data */}
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+      />
+      
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-20">
@@ -43,15 +65,18 @@ export default function FAQ() {
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                   className="w-full text-left px-8 py-6 flex items-center justify-between hover:bg-[#F8F4F1]/50 transition-colors duration-300"
+                  aria-expanded={openIndex === index}
+                  aria-controls={`faq-answer-${index}`}
                 >
                   <h3 className="text-xl font-semibold text-[#222222]">{faq.question}</h3>
                   <div className={`w-6 h-6 rounded-full border-2 border-[#DD8D00] flex items-center justify-center transform transition-transform duration-300 ${openIndex === index ? 'rotate-45' : ''}`}>
-                    <svg className="w-4 h-4 text-[#DD8D00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-4 h-4 text-[#DD8D00]" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                     </svg>
                   </div>
                 </button>
                 <div
+                  id={`faq-answer-${index}`}
                   className={`px-8 transition-all duration-300 ease-in-out overflow-hidden ${
                     openIndex === index ? 'max-h-[500px] pb-6 opacity-100' : 'max-h-0 opacity-0'
                   }`}

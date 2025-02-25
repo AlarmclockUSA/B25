@@ -17,6 +17,42 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Brilliance 2025 - Discover an Extraordinary Relationship With God",
   description: "Join us March 21st-23rd 2025 for a transformative 3-day virtual experience with Graham Cooke + Team. Discover the proven path to an extraordinary relationship with God.",
+  metadataBase: new URL('https://brilliance25.com'),
+  keywords: ["Christian event", "spiritual growth", "relationship with God", "Graham Cooke", "virtual conference", "Christian conference", "spiritual transformation", "Christian teaching"],
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://brilliance25.com',
+    siteName: 'Brilliance 2025',
+    title: 'Brilliance 2025 - March 21st-23rd 2025 Virtual Event',
+    description: 'Step into a 3-day transformational online experience hosted by leading voice Graham Cooke + Team. Discover the proven path to an extraordinary relationship with God.',
+    images: [
+      {
+        url: '/hero-bg.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Brilliance 2025 Virtual Event',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Brilliance 2025 - Discover an Extraordinary Relationship With God',
+    description: 'Join us March 21st-23rd 2025 for a transformative 3-day virtual experience with Graham Cooke + Team.',
+    images: ['/hero-bg.jpg'],
+    creator: '@BrilliantPerspectives',
+  },
 };
 
 export default function RootLayout({
@@ -27,14 +63,23 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0" />
         <meta name="theme-color" content="#000000" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <link 
           rel="icon" 
           type="image/png" 
-          href="/favicon.png"
+          href="/Brilliant_ICON_Full-Color.png?v=1"
+        />
+        <link
+          rel="shortcut icon"
+          href="/Brilliant_ICON_Full-Color.png?v=1"
+          type="image/png"
+        />
+        <link
+          rel="apple-touch-icon"
+          href="/Brilliant_ICON_Full-Color.png?v=1"
         />
         <Script id="brilliant-tracking" strategy="beforeInteractive">
           {`
