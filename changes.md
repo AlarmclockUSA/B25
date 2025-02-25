@@ -284,3 +284,21 @@ This file tracks all modifications made to the project.
 - Updated the JSON-LD structured data to include Graham Cooke in the event name
 - File modified: `src/app/page.tsx`
 - This addition provides immediate context about the event and emphasizes Graham Cooke as the main speaker 
+
+## 32. Increased Spacing Between Image and Button
+
+- Doubled the padding between the speaker spread image and the "Begin Your Journey" button
+- Changed the top padding from pt-8 (2rem) to pt-16 (4rem) 
+- Eliminated overlap between these elements for a cleaner layout
+- Improved visual hierarchy and separation between content sections
+- File modified: `src/app/page.tsx`
+- This change ensures proper spacing and prevents any unwanted visual overlap 
+
+## 33. Improved Hero Layout with Speaker Spread Image Spacing
+
+- Added a spacer div below the GET YOUR TICKET button to create proper room for the speaker spread image
+- Created responsive height adjustments (180px on mobile increasing to 240px on large screens)
+- Fixed overlap issues between the CTA button and speaker spread image at the bottom of the hero section
+- Ensures the full speaker image is visible without overlapping with other elements
+- File modified: `src/app/page.tsx`
+- This change creates a cleaner visual relationship between the hero CTA and the speaker spread image while maintaining an aesthetically pleasing composition 

@@ -111,24 +111,24 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
       <main className="relative overflow-hidden">
         <Nav scrolled={scrolled} cartUrl={cartUrl} />
         <VerticalNav />
-        
-        {/* Hero Section */}
+
+      {/* Hero Section */}
         <section id="hero" className="relative min-h-[100vh] bg-black bg-radial-gradient flex flex-col items-center justify-center py-16 md:py-12 px-4 overflow-hidden">
           {/* Background Image with Gradient Overlay */}
           <div className="absolute inset-0 w-full max-w-[100vw]">
-            <Image
-              src="/hero-bg.jpg"
+          <Image
+            src="/hero-bg.jpg"
               alt="Virtual Event - Brilliance 2025 with Graham Cooke and Team"
-              fill
+            fill
               className="object-cover opacity-40 scale-105"
-              priority
-            />
+            priority
+          />
             <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/80 to-black/70"></div>
             {/* Subtle radial gradient for depth */}
             <div className="absolute inset-0 bg-radial-gradient"></div>
             {/* Centered spotlight effect */}
             <div className="absolute inset-0 bg-gradient-radial from-[#DD8D00]/5 via-transparent to-transparent opacity-70" style={{ backgroundPosition: '50% 30%' }}></div>
-          </div>
+        </div>
           
           <div className="relative container mx-auto px-4 md:px-8 flex-1 flex flex-col justify-center z-20">
             {/* Content centered instead of left-aligned */}
@@ -148,13 +148,13 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                       backgroundSize: "100% 100%"
                     }}></span>
                   </span> Experience
-                </span>
+              </span>
                 <span className="block text-[1.4rem] sm:text-[1.8rem] md:text-[2.2rem] lg:text-[2.6rem] text-[#DD8D00] font-extrabold leading-[1.15] relative animate-fade-in-up animation-delay-500">
                   For Kingdom Believers Returns
                   <span className="absolute -z-10 inset-0 bg-[#DD8D00]/10 skew-x-3 rounded-lg translate-x-1 translate-y-1 hidden md:block"></span>
                 </span>
-              </h1>
-              
+            </h1>
+            
               {/* Date & Location - With improved contrast and animation */}
               <div className="mb-4 animate-fade-in-up animation-delay-700">
                 <div className="text-[#DD8D00] text-2xl sm:text-3xl md:text-4xl font-bold tracking-wide mb-2">
@@ -162,9 +162,9 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                 </div>
                 <div className="text-[#F8F4F1] text-base sm:text-lg">
                   Virtual Experience • Eastern Time
-                </div>
               </div>
-              
+            </div>
+
               {/* Descriptive Copy - Enhanced with better spacing and line height */}
               <div className="max-w-2xl mb-6 mx-auto animate-fade-in-up animation-delay-900">
                 <p className="text-lg md:text-xl text-[#F8F4F1]/90 leading-[1.5]">
@@ -220,6 +220,9 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                   </button>
                 </a>
               </div>
+              
+              {/* Add a spacer div to create more room for the speaker image */}
+              <div className="h-[180px] sm:h-[200px] md:h-[220px] lg:h-[240px]"></div>
             </div>
           </div>
           
@@ -234,17 +237,17 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
             />
             <div className="absolute inset-0 bg-gradient-radial from-transparent to-black/40 opacity-0 hover:opacity-20 transition-opacity duration-500"></div>
           </div>
-        </section>
+      </section>
 
         {/* Sales Letter Section */}
         <section className="relative overflow-hidden py-24 sm:py-32 bg-black">
-          <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="space-y-12">
                 <div className="space-y-8">
                   <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] font-medium leading-[1.2] text-[#F8F4F1]">
                     The Father has a secret He can barely contain - He's absolutely captivated by who you are becoming.
-                  </h2>
+          </h2>
                   
                   <p className="text-xl md:text-2xl text-[#F8F4F1]/90 leading-relaxed">
                     You see, while you might be focused on your shortcomings, He's mesmerized by your potential. What if I told you that right now, in this very moment, God isn't cataloging your failures or measuring your performance?
@@ -289,7 +292,7 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                   </div>
 
-                  <div className="pt-8">
+                  <div className="pt-16">
                     <a 
                       href={cartUrl}
                       className="block w-full"
@@ -323,16 +326,16 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                         </span>
                       </button>
                     </a>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* After Sales Letter Section - First Testimonial */}
         <section className="relative overflow-hidden py-24 bg-black">
-          <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <blockquote className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] font-medium leading-[1.2] text-[#F8F4F1] text-center mb-8">
                 "I am deeply loved by my Abba Father, who delights in walking in intimacy with me moment by moment."
@@ -342,21 +345,21 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                   <svg className="w-8 h-8 text-[#74A78E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                </div>
+          </div>
                 <div>
                   <p className="text-xl font-semibold text-[#F8F4F1]">Rhonda</p>
                   <p className="text-sm text-[#F8F4F1]/60">Event Attendee</p>
-                </div>
               </div>
+                </div>
             </div>
-          </div>
+              </div>
         </section>
 
         {/* Quote Section - Immediate Social Proof */}
         <section className="relative overflow-hidden py-24 sm:py-32 bg-black">
           <div className="absolute inset-0 w-full max-w-[100vw]">
             <div className="absolute inset-0 bg-gradient-to-br from-[#DD8D00]/20 via-black to-black"></div>
-          </div>
+                </div>
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
@@ -372,11 +375,11 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                         fill
                         className="object-cover"
                       />
-                    </div>
+              </div>
                     <div>
                       <p className="text-[#F8F4F1] font-medium text-xl">Graham Cooke</p>
-                    </div>
-                  </div>
+            </div>
+            </div>
                   <p className="text-xl text-[#F8F4F1]/90 mb-12">Come and discover who he says you are, and how that changes everything.</p>
                   
                   <a 
@@ -401,13 +404,13 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                       "
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-[#F8F4F1]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-                      <span className="relative flex items-center justify-center gap-3">
+                <span className="relative flex items-center justify-center gap-3">
                         Join the Journey
                         <svg className="w-5 h-5 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </span>
-                    </button>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+              </button>
                   </a>
                 </div>
                 <div className="lg:w-2/5">
@@ -445,48 +448,48 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                   <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 hover:transform hover:scale-105 transition-all duration-300">
                     <div className="inline-block px-4 py-2 rounded-full bg-[#DD8D00]/20 text-[#DD8D00] font-bold mb-4">
                       DAY 1
-                    </div>
+                  </div>
                     <h3 className="text-2xl font-bold text-[#F8F4F1] mb-3">Friday</h3>
                     <div className="text-xl font-medium text-[#DD8D00]">
                       11AM - 7PM Eastern
-                    </div>
+            </div>
                     <p className="text-[#F8F4F1]/70 mt-4">
                       Begin your journey with powerful opening sessions and inspiring teachings
                     </p>
-                  </div>
+          </div>
                   
                   {/* Saturday */}
                   <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 hover:transform hover:scale-105 transition-all duration-300">
                     <div className="inline-block px-4 py-2 rounded-full bg-[#DD8D00]/20 text-[#DD8D00] font-bold mb-4">
                       DAY 2
-                    </div>
+              </div>
                     <h3 className="text-2xl font-bold text-[#F8F4F1] mb-3">Saturday</h3>
                     <div className="text-xl font-medium text-[#DD8D00]">
                       11AM - 7:30PM Eastern
-                    </div>
+                  </div>
                     <p className="text-[#F8F4F1]/70 mt-4">
                       Dive deeper with immersive workshops and breakthrough moments
                     </p>
-                  </div>
+            </div>
                   
                   {/* Sunday */}
                   <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 hover:transform hover:scale-105 transition-all duration-300">
                     <div className="inline-block px-4 py-2 rounded-full bg-[#DD8D00]/20 text-[#DD8D00] font-bold mb-4">
                       DAY 3
-                    </div>
+              </div>
                     <h3 className="text-2xl font-bold text-[#F8F4F1] mb-3">Sunday</h3>
                     <div className="text-xl font-medium text-[#DD8D00]">
                       11AM - 5PM Eastern
-                    </div>
+                  </div>
                     <p className="text-[#F8F4F1]/70 mt-4">
                       Complete your experience with transformative final sessions
                     </p>
-                  </div>
-                </div>
+            </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* This Event Is For You If Section */}
         <section id="for-you" className="relative overflow-hidden py-24 bg-black">
@@ -503,47 +506,47 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                       <div className="w-12 h-12 rounded-full bg-[#74A78E]/20 flex items-center justify-center shrink-0 mt-1">
                         <svg className="w-6 h-6 text-[#74A78E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                      </div>
+                  </svg>
+                </div>
                       <p className="text-2xl text-[#F8F4F1]/90 leading-relaxed flex-1">
                         You're sure there's more for you with God, but are unsure how to access it.
-                      </p>
-                    </div>
+                  </p>
+                </div>
 
                     <div className="flex items-start gap-6 text-left">
                       <div className="w-12 h-12 rounded-full bg-[#74A78E]/20 flex items-center justify-center shrink-0 mt-1">
                         <svg className="w-6 h-6 text-[#74A78E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                      </div>
+              </div>
                       <p className="text-2xl text-[#F8F4F1]/90 leading-relaxed flex-1">
                         You're ready to let go of the "one-off moments" with God that mark so many believers' lifestyles.
                       </p>
-                    </div>
+            </div>
 
                     <div className="flex items-start gap-6 text-left">
                       <div className="w-12 h-12 rounded-full bg-[#74A78E]/20 flex items-center justify-center shrink-0 mt-1">
                         <svg className="w-6 h-6 text-[#74A78E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                      </div>
+                  </svg>
+                </div>
                       <p className="text-2xl text-[#F8F4F1]/90 leading-relaxed flex-1">
                         You're tired of waiting for revival and see that the world is heading in the opposite direction.
                       </p>
-                    </div>
+            </div>
 
                     <div className="flex items-start gap-6 text-left">
                       <div className="w-12 h-12 rounded-full bg-[#74A78E]/20 flex items-center justify-center shrink-0 mt-1">
                         <svg className="w-6 h-6 text-[#74A78E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                      </div>
+                  </svg>
+                </div>
                       <p className="text-2xl text-[#F8F4F1]/90 leading-relaxed flex-1">
                         You've long suspected that while good intentioned, the teaching you've received still seems to leave you in the same place without the change you're really looking for...
-                      </p>
-                    </div>
-                  </div>
+                  </p>
                 </div>
+              </div>
+            </div>
               </div>
             </div>
           </div>
@@ -574,17 +577,17 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
         {/* New CTA Section with Video Wall Background */}
         <section className="relative overflow-hidden py-32 bg-black">
           <div className="absolute inset-0 w-full max-w-[100vw]">
-            <Image
-              src="/2M5A3176.jpg"
+              <Image
+                src="/2M5A3176.jpg"
               alt="Virtual Event Experience"
-              fill
-              className="object-cover opacity-40"
+                fill
+                className="object-cover opacity-40"
               priority
-            />
+              />
             <div className="absolute inset-0 bg-gradient-to-br from-black/60 to-black/40"></div>
             {/* Add top fade for smooth transition */}
             <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent"></div>
-          </div>
+            </div>
           
           <div className="relative z-10 w-min(100% - 2rem, 80rem) mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
@@ -627,18 +630,18 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                       <span className="flex items-center justify-center gap-2 sm:gap-3">
                         Claim Your Seat
                         <svg className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </span>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
                       <span className="text-sm sm:text-base md:text-lg font-medium">March 21-23, 2025</span>
                       <span className="text-xs sm:text-sm md:text-base font-normal italic opacity-90">"I'm finally aware that God is so, so for me. My self-condemnation is gone."</span>
                     </div>
-                  </button>
+              </button>
                 </a>
-              </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Full Width Image Scroll */}
         <div className="relative overflow-hidden">
@@ -647,8 +650,8 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
 
         {/* Speakers Section */}
         <section id="speakers" className="relative overflow-hidden py-32 bg-black text-[#F8F4F1]">
-          <div className="container mx-auto px-4">
-            <div className="max-w-7xl mx-auto">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
               <div className="text-center mb-24">
                 <span className="inline-block text-xs tracking-[0.2em] uppercase text-[#DD8D00] mb-6">
                   Meet Your Guides
@@ -659,7 +662,7 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                 <p className="text-base md:text-lg text-[#F8F4F1]/60 max-w-xl mx-auto tracking-wide">
                   Join an extraordinary team of speakers and leaders who have helped thousands discover a deeper, more vibrant relationship with God
                 </p>
-              </div>
+            </div>
 
               {/* Top Row - Graham & Dionne */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -680,8 +683,8 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                       <p className="text-lg text-[#F8F4F1]/90 leading-relaxed">
                         Graham is a popular speaker around the world with a passion to empower the people of God to walk in their true identity. His life and ministry are marked by his delightful, intimate, and unreserved two-way friendship with the Lord, and his unique way of communicating a radiant idea of Jesus and the Kingdom of God.
                       </p>
-                    </div>
-                  </div>
+                </div>
+                        </div>
 
                   <div className="absolute bottom-0 left-0 right-0 p-8 z-10">
                     <span className="inline-block text-xs tracking-[0.2em] uppercase text-[#DD8D00] bg-[#DD8D00]/10 px-3 py-1 rounded-full mb-4">
@@ -689,12 +692,12 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                     </span>
                     <h3 className="text-3xl font-bold text-white mb-2">Graham Cooke</h3>
                     <p className="text-base text-white/80">A popular speaker around the world with a passion to empower the people of God to walk in their true identity.</p>
-                  </div>
-                </div>
+                      </div>
+              </div>
 
                 {/* Dionne */}
                 <div className="relative rounded-3xl overflow-hidden aspect-[4/5] bg-[#1A1A1A] group">
-                  <Image
+                        <Image
                     src="/Dionne.jpg"
                     alt="Dionne van Zyl"
                     fill
@@ -712,8 +715,8 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                       <p className="text-lg text-[#F8F4F1]/90 leading-relaxed">
                         Now, Dionne is channeling his extensive experience and proven strategies into resources that Kingdom leaders can utilize for effortless and lasting transformation.
                       </p>
+                      </div>
                     </div>
-                  </div>
 
                   <div className="absolute bottom-0 left-0 right-0 p-8 z-10">
                     <span className="inline-block text-xs tracking-[0.2em] uppercase text-[#DD8D00] bg-[#DD8D00]/10 px-3 py-1 rounded-full mb-4">
@@ -743,8 +746,8 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                       <p className="text-lg text-[#F8F4F1]/90 leading-relaxed">
                         Ray Higdon is a dynamic speaker and thought leader in personal development. His unique approach combines spiritual growth with practical business wisdom, helping people align their purpose with their profession.
                       </p>
-                    </div>
-                  </div>
+                </div>
+                        </div>
 
                   <div className="absolute bottom-0 left-0 right-0 p-8 z-10">
                     <span className="inline-block text-xs tracking-[0.2em] uppercase text-[#74A78E] bg-[#74A78E]/10 px-3 py-1 rounded-full mb-4">
@@ -752,7 +755,7 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                     </span>
                     <h3 className="text-2xl font-bold text-white mb-2">Ray Higdon</h3>
                     <p className="text-sm text-white/60">New This Year</p>
-                  </div>
+                      </div>
                 </div>
 
                 {/* Jim Baker */}
@@ -770,9 +773,9 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                     <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                       <p className="text-lg text-[#F8F4F1]/90 leading-relaxed">
                         Jim Baker and Mary, his wife of over 30 years, are the senior leaders of Zion Christian Fellowship in Powell, Ohio. The church is marked by worship, a strong presence of God, healings, miracles, several dead raisings and a passion for personal and regional transformation. Jim is known for his humor and revelatory teaching.
-                      </p>
-                    </div>
-                  </div>
+                </p>
+              </div>
+            </div>
 
                   <div className="absolute bottom-0 left-0 right-0 p-8 z-10">
                     <span className="inline-block text-xs tracking-[0.2em] uppercase text-[#74A78E] bg-[#74A78E]/10 px-3 py-1 rounded-full mb-4">
@@ -785,7 +788,7 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
 
                 {/* Jenny */}
                 <div className="relative rounded-3xl overflow-hidden aspect-[4/5] bg-[#1A1A1A] group">
-                  <Image
+                        <Image
                     src="/JennyTaylor.jpg"
                     alt="Jenny Taylor"
                     fill
@@ -799,14 +802,14 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                       <p className="text-lg text-[#F8F4F1]/90 leading-relaxed">
                         As Chief Operating Officer, Jenny Taylor brings operational excellence and strategic vision to Brilliant's global initiatives. Her leadership ensures that transformational experiences are delivered with excellence and impact.
                       </p>
+                      </div>
                     </div>
-                  </div>
 
                   <div className="absolute bottom-0 left-0 right-0 p-8 z-10">
                     <h3 className="text-2xl font-bold text-white mb-2">Jenny Taylor</h3>
                     <p className="text-sm text-white/60">Chief Operating Officer</p>
-                  </div>
                 </div>
+              </div>
 
                 {/* Theresa */}
                 <div className="relative rounded-3xl overflow-hidden aspect-[4/5] bg-[#1A1A1A] group">
@@ -824,13 +827,13 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                       <p className="text-lg text-[#F8F4F1]/90 leading-relaxed">
                         Theresa Cooke serves as a key ministry leader, bringing wisdom and practical application to spiritual principles. Her teaching style makes complex truths accessible and applicable to daily life.
                       </p>
-                    </div>
-                  </div>
+                </div>
+                        </div>
 
                   <div className="absolute bottom-0 left-0 right-0 p-8 z-10">
                     <h3 className="text-2xl font-bold text-white mb-2">Theresa Cooke</h3>
                     <p className="text-sm text-white/60">Ministry Leader</p>
-                  </div>
+                      </div>
                 </div>
 
                 {/* Bridget */}
@@ -860,7 +863,7 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
 
                 {/* Liesl */}
                 <div className="relative rounded-3xl overflow-hidden aspect-[4/5] bg-[#1A1A1A] group">
-                  <Image
+                        <Image
                     src="/Liesl.jpg"
                     alt="Liesl Webber"
                     fill
@@ -874,8 +877,8 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                       <p className="text-lg text-[#F8F4F1]/90 leading-relaxed">
                         Liesl Webber returns as our beloved host, bringing her warmth and insight to guide us through this transformative journey. Her gift for creating sacred spaces and facilitating meaningful connections has made her an integral part of our events.
                       </p>
+                      </div>
                     </div>
-                  </div>
 
                   <div className="absolute bottom-0 left-0 right-0 p-8 z-10">
                     <span className="inline-block text-xs tracking-[0.2em] uppercase text-[#74A78E] bg-[#74A78E]/10 px-3 py-1 rounded-full mb-4">
@@ -883,12 +886,12 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                     </span>
                     <h3 className="text-2xl font-bold text-white mb-2">Liesl Webber</h3>
                     <p className="text-sm text-white/60">Event Host</p>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Agenda Section */}
         <section id="agenda" className="relative overflow-hidden py-24 sm:py-32 bg-[#F8F4F1]">
@@ -902,7 +905,7 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                 <p className="text-lg sm:text-xl md:text-2xl text-black/80 md:max-w-2xl mt-6">
                   Each day builds upon the last, creating a journey that transforms how you experience God's presence in your daily life.
                 </p>
-              </div>
+                    </div>
 
               <div className="space-y-32">
                 {/* Day 1 */}
@@ -911,14 +914,14 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                     <div className="flex items-baseline gap-4">
                       <span className="text-4xl font-bold text-black/20">01</span>
                       <h3 className="text-3xl font-bold text-black">Embracing Your New Self in God</h3>
-                    </div>
                   </div>
+                    </div>
                   <div className="w-full md:w-2/3">
                     <p className="text-xl text-black/70 leading-relaxed">
                       Begin your journey by discovering how deeply God delights in you. Break free from performance-based relationship and step into the joy of being His beloved. Experience the transformative power of seeing yourself through His eyes of love.
                     </p>
-                  </div>
                 </div>
+              </div>
 
                 {/* Day 2 */}
                 <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
@@ -926,14 +929,14 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                     <div className="flex items-baseline gap-4">
                       <span className="text-4xl font-bold text-black/20">02</span>
                       <h3 className="text-3xl font-bold text-black">Embracing a New Way of Living with God</h3>
-                    </div>
-                  </div>
+              </div>
+            </div>
                   <div className="w-full md:w-2/3">
                     <p className="text-xl text-black/70 leading-relaxed">
                       Learn the art of living from His presence rather than for His presence. Discover practical ways to recognize and respond to His voice in every moment. Transform occasional encounters into continuous communion.
                     </p>
-                  </div>
                 </div>
+              </div>
 
                 {/* Day 3 */}
                 <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
@@ -941,8 +944,8 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                     <div className="flex items-baseline gap-4">
                       <span className="text-4xl font-bold text-black/20">03</span>
                       <h3 className="text-3xl font-bold text-black">Embrace a New Way of Learning with God</h3>
-                    </div>
-                  </div>
+              </div>
+            </div>
                   <div className="w-full md:w-2/3">
                     <p className="text-xl text-black/70 leading-relaxed mb-12">
                       Step into a lifestyle of continuous wonder and delight. Embrace the adventure of walking with God in every circumstance. Learn to see challenges as opportunities for deeper intimacy and discover the joy of partnering with Him in your everyday life.
@@ -954,12 +957,12 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                         fill
                         className="object-cover hover:scale-105 transition-transform duration-700"
                       />
-                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+                    </div>
+                  </div>
+                    </div>
         </section>
 
         {/* After Agenda Section - Final Testimonial */}
@@ -974,40 +977,40 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                   <svg className="w-8 h-8 text-[#74A78E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                </div>
+                  </div>
                 <div>
                   <p className="text-xl font-semibold text-black">Rachel</p>
                   <p className="text-sm text-black/60">Event Attendee</p>
-                </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA Section */}
+      {/* CTA Section */}
         <section id="pricing" className="relative overflow-hidden w-full bg-[#222] py-32">
           <div className="absolute inset-0 w-full max-w-[100vw]">
-            <Image
-              src="/2M5A4184.jpg"
-              alt="Event atmosphere"
-              fill
-              className="object-cover opacity-30"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#000] via-[#000]/50 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#000] via-transparent to-transparent" />
-          </div>
+          <Image
+            src="/2M5A4184.jpg"
+            alt="Event atmosphere"
+            fill
+            className="object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#000] via-[#000]/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#000] via-transparent to-transparent" />
+        </div>
 
           <div className="relative z-10 w-min(100% - 2rem, 80rem) mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center mb-16">
+          <div className="max-w-4xl mx-auto text-center mb-16">
               <h2 className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#F8F4F1] mb-6 leading-[1.1]">
                 <span className="inline sm:block">Discover an</span>{' '}
                 <span className="inline sm:block">Extraordinary</span>{' '}
                 <span className="inline sm:block">Relationship</span>{' '}
                 <span className="inline sm:block">With God</span>
-              </h2>
+            </h2>
               <p className="text-lg sm:text-xl text-[#F8F4F1]/80 mb-12 max-w-2xl mx-auto">
-                Join this transformative virtual gathering, connecting with seekers from around the world.
-              </p>
+              Join this transformative virtual gathering, connecting with seekers from around the world.
+            </p>
 
               <div className="bg-[#2A2A2A]/80 backdrop-blur-xl rounded-[32px] py-5 px-8 inline-flex gap-16 transition-all duration-300 flex-wrap justify-center gap-8 mx-auto mt-8">
                 <div className="flex items-center gap-3">
@@ -1044,60 +1047,60 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                   </div>
                 </div>
               </div>
-            </div>
+          </div>
 
             <div className="max-w-xl mx-auto bg-white rounded-[32px] p-12 shadow-2xl">
-              {/* Price Header */}
-              <div className="text-center mb-12">
-                <div className="space-y-2">
+            {/* Price Header */}
+            <div className="text-center mb-12">
+              <div className="space-y-2">
                   <span className="text-base text-gray-600 font-medium">FULL ACCESS TICKET</span>
-                  <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center">
                     <span className="text-7xl font-bold text-black tracking-tight">$97</span>
                     <span className="text-base font-medium text-green-600 mt-2 mb-8">All-Inclusive Experience</span>
-                  </div>
-                </div>
+              </div>
+            </div>
 
-                {/* Value Stack */}
+            {/* Value Stack */}
                 <ul className="space-y-8 mb-12 text-left max-w-xl">
-                  <li className="flex items-start gap-4">
+              <li className="flex items-start gap-4">
                     <div className="w-7 h-7 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-1">
                       <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex justify-between items-start gap-4">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                </div>
+                <div className="flex-1">
+                  <div className="flex justify-between items-start gap-4">
                         <span className="text-xl font-medium text-black">Three Days of Radical Transformation<br />March 21st-23rd 2025</span>
                         <span className="text-xl font-semibold text-gray-900 shrink-0">Value: $297</span>
-                      </div>
+                  </div>
                       <span className="text-base text-gray-500 mt-1.5 block">Virtual front row seats to three days of transformational awakening with Graham Cooke, Ray Higdon & Team.</span>
-                    </div>
+                </div>
                   </li>
-                  <li className="flex items-start gap-4">
+              <li className="flex items-start gap-4">
                     <div className="w-7 h-7 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-1">
                       <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex justify-between items-start gap-4">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                </div>
+                <div className="flex-1">
+                  <div className="flex justify-between items-start gap-4">
                         <span className="text-xl font-medium text-black">Breakout & Activation Sessions</span>
                         <span className="text-xl font-semibold text-gray-900 shrink-0">Value: $147</span>
-                      </div>
+                  </div>
                       <span className="text-base text-gray-500 mt-1.5 block">Practical sessions designed to help you activate and apply the transformational principles in your daily life.</span>
                     </div>
                   </li>
-                  <li className="flex items-start gap-4">
+              <li className="flex items-start gap-4">
                     <div className="w-7 h-7 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-1">
                       <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex justify-between items-start gap-4">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                </div>
+                <div className="flex-1">
+                  <div className="flex justify-between items-start gap-4">
                         <span className="text-xl font-medium text-black">Interactive Q&A Sessions<br />with Dionne & Team</span>
                         <span className="text-xl font-semibold text-gray-900 shrink-0">Value: $153</span>
-                      </div>
+                  </div>
                       <span className="text-base text-gray-500 mt-1.5 block">Live Q&A opportunities to deepen your understanding and get personalized insights.</span>
                     </div>
                   </li>
@@ -1113,26 +1116,26 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                         <span className="text-xl font-semibold text-gray-900 shrink-0">Priceless</span>
                       </div>
                       <span className="text-base text-gray-500 mt-1.5 block">Connect with believers from around the world, sharing experiences and building lasting relationships.</span>
-                    </div>
+                </div>
                   </li>
                 </ul>
 
-                {/* Total Value & CTA */}
-                <div className="pt-8 border-t border-gray-200">
-                  <div className="bg-gray-50 -mx-10 -mb-10 p-8 rounded-b-[32px]">
+            {/* Total Value & CTA */}
+            <div className="pt-8 border-t border-gray-200">
+              <div className="bg-gray-50 -mx-10 -mb-10 p-8 rounded-b-[32px]">
                     <div className="space-y-8 mb-8">
-                      <div>
+                  <div>
                         <span className="text-3xl text-gray-400 line-through">Total Value: $597</span>
-                      </div>
-                      <div className="space-y-6">
-                        <div className="space-y-2">
+                  </div>
+                  <div className="space-y-6">
+                    <div className="space-y-2">
                           <p className="text-2xl font-bold">Full Access Ticket:</p>
                           <div className="flex flex-col items-center gap-4">
                             <span className="text-7xl font-bold text-green-600">$97</span>
-                          </div>
-                        </div>
                       </div>
                     </div>
+                  </div>
+                </div>
 
                     <a 
                       href={cartUrl}
@@ -1146,22 +1149,22 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                           <span>Secure Your Seat Now</span>
                           <span className="text-base font-medium mt-1">March 21-23, 2025</span>
                         </span>
-                      </button>
+                </button>
                     </a>
                     <p className="text-sm text-gray-500">Limited spots available for optimal experience</p>
                   </div>
-                </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         <div id="faq">
-          <FAQ />
+      <FAQ />
         </div>
 
-        <Footer />
-      </main>
+      <Footer />
+    </main>
     </>
   );
 }
