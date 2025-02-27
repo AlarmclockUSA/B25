@@ -313,3 +313,71 @@ This file tracks all modifications made to the project.
   - `src/app/layout.tsx`
   - `src/utils/analytics.ts`
 - This addition enables conversion tracking, audience building, and ad optimization through the Facebook advertising platform 
+
+## 35. Added BrilliantTV Video Embed to Hero Section
+
+- Added a responsive video embed from BrilliantTV below the CTA button in the hero section
+- Created responsive container styles for the video in globals.css
+- Added iframe that loads content from https://www.brillianttv.com/embed/2257217
+- Applied consistent styling with rounded corners and box shadow for visual integration
+- Added proper animation for fade-in effect with the hero section elements
+- Files modified:
+  - `src/app/page.tsx`
+  - `src/app/globals.css`
+- This enhancement provides visitors with immediate visual context about the event experience 
+
+## 36. Updated BrilliantTV Video Embed Styling
+
+- Simplified the BrilliantTV video embed styling to match the original embed code
+- Removed border-radius, box-shadow, and margin from the embed container
+- Added inline style for border:0 directly to the iframe element
+- Removed the title attribute for better compatibility
+- Files modified:
+  - `src/app/page.tsx`
+  - `src/app/globals.css`
+- This update ensures the embed displays exactly as intended across all browsers and devices 
+
+## 37. Restored Curved Edges on BrilliantTV Video Embed
+
+- Added back the border-radius (1rem) to the embed container
+- Maintained the simplified styling from previous update while preserving the curved aesthetic
+- Kept the inline border:0 style on the iframe element
+- File modified: `src/app/globals.css`
+- This change preserves the preferred curved edge appearance while maintaining compatibility 
+
+## 38. Added Descriptive Text Above BrilliantTV Video Embed
+
+- Added explanatory text "Watch highlights from our previous Brilliance conference below:" above the video
+- Styled the text to be subtle yet informative (semi-transparent white, italicized, centered)
+- Provides context for visitors about the content of the video
+- File modified: `src/app/page.tsx`
+- This enhancement gives visitors clear context about what they're watching and sets expectations for the content 
+
+## 39. Enabled Silent Autoplay for BrilliantTV Video
+
+- Modified the video embed to automatically play when visitors land on the page
+- Added `autoplay=1` and `muted=1` parameters to the iframe source URL
+- Added the `allow="autoplay"` attribute to the iframe for better browser compatibility
+- Ensured the video plays silently to avoid disrupting the user experience
+- File modified: `src/app/page.tsx`
+- This enhancement creates a more dynamic and engaging hero section with motion that draws attention without being intrusive 
+
+## 40. Fixed Script Component Usage in Client Components
+
+- Fixed build errors related to incorrect usage of Next.js Script component in client components
+- Replaced Next.js Script components with standard HTML script tags for JSON-LD structured data 
+- Modified the implementation in both page.tsx and FAQ.tsx components to use inline script tags
+- Fixed an unclosed SVG tag in the testimonial section
+- Files modified:
+  - `src/app/page.tsx`
+  - `src/components/FAQ.tsx`
+- These changes ensure proper rendering of structured data for SEO while fixing React component structure issues 
+
+## 41. Removed Speaker Spread Image from Hero Section
+
+- Completely removed the speaker spread image from the bottom of the hero section
+- Removed the spacer div that was previously added to create room for the image
+- Simplified the hero section design for a cleaner and more focused user experience
+- Reduced unnecessary visual elements to maintain the emphasis on the video embed and CTA
+- File modified: `src/app/page.tsx`
+- This change streamlines the design by eliminating decorative elements that could potentially distract from the core message and call-to-action

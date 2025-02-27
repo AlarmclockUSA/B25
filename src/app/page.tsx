@@ -11,8 +11,6 @@ import { useSearchParams } from 'next/navigation';
 import { getCartUrl } from '../utils/urls';
 import EventDetailsBar from '@/components/EventDetailsBar';
 import HeroCountdown from '@/components/HeroCountdown';
-import { Metadata } from 'next';
-import Script from 'next/script';
 import VerticalNav from "@/components/VerticalNav";
 
 function MainContent({ cartUrl }: { cartUrl: string }) {
@@ -59,52 +57,54 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
   return (
     <>
       {/* JSON-LD Structured Data for Event */}
-      <Script
-        id="event-schema"
-        type="application/ld+json"
+      <div 
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Event",
-            "name": "Brilliance 2025 with Graham Cooke - Discover an Extraordinary Relationship With God",
-            "startDate": "2025-03-21T11:00:00-04:00",
-            "endDate": "2025-03-23T17:00:00-04:00",
-            "eventStatus": "https://schema.org/EventScheduled",
-            "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
-            "location": {
-              "@type": "VirtualLocation",
-              "url": "https://brilliance25.com"
-            },
-            "image": [
-              "https://brilliance25.com/hero-bg.jpg"
-            ],
-            "description": "Step into a 3-day transformational online experience hosted by leading voice Graham Cooke, Dionne van Zyl and special guests. Discover the proven path to an extraordinary relationship with God.",
-            "offers": {
-              "@type": "Offer",
-              "url": "https://brilliance25.com",
-              "price": "97",
-              "priceCurrency": "USD",
-              "availability": "https://schema.org/InStock",
-              "validFrom": "2024-01-15T00:00:00-05:00"
-            },
-            "performer": [
-              {
-                "@type": "Person",
-                "name": "Graham Cooke",
-                "image": "https://brilliance25.com/Graham.png"
-              },
-              {
-                "@type": "Person",
-                "name": "Dionne van Zyl",
-                "image": "https://brilliance25.com/Dionne.jpg"
-              }
-            ],
-            "organizer": {
-              "@type": "Organization",
-              "name": "Brilliant Perspectives",
-              "url": "https://brilliantperspectives.com"
-            }
-          })
+          __html: `
+            <script type="application/ld+json">
+              ${JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Event",
+                "name": "Brilliance 2025 with Graham Cooke - Discover an Extraordinary Relationship With God",
+                "startDate": "2025-03-21T11:00:00-04:00",
+                "endDate": "2025-03-23T17:00:00-04:00",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+                "location": {
+                  "@type": "VirtualLocation",
+                  "url": "https://brilliance25.com"
+                },
+                "image": [
+                  "https://brilliance25.com/hero-bg.jpg"
+                ],
+                "description": "Step into a 3-day transformational online experience hosted by leading voice Graham Cooke, Dionne van Zyl and special guests. Discover the proven path to an extraordinary relationship with God.",
+                "offers": {
+                  "@type": "Offer",
+                  "url": "https://brilliance25.com",
+                  "price": "97",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock",
+                  "validFrom": "2024-01-15T00:00:00-05:00"
+                },
+                "performer": [
+                  {
+                    "@type": "Person",
+                    "name": "Graham Cooke",
+                    "image": "https://brilliance25.com/Graham.png"
+                  },
+                  {
+                    "@type": "Person",
+                    "name": "Dionne van Zyl",
+                    "image": "https://brilliance25.com/Dionne.jpg"
+                  }
+                ],
+                "organizer": {
+                  "@type": "Organization",
+                  "name": "Brilliant Perspectives",
+                  "url": "https://brilliantperspectives.com"
+                }
+              })}
+            </script>
+          `
         }}
       />
 
@@ -221,21 +221,19 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                 </a>
               </div>
               
-              {/* Add a spacer div to create more room for the speaker image */}
-              <div className="h-[180px] sm:h-[200px] md:h-[220px] lg:h-[240px]"></div>
+              {/* BrilliantTV Video Embed */}
+              <div className="w-full max-w-2xl mx-auto px-4 mt-6 mb-8 animate-fade-in-up animation-delay-1300">
+                <p className="text-center text-[#F8F4F1]/80 text-sm mb-3 italic font-medium">Watch highlights from our previous Brilliance conference below:</p>
+                <div className="embed-container">
+                  <iframe 
+                    src="https://www.brillianttv.com/embed/2257217?autoplay=1&muted=1" 
+                    style={{border: 0}}
+                    allowFullScreen
+                    allow="autoplay"
+                  ></iframe>
+                </div>
+              </div>
             </div>
-          </div>
-          
-          {/* Decorative Element - Centered at bottom with adjusted position */}
-          <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-[90vw] max-w-[800px] h-[32vh] max-h-[320px] opacity-100 pointer-events-none z-30 transition-all duration-700 hover:scale-[1.02] animate-fade-in animation-delay-1200">
-            <Image 
-              src="/SpeakerSpread.png"
-              alt="Brilliance 2025 Featured Speakers - Graham Cooke and Team"
-              fill
-              className="object-contain object-bottom"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-radial from-transparent to-black/40 opacity-0 hover:opacity-20 transition-opacity duration-500"></div>
           </div>
       </section>
 
@@ -345,12 +343,12 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                   <svg className="w-8 h-8 text-[#74A78E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-          </div>
+                </div>
                 <div>
                   <p className="text-xl font-semibold text-[#F8F4F1]">Rhonda</p>
                   <p className="text-sm text-[#F8F4F1]/60">Event Attendee</p>
-              </div>
                 </div>
+              </div>
             </div>
               </div>
         </section>
@@ -977,15 +975,15 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                   <svg className="w-8 h-8 text-[#74A78E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  </div>
+                </div>
                 <div>
                   <p className="text-xl font-semibold text-black">Rachel</p>
                   <p className="text-sm text-black/60">Event Attendee</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* CTA Section */}
         <section id="pricing" className="relative overflow-hidden w-full bg-[#222] py-32">
