@@ -391,3 +391,12 @@ This file tracks all modifications made to the project.
 - Added explicit rounded corners and overflow handling to the container
 - Files modified: `src/app/globals.css` and `src/app/page.tsx`
 - These improvements ensure the video player is properly highlighted as a key element in the hero section with appropriate spacing and visual treatment
+
+## 43. Updated BrilliantTV Video Content
+
+- Replaced the image in the sales letter section with a BrilliantTV video embed (ID: 2257218)
+- Maintained the original BrilliantTV video in the hero section (ID: 2257217)
+- Configured the new video in the sales letter to initialize without autoplay for a better user experience
+- Ensured responsive design with rounded corners and proper styling for both video embeds
+- File modified: `src/app/page.tsx`
+- This update replaces a static image with engaging video content in the sales letter section, while keeping the original video in the hero section

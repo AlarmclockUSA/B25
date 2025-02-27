@@ -279,15 +279,14 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                     At Brilliance25, we're inviting you into an extraordinary relationship with God - one where you discover that His focus isn't on fixing what's wrong with you, but on delighting in who you already are in Christ. This is the kind of relationship you were created for.
                   </p>
 
-                  <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
-                    <Image
-                      src="/2M5A1060-3.jpg"
-                      alt="Event Experience"
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-700"
-                      priority
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                  <div className="relative rounded-2xl overflow-hidden">
+                    <div className="embed-container rounded-xl overflow-hidden">
+                      <iframe 
+                        src="https://www.brillianttv.com/embed/2257218?autoplay=0&muted=1" 
+                        style={{border: 0}}
+                        allowFullScreen
+                      ></iframe>
+                    </div>
                   </div>
 
                   <div className="pt-16">
