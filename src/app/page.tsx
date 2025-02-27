@@ -222,9 +222,9 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
               </div>
               
               {/* BrilliantTV Video Embed */}
-              <div className="w-full max-w-2xl mx-auto px-4 mt-6 mb-8 animate-fade-in-up animation-delay-1300">
-                <p className="text-center text-[#F8F4F1]/80 text-sm mb-3 italic font-medium">Watch highlights from our previous Brilliance conference below:</p>
-                <div className="embed-container">
+              <div className="w-full max-w-2xl mx-auto px-4 mt-8 mb-16 animate-fade-in-up animation-delay-1300">
+                <p className="text-center text-[#F8F4F1]/80 text-sm mb-4 italic font-medium">Watch highlights from our previous Brilliance conference below:</p>
+                <div className="embed-container rounded-xl overflow-hidden">
                   <iframe 
                     src="https://www.brillianttv.com/embed/2257217?autoplay=1&muted=1" 
                     style={{border: 0}}
