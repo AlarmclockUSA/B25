@@ -302,3 +302,14 @@ This file tracks all modifications made to the project.
 - Ensures the full speaker image is visible without overlapping with other elements
 - File modified: `src/app/page.tsx`
 - This change creates a cleaner visual relationship between the hero CTA and the speaker spread image while maintaining an aesthetically pleasing composition 
+
+## 34. Added Facebook Pixel Tracking
+
+- Implemented Facebook Pixel code in layout.tsx for site-wide tracking
+- Added pixel ID 120417822121950 with base PageView tracking
+- Enhanced analytics.ts with Facebook custom event tracking capabilities
+- Added TypeScript type declarations for the fbq function
+- Files modified: 
+  - `src/app/layout.tsx`
+  - `src/utils/analytics.ts`
+- This addition enables conversion tracking, audience building, and ad optimization through the Facebook advertising platform 

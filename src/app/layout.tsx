@@ -4,6 +4,14 @@ import Script from 'next/script';
 import "./globals.css";
 import { Analytics } from '@vercel/analytics/react';
 
+// Add Facebook Pixel type declaration
+declare global {
+  interface Window {
+    fbq?: (command: string, eventName: string, params?: Record<string, any>) => void;
+    _fbq?: any;
+  }
+}
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -81,6 +89,29 @@ export default function RootLayout({
           rel="apple-touch-icon"
           href="/Brilliant_ICON_Full-Color.png?v=1"
         />
+        <Script id="facebook-pixel" strategy="afterInteractive">
+          {`
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '120417822121950');
+            fbq('track', 'PageView');
+          `}
+        </Script>
+        <noscript>
+          <img 
+            height="1" 
+            width="1" 
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=120417822121950&ev=PageView&noscript=1"
+            alt="Facebook Pixel"
+          />
+        </noscript>
         <Script id="brilliant-tracking" strategy="beforeInteractive">
           {`
               var head = document.head;
