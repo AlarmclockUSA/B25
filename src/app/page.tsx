@@ -226,7 +226,7 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                 <p className="text-center text-[#F8F4F1]/80 text-sm mb-4 italic font-medium">Watch highlights from our previous Brilliance conference below:</p>
                 <div className="embed-container rounded-xl overflow-hidden">
                   <iframe 
-                    src="https://www.brillianttv.com/embed/2257217?autoplay=1&muted=1" 
+                    src="https://www.brillianttv.com/embed/2257217?autoplay=0&muted=1" 
                     style={{border: 0}}
                     allowFullScreen
                     allow="autoplay"
@@ -244,39 +244,68 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
               <div className="space-y-12">
                 <div className="space-y-8">
                   <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] font-medium leading-[1.2] text-[#F8F4F1]">
-                    The Father has a secret He can barely contain - He's absolutely captivated by who you are becoming.
-          </h2>
+                    What if Everything You've Wanted in Your Relationship with God is Already Yours?
+                  </h2>
                   
                   <p className="text-xl md:text-2xl text-[#F8F4F1]/90 leading-relaxed">
-                    You see, while you might be focused on your shortcomings, He's mesmerized by your potential. What if I told you that right now, in this very moment, God isn't cataloging your failures or measuring your performance?
+                    What if transformation isn't about trying harder, but becoming aware of what's already true?
+                    Isn't it wonderful that the Father isn't waiting for you to arrive—He's delighting in who you already are?
+                  </p>
+                  
+                  <p className="text-xl md:text-2xl text-[#F8F4F1]/90 leading-relaxed">
+                    Brilliance25 isn't just another conference. It's an immersive three-day journey carefully crafted to transform how you experience God's constant presence.
                   </p>
 
                   <div className="space-y-6">
-                    <p className="text-xl md:text-2xl text-[#F8F4F1] font-medium">Here's what might surprise you:</p>
-                    <ul className="space-y-4 text-xl md:text-2xl text-[#F8F4F1]/90">
-                      <li className="flex items-center gap-4">
-                        <div className="w-2 h-2 rounded-full bg-[#DD8D00]"></div>
-                        <span>The Father isn't working on your sin - He already dealt with that</span>
+                    <p className="text-xl md:text-2xl text-[#F8F4F1] font-medium">You'll Discover:</p>
+                    <ul className="space-y-6 text-xl md:text-2xl text-[#F8F4F1]/90">
+                      <li className="flex flex-col gap-2">
+                        <div className="flex items-center gap-4">
+                          <div className="w-2 h-2 rounded-full bg-[#DD8D00]"></div>
+                          <span className="font-medium">God's delight exists independent of your performance</span>
+                        </div>
+                        <p className="pl-6 text-[#F8F4F1]/80">What if His love for you has nothing to do with what you do, and everything to do with who you are in Christ?</p>
                       </li>
-                      <li className="flex items-center gap-4">
-                        <div className="w-2 h-2 rounded-full bg-[#DD8D00]"></div>
-                        <span>You're not lacking anything in Christ - you're completely equipped</span>
+                      <li className="flex flex-col gap-2">
+                        <div className="flex items-center gap-4">
+                          <div className="w-2 h-2 rounded-full bg-[#DD8D00]"></div>
+                          <span className="font-medium">Your complete identity in Christ is already yours</span>
+                        </div>
+                        <p className="pl-6 text-[#F8F4F1]/80">Isn't it beautiful that you're not becoming a new creation—you already are one? You're simply learning to practice who you already are.</p>
                       </li>
-                      <li className="flex items-center gap-4">
-                        <div className="w-2 h-2 rounded-full bg-[#DD8D00]"></div>
-                        <span>His gentleness isn't a temporary kindness - it's His permanent nature with you</span>
+                      <li className="flex flex-col gap-2">
+                        <div className="flex items-center gap-4">
+                          <div className="w-2 h-2 rounded-full bg-[#DD8D00]"></div>
+                          <span className="font-medium">Freedom instead of fear in God's presence</span>
+                        </div>
+                        <p className="pl-6 text-[#F8F4F1]/80">What if every encounter with the Father could be filled with wonder instead of worry? What if His presence is your permanent state of being?</p>
                       </li>
                     </ul>
                   </div>
 
-                  <p className="text-xl md:text-2xl text-[#F8F4F1] font-medium">Think about that for a moment...</p>
+                  <p className="text-xl md:text-2xl text-[#F8F4F1] font-medium">Why Brilliance25 Is Different:</p>
                   
                   <p className="text-xl md:text-2xl text-[#F8F4F1]/90 leading-relaxed">
-                    What if every interaction with God could be filled with wonder instead of worry? What if His delight in you isn't waiting on the other side of your next breakthrough - but is already your reality?
+                    We've designed each moment of these three days to build upon the last—creating a sequence of powerful experiences that shift how you relate to God. This isn't information to process; it's reality to step into.
                   </p>
-
+                  
                   <p className="text-xl md:text-2xl text-[#F8F4F1]/90 leading-relaxed">
-                    At Brilliance25, we're inviting you into an extraordinary relationship with God - one where you discover that His focus isn't on fixing what's wrong with you, but on delighting in who you already are in Christ. This is the kind of relationship you were created for.
+                    Each session guides you deeper into the Father's heart through:
+                  </p>
+                  
+                  <ul className="space-y-4 text-xl md:text-2xl text-[#F8F4F1]/90 pl-6">
+                    <li className="list-disc">Immersive teaching that helps you see yourself through Heaven's eyes</li>
+                    <li className="list-disc">Interactive experiences where you practice awareness of God's presence</li>
+                    <li className="list-disc">Guided encounters that turn revelation into lived reality</li>
+                  </ul>
+                  
+                  <p className="text-xl md:text-2xl text-[#F8F4F1]/90 leading-relaxed">
+                    What if these three days could help you permanently step out of performance Christianity into the freedom that's already yours?
+                  </p>
+                  
+                  <p className="text-xl md:text-2xl text-[#F8F4F1]/90 leading-relaxed">
+                    Join us as we journey together into an extraordinary relationship with God—one where you experience a Father who isn't fixing what's wrong with you, but is absolutely captivated by who you're becoming.
+                    This immersive journey awaits you.
                   </p>
 
                   <div className="relative rounded-2xl overflow-hidden">

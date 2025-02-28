@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Script from 'next/script';
 
 const faqs = [
   {
@@ -46,10 +45,14 @@ export default function FAQ() {
   return (
     <section className="py-32 bg-[#F8F4F1]">
       {/* FAQ Structured Data */}
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+      <div
+        dangerouslySetInnerHTML={{
+          __html: `
+            <script type="application/ld+json">
+              ${JSON.stringify(faqStructuredData)}
+            </script>
+          `
+        }}
       />
       
       <div className="container mx-auto px-4">
