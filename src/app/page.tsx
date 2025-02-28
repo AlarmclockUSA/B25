@@ -229,7 +229,6 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                     src="https://www.brillianttv.com/embed/2257217?autoplay=0&muted=1" 
                     style={{border: 0}}
                     allowFullScreen
-                    allow="autoplay"
                   ></iframe>
                 </div>
               </div>

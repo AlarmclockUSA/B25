@@ -466,3 +466,17 @@ This file tracks all modifications made to the project.
 
 **Purpose:**
 To create a more engaging sales letter that uses rhetorical questions to help potential attendees reflect on their relationship with God and see how Brilliance25 addresses their deeper spiritual longings. The new format creates a conversational tone while emphasizing the unique immersive experience of the event.
+
+### Entry 50: Removed Video Autoplay Functionality
+
+**Changes Made:**
+- Removed the `allow="autoplay"` attribute from the hero section video embed
+- Ensured both video embeds (hero and sales letter) have autoplay disabled
+- Maintained existing configuration with `autoplay=0` parameter in both embed URLs
+- Provides consistent behavior for both video players
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To ensure videos don't play automatically when visitors load the page, giving users control over when they choose to watch the video content. This creates a better user experience by preventing unexpected audio or motion when first visiting the site.
