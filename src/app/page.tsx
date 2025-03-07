@@ -55,7 +55,7 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
   }, []);
 
   return (
-    <>
+    <div>
       {/* JSON-LD Structured Data for Event */}
       <div 
         dangerouslySetInnerHTML={{
@@ -135,40 +135,36 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
             <div className="max-w-4xl mx-auto pt-12 md:pt-16 pb-12 md:pb-16 text-center">
               
               {/* Main Headline - Enhanced with subtle animation and better spacing */}
-              <h1 className="font-bold mb-6 mx-auto">
-                <span className="block text-sm sm:text-base md:text-lg tracking-widest text-[#F8F4F1]/80 mb-4 font-medium animate-fade-in-up">
-                  INTRODUCING BRILLIANCE25 WITH GRAHAM COOKE
+              <h1 className="font-bold mb-8 mx-auto">
+                <span className="block text-[#F8F4F1] text-lg sm:text-xl md:text-2xl font-medium tracking-[0.2em] mb-4 animate-fade-in-up">
+                  3-DAY VIRTUAL EVENT
                 </span>
-                <span className="block text-[2.2rem] sm:text-[3rem] md:text-[3.6rem] lg:text-[4.2rem] text-[#F8F4F1] leading-[1.05] tracking-tight mb-4 relative animate-fade-in-up animation-delay-300">
-                  The Most <span className="relative inline-block">
-                    Transformational
+                <span className="block text-[2.6rem] sm:text-[3.4rem] md:text-[4.2rem] lg:text-[5.4rem] text-[#F8F4F1] leading-[1.05] tracking-tight mb-6 relative animate-fade-in-up animation-delay-200">
+                  Discover Your <span className="relative inline-block">
+                    Extraordinary
                     <span className="absolute -bottom-1 left-0 right-0 h-[0.15em] bg-[#DD8D00]" style={{
                       backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,5 Q25,2 50,5 T100,5' stroke='%23DD8D00' stroke-width='3' fill='none' stroke-linecap='round' stroke-dasharray='0,0'/%3E%3C/svg%3E\")",
                       backgroundRepeat: "repeat-x",
                       backgroundSize: "100% 100%"
                     }}></span>
-                  </span> Experience
+                  </span> Relationship With God
               </span>
-                <span className="block text-[1.4rem] sm:text-[1.8rem] md:text-[2.2rem] lg:text-[2.6rem] text-[#DD8D00] font-extrabold leading-[1.15] relative animate-fade-in-up animation-delay-500">
-                  For Kingdom Believers Returns
-                  <span className="absolute -z-10 inset-0 bg-[#DD8D00]/10 skew-x-3 rounded-lg translate-x-1 translate-y-1 hidden md:block"></span>
+                <span className="block text-base sm:text-lg md:text-xl lg:text-2xl text-[#DD8D00] font-medium tracking-wide mb-4 animate-fade-in-up animation-delay-200">
+                  What if life with God is more than you've ever dreamed—and it's already yours?
                 </span>
             </h1>
             
               {/* Date & Location - With improved contrast and animation */}
               <div className="mb-4 animate-fade-in-up animation-delay-700">
-                <div className="text-[#DD8D00] text-2xl sm:text-3xl md:text-4xl font-bold tracking-wide mb-2">
+                <div className="text-[#F8F4F1] text-3xl sm:text-4xl md:text-5xl font-bold tracking-wide">
                   MARCH 21-23, 2025
                 </div>
-                <div className="text-[#F8F4F1] text-base sm:text-lg">
-                  Virtual Experience • Eastern Time
-              </div>
-            </div>
+                </div>
 
               {/* Descriptive Copy - Enhanced with better spacing and line height */}
               <div className="max-w-2xl mb-6 mx-auto animate-fade-in-up animation-delay-900">
                 <p className="text-lg md:text-xl text-[#F8F4F1]/90 leading-[1.5]">
-                  Step into a 3-day transformational online experience hosted by leading voice Graham Cooke, Dionne van Zyl and special guests. Discover the proven path to an extraordinary relationship with God.
+                  Step into a 3-day transformational online experience hosted by leading voices Graham Cooke, Dionne van Zyl + Team. Experience a proven pathway to an extraordinary relationship with God.
                 </p>
               </div>
               
@@ -204,13 +200,12 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                   >
                     <span className="relative flex flex-col items-center justify-center">
                       <span className="flex items-center justify-center gap-3">
-                        GET YOUR TICKET
+                        JOIN THE EXPERIENCE
                         <svg className="w-6 h-6 transform transition-transform group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
+                  </svg>
                       </span>
-                      <span className="text-sm font-medium mt-2">March 21-23, 2025</span>
-                      <span className="text-xs font-normal mt-1 flex items-center gap-1">
+                      <span className="text-xs font-normal mt-3 flex items-center gap-1">
                         <svg className="w-3 h-3 text-[#74A78E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                         </svg>
@@ -219,7 +214,7 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                     </span>
                   </button>
                 </a>
-              </div>
+                </div>
               
               {/* BrilliantTV Video Embed */}
               <div className="w-full max-w-2xl mx-auto px-4 mt-8 mb-16 animate-fade-in-up animation-delay-1300">
@@ -232,8 +227,8 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                   ></iframe>
                 </div>
               </div>
-            </div>
-          </div>
+                </div>
+                </div>
       </section>
 
         {/* Sales Letter Section */}
@@ -262,7 +257,7 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                         <div className="flex items-center gap-4">
                           <div className="w-2 h-2 rounded-full bg-[#DD8D00]"></div>
                           <span className="font-medium">God's delight exists independent of your performance</span>
-                        </div>
+              </div>
                         <p className="pl-6 text-[#F8F4F1]/80">What if His love for you has nothing to do with what you do, and everything to do with who you are in Christ?</p>
                       </li>
                       <li className="flex flex-col gap-2">
@@ -280,7 +275,7 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                         <p className="pl-6 text-[#F8F4F1]/80">What if every encounter with the Father could be filled with wonder instead of worry? What if His presence is your permanent state of being?</p>
                       </li>
                     </ul>
-                  </div>
+            </div>
 
                   <p className="text-xl md:text-2xl text-[#F8F4F1] font-medium">Why Brilliance25 Is Different:</p>
                   
@@ -339,17 +334,16 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                           active:scale-95
                         "
                       >
-                        <div className="absolute inset-0 bg-gradient-to-r from-[#F8F4F1]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#F8F4F1]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
                         <span className="relative flex flex-col items-center justify-center">
-                          <span className="flex items-center justify-center gap-3">
+                  <span className="flex items-center justify-center gap-3">
                             Begin Your Journey
                             <svg className="w-5 h-5 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                          </span>
-                          <span className="text-sm font-normal mt-2">March 21-23, 2025</span>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+                  </span>
                         </span>
-                      </button>
+              </button>
                     </a>
                 </div>
               </div>
@@ -374,82 +368,280 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                 <div>
                   <p className="text-xl font-semibold text-[#F8F4F1]">Rhonda</p>
                   <p className="text-sm text-[#F8F4F1]/60">Event Attendee</p>
-                </div>
               </div>
             </div>
-              </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        {/* Quote Section - Immediate Social Proof */}
+        {/* Before & After Transformation Section */}
         <section className="relative overflow-hidden py-24 sm:py-32 bg-black">
           <div className="absolute inset-0 w-full max-w-[100vw]">
             <div className="absolute inset-0 bg-gradient-to-br from-[#DD8D00]/20 via-black to-black"></div>
-                </div>
+          </div>
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
-                <div className="flex-1 relative z-10">
-                  <blockquote className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] font-medium leading-[1.2] text-[#F8F4F1]">
-                    "Are you ready to finally stop searching for the life with God you've always wanted?"
-                  </blockquote>
-                  <div className="flex items-center gap-4 mt-8 mb-8">
-                    <div className="w-12 h-12 rounded-full overflow-hidden relative">
-                      <Image
-                        src="/Graham.png"
-                        alt="Graham Cooke"
-                        fill
-                        className="object-cover"
-                      />
-              </div>
-                    <div>
-                      <p className="text-[#F8F4F1] font-medium text-xl">Graham Cooke</p>
-            </div>
-            </div>
-                  <p className="text-xl text-[#F8F4F1]/90 mb-12">Come and discover who he says you are, and how that changes everything.</p>
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#F8F4F1] text-center mb-16 relative z-10">
+                Your Transformation Journey
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
+                {/* Before Column */}
+                <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-[#DD8D00]/20">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 rounded-full bg-[#DD8D00]/20 flex items-center justify-center shrink-0">
+                      <span className="text-[#DD8D00] font-bold text-xl">BEFORE</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-[#F8F4F1]">Where You Are Now</h3>
+                  </div>
                   
-                  <a 
-                    href={cartUrl}
-                    className="inline-block"
+                  <ul className="space-y-6">
+                    <li className="flex items-start gap-4">
+                      <div className="w-6 h-6 rounded-full bg-[#DD8D00]/10 flex items-center justify-center shrink-0 mt-1">
+                        <svg className="w-4 h-4 text-[#DD8D00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </div>
+                      <p className="text-xl text-[#F8F4F1]/80">Feeling disconnected from God despite your best efforts</p>
+                    </li>
+                    <li className="flex items-start gap-4">
+                      <div className="w-6 h-6 rounded-full bg-[#DD8D00]/10 flex items-center justify-center shrink-0 mt-1">
+                        <svg className="w-4 h-4 text-[#DD8D00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </div>
+                      <p className="text-xl text-[#F8F4F1]/80">Experiencing occasional spiritual highs followed by long dry seasons</p>
+                    </li>
+                    <li className="flex items-start gap-4">
+                      <div className="w-6 h-6 rounded-full bg-[#DD8D00]/10 flex items-center justify-center shrink-0 mt-1">
+                        <svg className="w-4 h-4 text-[#DD8D00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </div>
+                      <p className="text-xl text-[#F8F4F1]/80">Constantly striving to earn God's approval and presence</p>
+                    </li>
+                    <li className="flex items-start gap-4">
+                      <div className="w-6 h-6 rounded-full bg-[#DD8D00]/10 flex items-center justify-center shrink-0 mt-1">
+                        <svg className="w-4 h-4 text-[#DD8D00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </div>
+                      <p className="text-xl text-[#F8F4F1]/80">
+                        You're unsure of your identity and purpose in God's kingdom
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                
+                {/* After Column */}
+                <div className="bg-[#DD8D00]/10 backdrop-blur-sm rounded-2xl p-8 border border-[#DD8D00]/30">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 rounded-full bg-[#DD8D00]/20 flex items-center justify-center shrink-0">
+                      <span className="text-[#DD8D00] font-bold text-xl">AFTER</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-[#F8F4F1]">Your New Reality</h3>
+                  </div>
+                  
+                  <ul className="space-y-6">
+                    <li className="flex items-start gap-4">
+                      <div className="w-6 h-6 rounded-full bg-[#74A78E]/20 flex items-center justify-center shrink-0 mt-1">
+                        <svg className="w-4 h-4 text-[#74A78E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <p className="text-xl text-[#F8F4F1]/90">Living in constant awareness of God's presence and delight in you</p>
+                    </li>
+                    <li className="flex items-start gap-4">
+                      <div className="w-6 h-6 rounded-full bg-[#74A78E]/20 flex items-center justify-center shrink-0 mt-1">
+                        <svg className="w-4 h-4 text-[#74A78E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <p className="text-xl text-[#F8F4F1]/90">Experiencing consistent communion with God that doesn't depend on circumstances</p>
+                    </li>
+                    <li className="flex items-start gap-4">
+                      <div className="w-6 h-6 rounded-full bg-[#74A78E]/20 flex items-center justify-center shrink-0 mt-1">
+                        <svg className="w-4 h-4 text-[#74A78E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <p className="text-xl text-[#F8F4F1]/90">Resting in the freedom of being fully known, fully loved, and fully accepted</p>
+                    </li>
+                    <li className="flex items-start gap-4">
+                      <div className="w-6 h-6 rounded-full bg-[#74A78E]/20 flex items-center justify-center shrink-0 mt-1">
+                        <svg className="w-4 h-4 text-[#74A78E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <p className="text-xl text-[#F8F4F1]/90">Walking confidently in your true identity and purpose as God's beloved</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="mt-16 text-center">
+                <a 
+                  href={cartUrl}
+                  className="inline-block"
+                >
+                  <button 
+                    onClick={() => trackButtonClick('Experience the Transformation', 'Before After Section')}
+                    className="
+                      group relative
+                      transform hover:-translate-y-1 
+                      bg-gradient-to-br from-[#DD8D00] via-[#DD8D00] to-[#E3DDC9] 
+                      hover:from-[#E3DDC9] hover:via-[#DD8D00] hover:to-[#DD8D00] 
+                      text-[#F8F4F1] 
+                      px-10 py-5
+                      rounded-xl 
+                      text-xl md:text-2xl
+                      font-semibold 
+                      transition-all duration-500 
+                      hover:shadow-[0_20px_50px_rgba(221,141,0,0.3)] 
+                      active:scale-95
+                    "
                   >
-                    <button 
-                      onClick={() => trackButtonClick('Join the Journey', 'Quote Section')}
-                      className="
-                        group relative
-                        transform hover:-translate-y-1 
-                        bg-gradient-to-br from-[#DD8D00] via-[#DD8D00] to-[#E3DDC9] 
-                        hover:from-[#E3DDC9] hover:via-[#DD8D00] hover:to-[#DD8D00] 
-                        text-[#F8F4F1] 
-                        px-8 py-4
-                        rounded-xl 
-                        text-xl
-                        font-semibold 
-                        transition-all duration-500 
-                        hover:shadow-[0_20px_50px_rgba(221,141,0,0.3)] 
-                        active:scale-95
-                      "
-                    >
-                      <div className="absolute inset-0 bg-gradient-to-r from-[#F8F4F1]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#F8F4F1]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
+                    <span className="relative flex items-center justify-center gap-3">
+                      Experience the Transformation
+                      <svg className="w-5 h-5 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </span>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* What You'll Learn Section */}
+        <section className="relative overflow-hidden py-24 sm:py-32 bg-black">
+          <div className="absolute inset-0 w-full max-w-[100vw]">
+            <div className="absolute inset-0 bg-gradient-to-br from-black via-black to-[#DD8D00]/10"></div>
+          </div>
+        <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#F8F4F1] text-center mb-16 relative z-10">
+                What You'll Learn
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                {/* Learning Point 1 */}
+                <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-[#DD8D00]/20 transform transition-all duration-500 hover:border-[#DD8D00]/40 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(221,141,0,0.1)]">
+              <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-[#DD8D00]/20 flex items-center justify-center shrink-0 mt-1">
+                      <svg className="w-5 h-5 text-[#DD8D00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+          </div>
+                    <p className="text-xl text-[#F8F4F1] leading-relaxed">
+                      Exploring God's true nature, and how this gives permission for everything to be made new.
+                </p>
+                  </div>
+              </div>
+
+                {/* Learning Point 2 */}
+                <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-[#DD8D00]/20 transform transition-all duration-500 hover:border-[#DD8D00]/40 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(221,141,0,0.1)]">
+              <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-[#DD8D00]/20 flex items-center justify-center shrink-0 mt-1">
+                      <svg className="w-5 h-5 text-[#DD8D00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                    <p className="text-xl text-[#F8F4F1] leading-relaxed">
+                      Experiencing the paradigm shift that occurs when you realize that God isn't working on your sin.
+              </p>
+                  </div>
+            </div>
+
+                {/* Learning Point 3 */}
+                <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-[#DD8D00]/20 transform transition-all duration-500 hover:border-[#DD8D00]/40 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(221,141,0,0.1)]">
+              <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-[#DD8D00]/20 flex items-center justify-center shrink-0 mt-1">
+                      <svg className="w-5 h-5 text-[#DD8D00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+                    <p className="text-xl text-[#F8F4F1] leading-relaxed">
+                      Discovering the keys to having a relationship with the Father like Jesus had.
+              </p>
+                  </div>
+            </div>
+
+                {/* Learning Point 4 */}
+                <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-[#DD8D00]/20 transform transition-all duration-500 hover:border-[#DD8D00]/40 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(221,141,0,0.1)]">
+              <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-[#DD8D00]/20 flex items-center justify-center shrink-0 mt-1">
+                      <svg className="w-5 h-5 text-[#DD8D00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                </div>
+                    <p className="text-xl text-[#F8F4F1] leading-relaxed">
+                      Knowing with absolute confidence how God wants to walk with you in your current situation.
+                </p>
+              </div>
+            </div>
+
+                {/* Learning Point 5 */}
+                <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-[#DD8D00]/20 transform transition-all duration-500 hover:border-[#DD8D00]/40 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(221,141,0,0.1)]">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-[#DD8D00]/20 flex items-center justify-center shrink-0 mt-1">
+                      <svg className="w-5 h-5 text-[#DD8D00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
+                    <p className="text-xl text-[#F8F4F1] leading-relaxed">
+                      Accessing the astonishing inheritance that Jesus paid for in your life.
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Learning Point 6 */}
+                <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-[#DD8D00]/20 transform transition-all duration-500 hover:border-[#DD8D00]/40 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(221,141,0,0.1)]">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-[#DD8D00]/20 flex items-center justify-center shrink-0 mt-1">
+                      <svg className="w-5 h-5 text-[#DD8D00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
+                    <p className="text-xl text-[#F8F4F1] leading-relaxed">
+                      Enjoying the same perfect love from the Father scripture talks about.
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+              <div className="mt-16 text-center">
+                <a 
+                  href={cartUrl}
+                  className="inline-block"
+                >
+                  <button 
+                    onClick={() => trackButtonClick('Join This Transformational Experience', 'What You\'ll Learn Section')}
+                    className="
+                      group relative
+                      transform hover:-translate-y-1 
+                      bg-gradient-to-br from-[#DD8D00] via-[#DD8D00] to-[#E3DDC9] 
+                      hover:from-[#E3DDC9] hover:via-[#DD8D00] hover:to-[#DD8D00] 
+                      text-[#F8F4F1] 
+                      px-10 py-5
+                      rounded-xl 
+                      text-xl md:text-2xl
+                      font-semibold 
+                      transition-all duration-500 
+                      hover:shadow-[0_20px_50px_rgba(221,141,0,0.3)] 
+                      active:scale-95
+                    "
+                  >
                 <span className="relative flex items-center justify-center gap-3">
-                        Join the Journey
-                        <svg className="w-5 h-5 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      Join This Transformational Experience
+                      <svg className="w-5 h-5 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </span>
               </button>
-                  </a>
-                </div>
-                <div className="lg:w-2/5">
-                  <div className="relative aspect-[3/4] rounded-2xl overflow-hidden">
-                    <Image
-                      src="/2M5A4455.jpg"
-                      alt="Event Experience"
-                      fill
-                      className="object-cover object-[50%_80%] hover:scale-105 transition-transform duration-700"
-                      priority
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                  </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -478,9 +670,6 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                     <div className="text-xl font-medium text-[#DD8D00]">
                       11AM - 7PM Eastern
             </div>
-                    <p className="text-[#F8F4F1]/70 mt-4">
-                      Begin your journey with powerful opening sessions and inspiring teachings
-                    </p>
           </div>
                   
                   {/* Saturday */}
@@ -492,9 +681,6 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                     <div className="text-xl font-medium text-[#DD8D00]">
                       11AM - 7:30PM Eastern
                   </div>
-                    <p className="text-[#F8F4F1]/70 mt-4">
-                      Dive deeper with immersive workshops and breakthrough moments
-                    </p>
             </div>
                   
                   {/* Sunday */}
@@ -506,9 +692,6 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                     <div className="text-xl font-medium text-[#DD8D00]">
                       11AM - 5PM Eastern
                   </div>
-                    <p className="text-[#F8F4F1]/70 mt-4">
-                      Complete your experience with transformative final sessions
-                    </p>
             </div>
               </div>
             </div>
@@ -533,7 +716,7 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                      <p className="text-2xl text-[#F8F4F1]/90 leading-relaxed flex-1">
+                      <p className="text-xl text-[#F8F4F1]/80">
                         You're sure there's more for you with God, but are unsure how to access it.
                   </p>
                 </div>
@@ -544,7 +727,7 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
               </div>
-                      <p className="text-2xl text-[#F8F4F1]/90 leading-relaxed flex-1">
+                      <p className="text-xl text-[#F8F4F1]/80">
                         You're ready to let go of the "one-off moments" with God that mark so many believers' lifestyles.
                       </p>
             </div>
@@ -555,7 +738,7 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                      <p className="text-2xl text-[#F8F4F1]/90 leading-relaxed flex-1">
+                      <p className="text-xl text-[#F8F4F1]/80">
                         You're tired of waiting for revival and see that the world is heading in the opposite direction.
                       </p>
             </div>
@@ -566,8 +749,8 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                      <p className="text-2xl text-[#F8F4F1]/90 leading-relaxed flex-1">
-                        You've long suspected that while good intentioned, the teaching you've received still seems to leave you in the same place without the change you're really looking for...
+                      <p className="text-xl text-[#F8F4F1]/80">
+                        You're unsure of your identity and purpose in God's kingdom.
                   </p>
                 </div>
               </div>
@@ -735,10 +918,10 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                   <div className="absolute inset-0 p-8 flex flex-col justify-center bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                       <p className="text-lg text-[#F8F4F1]/90 leading-relaxed mb-4">
-                        Dionne van Zyl is a dynamic and accomplished leader who serves as president of Brilliant Perspectives. His career spans from innovative tech startups that disrupted Wall Street norms to three impactful non-profits that have influenced generations.
+                        Dionne van Zyl is a dynamic and visionary leader who serves as CEO of Brilliant Perspectives. His passion is helping believers align their thinking with God's perspective through transformative resources, experiences, and communities.
                       </p>
                       <p className="text-lg text-[#F8F4F1]/90 leading-relaxed">
-                        Now, Dionne is channeling his extensive experience and proven strategies into resources that Kingdom leaders can utilize for effortless and lasting transformation.
+                        His goal is to enable Kingdom leaders to step into their true identity in Christ, empowering them to live from a place of confidence, purpose, and joy.
                       </p>
                       </div>
                     </div>
@@ -748,7 +931,7 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                       Keynote Speaker
                     </span>
                     <h3 className="text-3xl font-bold text-white mb-2">Dionne van Zyl</h3>
-                    <p className="text-base text-white/80">President, Brilliant Perspectives</p>
+                    <p className="text-base text-white/80">CEO, Brilliant Perspectives</p>
                   </div>
                 </div>
               </div>
@@ -797,7 +980,7 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                   <div className="absolute inset-0 p-8 flex flex-col justify-center bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                       <p className="text-lg text-[#F8F4F1]/90 leading-relaxed">
-                        Jim Baker and Mary, his wife of over 30 years, are the senior leaders of Zion Christian Fellowship in Powell, Ohio. The church is marked by worship, a strong presence of God, healings, miracles, several dead raisings and a passion for personal and regional transformation. Jim is known for his humor and revelatory teaching.
+                        Jim Baker and Mary, his wife of over 30 years, are the senior leaders of Zion Christian Fellowship in Powell, Ohio. The church is marked by worship, a strong presence of God, healings, miracles, several resurrections and a passion for personal and regional transformation. Jim is known for his humor and revelatory teaching.
                 </p>
               </div>
             </div>
@@ -1002,15 +1185,15 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                   <svg className="w-8 h-8 text-[#74A78E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                </div>
+                  </div>
                 <div>
                   <p className="text-xl font-semibold text-black">Rachel</p>
                   <p className="text-sm text-black/60">Event Attendee</p>
-                </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* CTA Section */}
         <section id="pricing" className="relative overflow-hidden w-full bg-[#222] py-32">
@@ -1113,7 +1296,7 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                         <span className="text-xl font-semibold text-gray-900 shrink-0">Value: $147</span>
                   </div>
                       <span className="text-base text-gray-500 mt-1.5 block">Practical sessions designed to help you activate and apply the transformational principles in your daily life.</span>
-                    </div>
+                </div>
                   </li>
               <li className="flex items-start gap-4">
                     <div className="w-7 h-7 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-1">
@@ -1184,13 +1367,13 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
         </div>
       </section>
 
-        <div id="faq">
+        <section id="faq" className="relative overflow-hidden py-24 bg-black">
       <FAQ />
-        </div>
+        </section>
 
       <Footer />
     </main>
-    </>
+  </div>
   );
 }
 
@@ -1201,7 +1384,6 @@ export default function Home() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <main className="bg-black text-[#F8F4F1]">
-        <VerticalNav />
         <MainContent cartUrl={cartUrl} />
       </main>
     </Suspense>

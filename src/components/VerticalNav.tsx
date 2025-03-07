@@ -9,8 +9,8 @@ const sections = [
   { id: 'schedule', label: 'Schedule' },
   { id: 'speakers', label: 'Speakers' },
   { id: 'agenda', label: 'Agenda' },
-  { id: 'faq', label: 'FAQ' },
-  { id: 'pricing', label: 'Tickets' }
+  { id: 'pricing', label: 'Tickets' },
+  { id: 'faq', label: 'FAQ' }
 ];
 
 export default function VerticalNav() {

@@ -58,7 +58,6 @@ export default function Nav({ scrolled, cartUrl }: NavProps) {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   </span>
-                  <span className="text-[10px] font-normal mt-1">March 21-23, 2025</span>
                 </span>
               </button>
             </a>

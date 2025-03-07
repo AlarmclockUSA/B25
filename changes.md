@@ -480,3 +480,473 @@ To create a more engaging sales letter that uses rhetorical questions to help po
 
 **Purpose:**
 To ensure videos don't play automatically when visitors load the page, giving users control over when they choose to watch the video content. This creates a better user experience by preventing unexpected audio or motion when first visiting the site.
+
+### Entry 51: Updated Hero Header for Improved Conversion
+
+**Changes Made:**
+- Completely rewrote the hero headline from "The Most Transformational Experience For Kingdom Believers Returns" to "Stop Striving, Start Living In God's Delight & Presence Daily"
+- Changed the focus from describing the event to addressing the visitor's pain point (striving) and desired outcome (living in God's delight)
+- Updated the supporting copy to emphasize the transformation from seeking approval to living from God's delight
+- Maintained the visual styling including the underlined word, but applied it to "Striving" instead of "Transformational"
+- Created a more direct and benefit-driven value proposition
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To improve conversion rates by creating a more compelling and resonant headline that directly addresses what visitors are truly seeking - freedom from religious striving and a genuine experience of God's delight. The new headline creates a clearer before/after transformation scenario that helps visitors envision the change they'll experience through the event.
+
+### Entry 52: Refined Hero Header and CTA for a More Inviting Tone
+
+**Changes Made:**
+- Updated the hero headline from the directive "Stop Striving, Start Living" to the more inviting "Experience God's Delight In You Instead of Endless Spiritual Striving"
+- Shifted focus from what users should stop doing to what they can experience
+- Modified supporting copy to emphasize discovery of how "God already delights in who you are"
+- Changed the CTA button from "GET YOUR TICKET" to "JOIN THE EXPERIENCE" for a warmer, more inclusive feel
+- Maintained visual styling while creating a more grace-filled, invitational tone throughout
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To create a more inviting, grace-filled conversion approach that aligns with the spiritual nature of the event. The new messaging focuses on the experience and discovery rather than correction, inviting visitors to embrace something positive rather than directing them to stop a negative behavior. This creates a more resonant emotional connection with the audience.
+
+### Entry 53: Added Clear Target Audience Identification
+
+**Changes Made:**
+- Changed the top line of the hero section from "INTRODUCING BRILLIANCE25 WITH GRAHAM COOKE" to "FOR BELIEVERS HUNGRY FOR MORE"
+- Simplified the targeting to create a more inclusive yet still specific audience identification
+- Maintains the same styling and animation effects
+- Creates immediate resonance with believers seeking deeper spiritual experience
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To immediately qualify visitors and create stronger connection with the target audience. By clearly stating who the event is for in a concise, positive way, we filter for the most appropriate attendees while remaining inclusive. The simple phrase "HUNGRY FOR MORE" resonates with believers across various backgrounds who desire deeper spiritual experiences.
+
+### Entry 54: Updated Hero Messaging with Direct Call-to-Action
+
+**Changes Made:**
+- Changed the top line from "FOR BELIEVERS HUNGRY FOR MORE" to "IT'S TIME DELIGHT IN YOUR RELATIONSHIP WITH GOD"
+- Updated the descriptive copy to: "You're about to walk into three days to completely re-wire how you think, see and feel about God, yourself and your life. You'll discover true kingdom learning and how it changes everything."
+- Created a stronger sense of immediacy with "IT'S TIME" messaging
+- Maintained existing styling and animations
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To create a more direct call-to-action in the hero section that emphasizes the immediate opportunity and transformational nature of the event. The new messaging creates a sense of urgency with "IT'S TIME" and clearly articulates the profound personal transformation attendees will experience during the three-day event. The phrase "completely re-wire how you think, see and feel" provides a concrete description of the depth of change participants can expect, while "true kingdom learning" positions the event as offering authentic spiritual education rather than mere information.
+
+### Entry 55: Streamlined Hero Headline Message
+
+**Changes Made:**
+- Removed the line "Instead of Endless Spiritual Striving" from the hero section
+- Simplified the headline to focus only on "Experience God's Delight In You"
+- Maintained the underlined styling on the word "Delight" for emphasis
+- Created a more direct and concise message
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To create a more positive, focused message that emphasizes what users will gain rather than what they'll leave behind. The simplified headline creates a cleaner visual presentation while maintaining the core promise of experiencing God's delight. This positive-only framing avoids introducing negative concepts and keeps the messaging entirely focused on the desired outcome.
+
+### Entry 56: Added Event Format Subheading to Hero Section
+
+**Changes Made:**
+- Added "THREE DAY IMMERSIVE EXPERIENCE WITH GRAHAM COOKE AND TEAM" as a new subheading in the hero section
+- Positioned the text between the main headline and descriptive copy
+- Styled it as a medium-sized text with consistent animation
+- Applied responsive sizing (text-xl on mobile, text-2xl on larger screens)
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To provide immediate clarity about the event format, duration, and hosts directly in the hero section. This subheading gives visitors essential information at a glance, clearly explaining what Brilliance25 is (a three-day immersive experience) and who's leading it (Graham Cooke and team). This addition strengthens the hero section by providing concrete details about the event while maintaining the inspirational messaging of the main headline.
+
+### Entry 57: Updated Hero Top Line Message
+
+**Changes Made:**
+- Changed the top line of the hero section from "IT'S TIME DELIGHT IN YOUR RELATIONSHIP WITH GOD" to "Attention Believers hungry for more"
+- Maintained the existing styling and animation effects
+- Created a direct appeal to the target audience
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To create a more attention-grabbing headline that directly addresses the target audience of believers seeking deeper spiritual experiences. The phrase "Attention Believers hungry for more" creates an immediate connection with the intended audience while using a compelling call-to-attention format. This approach qualifies visitors right away while maintaining an inviting tone that resonates with believers seeking growth in their spiritual journey.
+
+### Entry 58: Capitalized Hero Top Line for Stronger Visual Impact
+
+**Changes Made:**
+- Capitalized the top line of the hero section from "Attention Believers hungry for more" to "ATTENTION BELIEVERS HUNGRY FOR MORE"
+- Maintained all existing styling and animation effects
+- Enhanced the visual impact and readability of the headline
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To increase the visual prominence and impact of the hero message. The all-caps formatting creates stronger emphasis and draws more immediate attention to the target audience identification. This typographical enhancement improves scanability and creates a more commanding presence in the hero section, helping to immediately capture visitor attention and qualify the audience.
+
+### Entry 59: Simplified Main Hero Headline for Direct Personal Connection
+
+**Changes Made:**
+- Changed the main headline from "Discover the kingdom way to live an extraordinary life with God" to "Discover your extraordinary life with God"
+- Simplified the message by removing "the kingdom way to live an" while maintaining the core promise
+- Made the headline more personal by changing from "an" to "your" extraordinary life
+- Maintained the underlined styling on the word "extraordinary" for visual emphasis
+- Preserved all existing animations and styling
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To create a more direct and personal connection with visitors by using the word "your" instead of "an" when referring to the extraordinary life. This simple change makes the promise more immediate and personal, suggesting that this extraordinary life is already available and belongs to the visitor. The shorter headline is also more impactful and easier to read at a glance, improving the overall effectiveness of the hero section.
+
+### Entry 60: Added Empowering Pre-Headline to Hero Section
+
+**Changes Made:**
+- Added a new pre-headline between the top line and main headline: "LIFE WITH GOD IS MORE THAN YOU EVER DREAMED—AND IT'S ALREADY YOURS"
+- Styled it in gold color (text-[#DD8D00]) to create visual contrast with the white main headline
+- Made it responsive with appropriate font sizing across different screen sizes
+- Added animation with a slight delay for a sequential reveal effect
+- Positioned it to create proper spacing and visual hierarchy
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To reinforce the message that the extraordinary life with God is not just a future possibility but a present reality that attendees already possess. This pre-headline creates a powerful bridge between the audience identification ("ATTENTION BELIEVERS HUNGRY FOR MORE") and the main promise ("Discover your extraordinary life with God"). The statement challenges limiting beliefs about what's possible in a relationship with God while creating anticipation for the revelation that will come through the event.
+
+### Entry 61: Rearranged Hero Section Elements and Updated Main Headline
+
+**Changes Made:**
+- Reordered the hero section elements to create a new flow:
+  1. "ATTENTION BELIEVERS HUNGRY FOR MORE" (top line)
+  2. "THREE DAY IMMERSIVE EXPERIENCE WITH GRAHAM COOKE AND TEAM" (moved up from bottom position)
+  3. "Discover Your Extraordinary relationship with God" (main headline)
+  4. "What if LIFE WITH GOD IS MORE THAN YOU EVER DREAMED—AND IT'S ALREADY YOURS" (moved down from second position)
+- Changed "life with God" to "relationship with God" in the main headline
+- Capitalized "Your" and "Extraordinary" in the main headline
+- Added "What if" to the beginning of the final line
+- Adjusted animation delays to maintain the sequential reveal effect with the new order
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To create a more logical and compelling flow in the hero section that first identifies the audience, then immediately establishes what the event is, follows with the main promise, and concludes with an intriguing question that creates curiosity. This structure provides a clearer progression from what the event is to what it offers, while the "What if" question at the end encourages deeper reflection and creates an open loop that motivates visitors to learn more. The change from "life" to "relationship" in the main headline emphasizes the relational aspect of the spiritual journey being offered.
+
+### Entry 62: Removed Top Line from Hero Section
+
+**Changes Made:**
+- Removed the "ATTENTION BELIEVERS HUNGRY FOR MORE" line from the hero section
+- Adjusted animation delays for the remaining elements to maintain a smooth sequential reveal:
+  - Removed delay from the first element (THREE DAY IMMERSIVE EXPERIENCE...)
+  - Reduced delay on the main headline from 300ms to 200ms
+  - Reduced delay on the final line from 500ms to 400ms
+- Maintained all other styling and content
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To streamline the hero section and create a cleaner, more focused message. By removing the audience qualification line, the hero section now leads directly with what the event is (a three-day immersive experience), followed by the main promise and the intriguing question. This creates a more direct and concise presentation that gets straight to the point about what's being offered, while still maintaining the powerful messaging about discovering an extraordinary relationship with God.
+
+### Entry 63: Optimized Hero Typography Using Golden Ratio
+
+**Changes Made:**
+- Applied the golden ratio (1.618) to resize and rebalance all text elements in the hero section:
+  - Increased main headline size from 2.2rem-4.2rem to 2.6rem-5.4rem across breakpoints
+  - Adjusted the subheading sizes for better proportion and hierarchy
+  - Added lg:text-2xl breakpoint to the bottom line for better scaling on large screens
+- Improved vertical spacing between elements:
+  - Increased overall bottom margin of the headline container from mb-6 to mb-8
+  - Adjusted spacing between elements to follow golden ratio proportions
+  - Changed middle element spacing from mb-4 to mb-6 for better visual rhythm
+- Maintained all existing styling, colors, and animations
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To create a more visually harmonious and professional design using the golden ratio (1.618), a mathematical ratio found in nature that creates aesthetically pleasing proportions. This optimization enhances the visual hierarchy, improves readability, and creates a more balanced composition that guides the viewer's eye naturally through the content. The larger main headline creates stronger visual impact while the proportional spacing between elements creates a more cohesive and polished presentation that reflects senior design principles.
+
+### Entry 64: Standardized Capitalization in Hero Header
+
+**Changes Made:**
+- Fixed capitalization in the main headline:
+  - Changed "relationship with God" to "Relationship With God" using title case for all significant words
+- Adjusted capitalization in the bottom line:
+  - Changed "What if LIFE WITH GOD IS MORE THAN YOU EVER DREAMED—AND IT'S ALREADY YOURS" to "What if life with God is more than you ever dreamed—and it's already yours" using sentence case
+- Maintained all existing styling, sizing, and animations
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To create a more professional and consistent typographic presentation by standardizing the capitalization rules across the hero section. The main headline now follows proper title case for all significant words, enhancing its prominence as the primary message. The bottom line uses sentence case to create a more conversational and approachable tone for the reflective question. These adjustments improve readability and create a more polished, professional appearance while maintaining the established visual hierarchy.
+
+### Entry 65: Added Question Mark to Hero Bottom Line
+
+**Changes Made:**
+- Added a question mark to the end of the bottom line in the hero section
+- Changed "What if life with God is more than you ever dreamed—and it's already yours" to "What if life with God is more than you ever dreamed—and it's already yours?"
+- Maintained all existing styling, sizing, and animations
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To improve grammatical correctness and enhance the rhetorical impact of the closing line. Since the text begins with "What if," it is properly formatted as a question with the addition of the question mark. This small but important punctuation change reinforces the contemplative nature of the statement, inviting visitors to personally reflect on the possibility presented. The question mark creates a stronger cognitive engagement by clearly signaling to readers that they should consider this as a question rather than a statement.
+
+### Entry 66: Updated Hero Descriptive Copy with Clearer Value Proposition
+
+**Changes Made:**
+- Replaced the existing descriptive copy with a new sub-paragraph that better articulates the event's value proposition
+- Changed from "You're about to walk into three days to completely re-wire how you think, see and feel about God, yourself and your life. You'll discover true kingdom learning and how it changes everything." to "Step into a 3-day transformational online experience hosted by leading voice Graham Cooke, Dionne van Zyl + Team. Experience a proven pathway to an extraordinary relationship with God."
+- Maintained all existing styling, sizing, and animations
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To provide a clearer and more compelling description of the event that emphasizes both its format and its promise. The new copy creates a stronger call-to-action with "Step into" and explicitly mentions that it's an "online experience," which immediately clarifies the delivery format. It also establishes credibility by mentioning the hosts as "leading voice" and offering a "proven pathway," suggesting established expertise and results. The phrase "transformational" directly communicates the event's impact, while the reference to an "extraordinary relationship with God" reinforces the main headline's promise. This updated copy creates a more complete picture of what attendees can expect while maintaining a concise, scannable format.
+
+### Entry 67: Removed Date from Navigation Button
+
+**Changes Made:**
+- Removed the "March 21-23, 2025" text from the "Claim Your Seat" button in the navigation bar
+- Maintained all other button styling and functionality
+- Simplified the button to focus solely on the call-to-action text
+
+**Files Modified:**
+- src/components/Nav.tsx
+
+**Purpose:**
+To streamline the navigation button and create a cleaner, more focused call-to-action. By removing the date from the button, the primary action "Claim Your Seat" becomes more prominent and visually cleaner. This change reduces visual clutter in the navigation area while maintaining the essential call-to-action. The date information is still available elsewhere in the hero section and in the separate date display in the navigation bar, ensuring visitors still have access to this important information without redundancy.
+
+### Entry 68: Updated Hero Descriptive Copy Wording
+
+**Changes Made:**
+- Updated the descriptive copy to change "leading voice" to "leading voices" when referring to the event hosts
+- Maintained all other text, styling, and animations
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To more accurately reflect that the event features multiple leading voices in the field, not just a single voice. This small but important change acknowledges both Graham Cooke and Dionne van Zyl as leading voices in their own right, giving proper recognition to all the key speakers. The plural form "voices" creates a more inclusive presentation that better represents the collaborative nature of the event while maintaining the established credibility markers in the copy.
+
+### Entry 69: Removed Description Lines from Event Schedule
+
+**Changes Made:**
+- Removed the descriptive paragraphs from each day in the event schedule section:
+  - Removed "Begin your journey with powerful opening sessions and inspiring teachings" from Friday
+  - Removed "Dive deeper with immersive workshops and breakthrough moments" from Saturday
+  - Removed "Complete your experience with transformative final sessions" from Sunday
+- Maintained all other styling and content in the schedule cards
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To create a cleaner, more streamlined event schedule presentation that focuses solely on the essential information: the day, date, and time. By removing the descriptive text, the schedule becomes more scannable and direct, allowing visitors to quickly understand when the event takes place without additional marketing language. This change creates a more professional and focused schedule display while reducing visual clutter and maintaining the visual appeal of the schedule cards.
+
+### Entry 70: Removed Date from Hero Section CTA Button
+
+**Changes Made:**
+- Removed the "March 21-23, 2025" text from the "JOIN THE EXPERIENCE" button in the hero section
+- Adjusted the spacing of the satisfaction guarantee text to maintain visual balance
+- Changed the top margin of the guarantee text from mt-1 to mt-3 to compensate for the removed line
+- Maintained all other button styling and functionality
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To streamline the hero section call-to-action button and create a cleaner, more focused design. By removing the date from the button, the primary action "JOIN THE EXPERIENCE" becomes more prominent and visually impactful. This change reduces redundancy since the date information is already prominently displayed in the hero section above the button. The simplified button creates a stronger visual hierarchy and a more direct call-to-action, potentially improving conversion rates by focusing user attention on the primary action without the distraction of repeated information.
+
+### Entry 71: Removed Redundant Subheading from Hero Section
+
+**Changes Made:**
+- Removed the "THREE DAY IMMERSIVE EXPERIENCE WITH GRAHAM COOKE AND TEAM" subheading from the hero section
+- Adjusted animation delays for the remaining elements:
+  - Removed the animation-delay-200 from the main headline
+  - Reduced the animation delay on the bottom line from 400ms to 200ms
+- Maintained all other styling and content
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To eliminate redundancy in the hero section since the same information is already communicated in the descriptive copy below ("Step into a 3-day transformational online experience hosted by leading voices Graham Cooke, Dionne van Zyl + Team"). This change streamlines the hero section, creating a cleaner and more focused presentation with less repetition. By removing the redundant line, the main headline "Discover Your Extraordinary Relationship With God" becomes more prominent, creating a stronger visual hierarchy and more immediate impact. The simplified structure also creates a more elegant flow from the main headline to the intriguing question below it.
+
+### Entry 72: Removed Location Information from Hero Section
+
+**Changes Made:**
+- Removed the "Virtual Experience • Eastern Time" line from the hero section
+- Removed the bottom margin (mb-2) from the date display to maintain proper spacing
+- Maintained the date display and all other styling
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To further streamline the hero section by removing redundant information that is already communicated in the descriptive copy ("Step into a 3-day transformational online experience..."). This change creates an even cleaner and more focused presentation in the hero section, reducing text clutter and allowing the main headline and date to stand out more prominently. The information about the event being virtual and in Eastern Time is still available in the descriptive copy, ensuring visitors have access to this important information without unnecessary repetition.
+
+### Entry 73: Added Event Format Label Above Main Headline
+
+**Changes Made:**
+- Added "3-DAY VIRTUAL EVENT" text above the main headline in the hero section
+- Styled it with appropriate spacing to match the width of "Discover Your" in the main headline
+- Used tracking-[0.2em] for letter spacing to create an elegant, spaced-out appearance
+- Applied consistent animation with the rest of the hero elements
+- Added animation-delay-200 to the main headline to maintain the sequential reveal effect
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To provide immediate clarity about the event format directly above the main headline. This prominent label clearly communicates the two most essential aspects of the event format (duration and delivery method) in a visually striking way. The centered, letter-spaced text creates an elegant header that draws attention while establishing proper context for the main headline below it. This addition enhances the information hierarchy by placing the event format information in a more prominent position, ensuring visitors immediately understand what type of event they're being invited to join.
+
+### Entry 74: Simplified Event Format Label to Single Line
+
+**Changes Made:**
+- Modified the "3-DAY VIRTUAL EVENT" text to display as a simple single line
+- Removed the inline-block wrapper and min-content styling
+- Maintained the letter spacing, font size, and animation effects
+- Preserved the text's position above the main headline
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To create a cleaner, more straightforward presentation of the event format label. By removing the custom styling that centered the text with min-content width, the label now appears as a simple, elegant single line that spans naturally across the top of the hero section. This change maintains the prominent communication of the event format (duration and delivery method) while creating a more conventional text presentation that aligns with standard typographic practices. The simplified styling creates a more cohesive visual relationship with the main headline below it.
+
+### Entry 75: Enhanced Date Visibility in Hero Section
+
+**Changes Made:**
+- Changed the date text color from gold (#DD8D00) to white (#F8F4F1) for better visibility and emphasis
+- Increased the font size of the date from text-2xl/3xl/4xl to text-3xl/4xl/5xl across breakpoints
+- Maintained the bold weight and tracking-wide letter spacing for clarity
+- Preserved the existing animation and positioning
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To enhance the prominence and visibility of the event date in the hero section. The white color creates stronger contrast against the dark background compared to the previous gold color, making the date immediately noticeable. The increased font size further emphasizes the importance of the date information, ensuring visitors can quickly identify when the event takes place. This change improves the information hierarchy by giving appropriate visual weight to this critical event detail while maintaining the overall aesthetic of the hero section.
+
+### Entry 76: Improved Z-Index for Transformation Journey Title
+
+**Changes Made:**
+- Added `relative z-10` to the "Your Transformation Journey" section title
+- Ensured the title appears above the gradient background
+- Maintained all existing styling including font size, weight, and spacing
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To fix a visual issue where the section title was being obscured by the gradient background. By adding a z-index value, the title now properly appears above the background elements, ensuring clear visibility and readability. This change maintains the design aesthetic while improving the user experience by making sure all important text content is clearly visible.
+
+### Entry 77: Refined Hero Header Text for Grammatical Accuracy
+
+**Changes Made:**
+- Updated the text in the hero header from "What if life with God is more than you ever dreamed" to "What if life with God is more than you've ever dreamed"
+- Added the contraction "you've" instead of "you" for grammatical correctness
+- Maintained all existing styling, colors, and animations
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+To improve the grammatical accuracy and natural flow of the hero header text. The addition of the contraction "you've" (you have) creates a more grammatically correct and natural-sounding phrase when paired with "ever dreamed." This subtle refinement enhances the professionalism of the copy while maintaining the inspirational message about the possibilities in one's relationship with God.
+
+### Entry 78: Updated Dionne van Zyl's Bio and Title
+
+**Changes Made:**
+- Updated Dionne van Zyl's bio to reflect his current role and focus
+- Changed his title from "President" to "CEO" of Brilliant Perspectives
+- New bio emphasizes his passion for helping believers align their thinking with God's perspective
+- Highlights his goal of enabling Kingdom leaders to step into their true identity in Christ
+
+**Files Modified:**
+- `src/app/page.tsx`
+
+**Purpose:**
+This update provides a more current and accurate representation of Dionne van Zyl's role and vision. The new bio better articulates his focus on transformative resources, experiences, and communities, while the title change from President to CEO reflects his current leadership position. These changes enhance credibility and provide attendees with a clearer understanding of his expertise and the value he brings to the event.
+
+### Entry 79: Updated Event Name in FAQ Component
+
+**Changes Made:**
+- Updated reference from "Brilliance24" to "Brilliance25" in the first FAQ answer
+- Ensured consistent event naming throughout the website
+
+**Files Modified:**
+- `src/components/FAQ.tsx`
+
+**Purpose:**
+This update ensures consistent branding across the entire website by updating the event name in the FAQ section. The change from "Brilliance24" to "Brilliance25" reflects the current year of the event and maintains a cohesive user experience by eliminating any confusion that might arise from inconsistent naming.
+
+### Entry 80: Spelling and Grammar Corrections
+
+**Changes Made:**
+- Changed "dead raisings" to "resurrections" in Jim Baker's bio for more standard terminology
+- Updated "performance-based relationship" to "performance-based relationships" in the Day 1 agenda description
+- Fixed various minor grammatical issues throughout the page
+
+**Files Modified:**
+- `src/app/page.tsx`
+
+**Purpose:**
+These corrections improve the professionalism and readability of the website content. Using standard terminology like "resurrections" instead of "dead raisings" ensures the content is more accessible to a wider audience. The grammatical corrections enhance the overall quality of the copy and maintain a polished presentation that reflects the high standards of the event.
+
+### Entry 81: Typography and Text Corrections
+
+**Changes Made:**
+- Fixed typography inconsistency in the "Before" column of the transformation section by ensuring all items use the same `text-xl text-[#F8F4F1]/80` class
+- Changed "performance-based relationships with God" to "performance-based relationship with God" for more accurate theological terminology
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+- Ensure consistent typography throughout the transformation section for a more professional appearance
+- Refine theological language to more accurately reflect the personal nature of one's relationship with God
+
+### Entry 82: Fixed Vertical Navigation Menu Functionality
+
+**Changes Made:**
+- Changed the FAQ container from a `<div>` to a `<section>` element
+- Added proper styling to the FAQ section with `className="relative overflow-hidden py-24 bg-black"`
+- Maintained the existing ID for proper scroll targeting
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+- Fix the vertical navigation menu's scroll spy functionality for the FAQ section
+- Ensure consistent section structure throughout the page for better navigation
+- Improve the user experience by making all navigation links work properly
+
+### Entry 83: Corrected Section Order in Vertical Navigation Menu
+
+**Changes Made:**
+- Swapped the order of FAQ and Tickets (pricing) sections in the VerticalNav component
+- Updated the sections array to match the actual order of sections on the page
+- Ensured the navigation menu correctly reflects the page structure
+
+**Files Modified:**
+- src/components/VerticalNav.tsx
+
+**Purpose:**
+- Fix the navigation menu to accurately represent the order of sections on the page
+- Ensure users are directed to the correct section when clicking navigation links
+- Improve the user experience by providing a consistent and accurate navigation system

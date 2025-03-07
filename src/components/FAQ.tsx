@@ -5,7 +5,7 @@ import { useState } from 'react';
 const faqs = [
   {
     question: "Is this just a three day zoom call?",
-    answer: "No! You get a front row seat in this immersive and interactive experience. The days of hours of endless zoom calls are behind us (and we're so thankful). Brilliance24 makes use of the latest technology to immerse you in three days of transformational teaching and community. So much more than a zoom call, livestream, or webinar, you'll meet others who think just like you, discover what God is doing around the world and unlock His Brilliance in you in the process.\n\nYou'll see the speakers (and they'll see you!) in spectacular HD broadcast live from our cutting edge studio that powers the event."
+    answer: "No! You get a front row seat in this immersive and interactive experience. The days of hours of endless zoom calls are behind us (and we're so thankful). Brilliance25 makes use of the latest technology to immerse you in three days of transformational teaching and community. So much more than a zoom call, livestream, or webinar, you'll meet others who think just like you, discover what God is doing around the world and unlock His Brilliance in you in the process.\n\nYou'll see the speakers (and they'll see you!) in spectacular HD broadcast live from our cutting edge studio that powers the event."
   },
   {
     question: "Why not just host an in-person event?",
