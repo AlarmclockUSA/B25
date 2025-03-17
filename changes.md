@@ -950,3 +950,98 @@ These corrections improve the professionalism and readability of the website con
 - Fix the navigation menu to accurately represent the order of sections on the page
 - Ensure users are directed to the correct section when clicking navigation links
 - Improve the user experience by providing a consistent and accurate navigation system
+
+### Entry 84: Added Urgency Indicators for Cart Closing
+
+**Changes Made:**
+- Created a new CartClosingBanner component that displays at the top of the page
+- Updated the HeroCountdown component to show countdown to Thursday cart closing
+- Changed the CTA button in the hero section to emphasize the Thursday deadline
+- Updated the navigation button to highlight urgency with red color and animation
+- Added a "Last Chance" badge to the pricing section
+- Implemented countdown timers showing days, hours, minutes, and seconds until cart closes
+
+**Files Modified:**
+- src/components/CartClosingBanner.tsx (new file)
+- src/components/HeroCountdown.tsx
+- src/app/page.tsx
+- src/components/Nav.tsx
+
+**Purpose:**
+- Create a sense of urgency to encourage immediate registration before the cart closes
+- Clearly communicate the Thursday deadline throughout the site
+- Increase conversion rates by emphasizing the limited time available to register
+- Provide visual cues that draw attention to the closing deadline
+- Ensure visitors understand the consequences of missing the registration window
+
+### Entry 85: Fixed Infinite Update Loop in Countdown Components
+
+**Changes Made:**
+- Removed `timeLeft` from the dependency array in the HeroCountdown component's useEffect hook
+- Changed from `useEffect(..., [timeLeft])` to `useEffect(..., [])` to prevent infinite re-renders
+- Maintained all countdown functionality while fixing the performance issue
+
+**Files Modified:**
+- src/components/HeroCountdown.tsx
+
+**Purpose:**
+- Fix the "Maximum update depth exceeded" error that was occurring due to an infinite update loop
+- Improve performance by preventing unnecessary re-renders of the countdown component
+- Ensure stable and reliable countdown functionality without browser crashes or warnings
+- Maintain all visual and functional aspects of the urgency indicators while fixing the technical issue
+
+### Entry 86: Improved Centering of Cart Closing Banner
+
+**Changes Made:**
+- Restructured the layout of the CartClosingBanner component for proper centering
+- Added `justify-center` and `text-center` classes to the content container
+- Positioned the close button with `absolute right-0` to maintain proper layout
+- Added `flex-shrink-0` to the clock icon to prevent it from shrinking
+- Removed the justify-between class that was causing the centering issue
+
+**Files Modified:**
+- src/components/CartClosingBanner.tsx
+
+**Purpose:**
+- Fix the visual alignment issue where the banner text was not properly centered
+- Improve the overall appearance of the urgency indicator at the top of the page
+- Ensure the banner text is centered while maintaining the close button position
+- Create a more professional and polished presentation of the cart closing notification
+
+### Entry 87: Fixed Close Button Functionality in Cart Closing Banner
+
+**Changes Made:**
+- Enhanced the close button in the CartClosingBanner component for better usability
+- Added padding (`p-2`) to increase the clickable area of the button
+- Added a rounded-full class to create a circular hit area
+- Moved the button slightly inward with `right-4` instead of `right-0`
+- Added a hover background effect (`hover:bg-red-700`) for better visual feedback
+- Increased the size of the X icon from 4x4 to 5x5 for better visibility
+- Added a smooth transition effect for color changes
+
+**Files Modified:**
+- src/components/CartClosingBanner.tsx
+
+**Purpose:**
+- Fix the non-functioning close button in the cart closing banner
+- Improve the user experience by making the close button more visible and easier to click
+- Provide visual feedback when users hover over the close button
+- Ensure the banner can be dismissed properly when users no longer want to see it
+- Enhance the overall usability and accessibility of the urgency notification
+
+### Entry 88: Removed Close Button from Cart Closing Banner
+
+**Changes Made:**
+- Completely removed the close button (X) from the CartClosingBanner component
+- Removed the `relative` positioning from the container since it's no longer needed
+- Maintained the isVisible state for potential future programmatic control
+- Kept all other functionality including the countdown timer and styling
+
+**Files Modified:**
+- src/components/CartClosingBanner.tsx
+
+**Purpose:**
+- Simplify the banner design by removing the dismissal option
+- Ensure the urgency message remains visible to all users throughout their session
+- Create a more streamlined and focused presentation of the cart closing notification
+- Maintain consistent visibility of the urgency indicator for improved conversion rates

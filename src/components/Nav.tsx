@@ -36,26 +36,27 @@ export default function Nav({ scrolled, cartUrl }: NavProps) {
               href={cartUrl}
             >
               <button 
-                onClick={() => trackButtonClick('Claim Your Seat', 'Navigation')}
+                onClick={() => trackButtonClick('Register Now', 'Navigation')}
                 className="
                   cart-button
                   group relative 
-                  bg-gradient-to-br from-[#DD8D00] via-[#DD8D00] to-[#E3DDC9] 
-                  hover:from-[#E3DDC9] hover:via-[#DD8D00] hover:to-[#DD8D00] 
+                  bg-gradient-to-br from-red-600 via-red-500 to-red-700
+                  hover:from-red-500 hover:via-red-600 hover:to-red-800
                   text-[#F8F4F1] 
                   px-6 py-3
                   rounded-xl 
                   text-sm font-semibold 
                   transition-all duration-500 
-                  hover:shadow-[0_8px_16px_rgba(221,141,0,0.3)]
+                  hover:shadow-[0_8px_16px_rgba(220,38,38,0.3)]
+                  animate-pulse
                 "
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-[#F8F4F1]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
                 <span className="relative flex flex-col items-center justify-center">
                   <span className="flex items-center justify-center gap-2">
-                    Claim Your Seat
-                    <svg className="w-4 h-4 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    Register Now
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </span>
                 </span>
