@@ -1045,3 +1045,35 @@ These corrections improve the professionalism and readability of the website con
 - Ensure the urgency message remains visible to all users throughout their session
 - Create a more streamlined and focused presentation of the cart closing notification
 - Maintain consistent visibility of the urgency indicator for improved conversion rates
+
+### Entry 89: Updated Time Zone to Pacific Time in Cart Closing Banner
+
+**Changes Made:**
+- Changed time zone reference from "ET" to "PT" in the banner text
+- Updated comments to reflect Pacific Time zone
+- Maintained the same time calculation as it's handled by the user's local system time
+
+**Files Modified:**
+- src/components/CartClosingBanner.tsx
+
+**Purpose:**
+- Align the displayed time zone with Pacific Time (PT) for consistency
+- Ensure users understand the registration deadline in Pacific Time
+- Maintain accurate countdown functionality while displaying the correct time zone
+- Improve clarity for users in different time zones
+
+### Entry 90: Updated Main CTA Button Text for Urgency
+
+**Changes Made:**
+- Changed the main button text from "Register Before Thursday" to "Registration closes midnight tonight"
+- Updated the subtext time zone from "ET" to "PT" to maintain consistency
+- Maintained all existing styling, animations, and functionality
+
+**Files Modified:**
+- src/app/page.tsx
+
+**Purpose:**
+- Create a stronger sense of urgency with "closes midnight tonight" messaging
+- Maintain consistency with the Pacific Time zone across all components
+- Enhance the call-to-action effectiveness with more immediate deadline language
+- Improve conversion potential by emphasizing the immediate closing deadline

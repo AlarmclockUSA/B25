@@ -14,13 +14,14 @@ export default function CartClosingBanner() {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // Set Thursday night at 11:59 PM Eastern Time
+    // Set Thursday night at 11:59 PM Pacific Time
     const closingDate = new Date();
     // Find the next Thursday
     const day = closingDate.getDay(); // 0 is Sunday, 4 is Thursday
     const daysUntilThursday = (4 + 7 - day) % 7;
     closingDate.setDate(closingDate.getDate() + daysUntilThursday);
-    closingDate.setHours(23, 59, 59, 0); // 11:59:59 PM
+    // Set to 11:59:59 PM PT (which is 3 hours behind ET)
+    closingDate.setHours(23, 59, 59, 0);
 
     const calculateTimeLeft = () => {
       const now = new Date();
@@ -52,7 +53,7 @@ export default function CartClosingBanner() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           <span className="font-medium">
-            URGENT: Registration closes Thursday at 11:59 PM ET
+            URGENT: Registration closes Thursday at 11:59 PM PT
             {timeLeft.days > 0 && ` (${timeLeft.days}d ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s)`}
             {timeLeft.days === 0 && ` (${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s)`}
           </span>

@@ -203,12 +203,12 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                   >
                     <span className="flex flex-col items-center">
                       <span className="flex items-center justify-center gap-2">
-                        Register Before Thursday
+                        Registration closes midnight tonight
                         <svg className="w-6 h-6 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
+                  </svg>
                       </span>
-                      <span className="text-sm font-normal mt-1">Cart closes Thursday at 11:59 PM ET</span>
+                      <span className="text-sm font-normal mt-1">Cart closes Thursday at 11:59 PM PT</span>
                     </span>
                   </button>
                 </a>
@@ -381,7 +381,7 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
             <div className="max-w-5xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold text-[#F8F4F1] text-center mb-16 relative z-10">
                 Your Transformation Journey
-              </h2>
+          </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
                 {/* Before Column */}
@@ -436,9 +436,9 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-12 h-12 rounded-full bg-[#DD8D00]/20 flex items-center justify-center shrink-0">
                       <span className="text-[#DD8D00] font-bold text-xl">AFTER</span>
-                    </div>
+              </div>
                     <h3 className="text-2xl font-bold text-[#F8F4F1]">Your New Reality</h3>
-                  </div>
+            </div>
                   
                   <ul className="space-y-6">
                     <li className="flex items-start gap-4">
@@ -509,9 +509,9 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                   </button>
                 </a>
               </div>
-            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* What You'll Learn Section */}
         <section className="relative overflow-hidden py-24 sm:py-32 bg-black">
