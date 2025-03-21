@@ -1,18 +1,20 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Footer from '../components/Footer';
-import FAQ from '../components/FAQ';
-import ImageScroll from '../components/ImageScroll';
-import Nav from '../components/Nav';
-import { useEffect, useState, Suspense } from 'react';
-import { trackButtonClick } from '../utils/analytics';
-import { useSearchParams } from 'next/navigation';
-import { getCartUrl } from '../utils/urls';
-import EventDetailsBar from '@/components/EventDetailsBar';
-import HeroCountdown from '@/components/HeroCountdown';
+import Nav from '@/components/Nav';
 import VerticalNav from "@/components/VerticalNav";
-import CartClosingBanner from "@/components/CartClosingBanner";
+import FAQ from '@/components/FAQ';
+import Footer from '@/components/Footer';
+import HeroCountdown from '@/components/HeroCountdown';
+import EventDetailsBar from '@/components/EventDetailsBar';
+import ImageScroll from '@/components/ImageScroll';
+
+// Track button clicks
+function trackButtonClick(buttonText: string, section: string) {
+  // Implement tracking logic here
+  console.log(`Button clicked: ${buttonText} in ${section}`);
+}
 
 function MainContent({ cartUrl }: { cartUrl: string }) {
   const [scrolled, setScrolled] = useState(false);
@@ -57,7 +59,6 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
 
   return (
     <div>
-      <CartClosingBanner />
       {/* JSON-LD Structured Data for Event */}
       <div 
         dangerouslySetInnerHTML={{
@@ -177,42 +178,31 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
               </div>
               
               <div className="mb-6 flex justify-center animate-fade-in-up animation-delay-1200">
-                <a 
-                  href={cartUrl}
-                  className="inline-block w-full sm:w-auto relative overflow-hidden group"
+                <button 
+                  className="
+                    group relative
+                    w-full sm:w-auto
+                    transform
+                    bg-gray-600
+                    text-[#F8F4F1] 
+                    px-8 sm:px-12 py-6 sm:py-8
+                    rounded-xl 
+                    text-2xl sm:text-3xl
+                    font-bold
+                    transition-all duration-300
+                    cursor-not-allowed
+                    opacity-75
+                  "
+                  disabled
                 >
-                  <span className="absolute inset-0 bg-white/10 transform -skew-x-12 -translate-x-full group-hover:translate-x-[150%] transition-transform duration-1000 ease-out"></span>
-                  <button 
-                    onClick={() => trackButtonClick('Register Before Thursday', 'Hero Section')}
-                    className="
-                      group relative
-                      w-full sm:w-auto
-                      transform hover:-translate-y-1 
-                      bg-gradient-to-br from-red-600 via-red-500 to-red-700
-                      hover:from-red-500 hover:via-red-600 hover:to-red-800
-                      text-[#F8F4F1] 
-                      px-8 sm:px-12 py-6 sm:py-8
-                      rounded-xl 
-                      text-2xl sm:text-3xl
-                      font-bold
-                      transition-all duration-300 
-                      hover:shadow-[0_20px_50px_rgba(220,38,38,0.3)] 
-                      active:scale-95
-                      animate-pulse
-                    "
-                  >
-                    <span className="flex flex-col items-center">
-                      <span className="flex items-center justify-center gap-2">
-                        Registration closes midnight tonight
-                        <svg className="w-6 h-6 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                      </span>
-                      <span className="text-sm font-normal mt-1">Cart closes Thursday at 11:59 PM PT</span>
+                  <span className="flex flex-col items-center">
+                    <span className="flex items-center justify-center gap-2">
+                      Registration Closed
                     </span>
-                  </button>
-                </a>
-                </div>
+                    <span className="text-sm font-normal mt-1">Join our waitlist for future events</span>
+                  </span>
+                </button>
+              </div>
               
               {/* BrilliantTV Video Embed */}
               <div className="w-full max-w-2xl mx-auto px-4 mt-8 mb-16 animate-fade-in-up animation-delay-1300">
@@ -1353,20 +1343,26 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
                   </div>
                 </div>
 
-                    <a 
-                      href={cartUrl}
-                      className="block w-full"
+                    <button 
+                      className="
+                        w-full
+                        bg-gray-600
+                        text-white
+                        py-6
+                        rounded-full
+                        text-2xl
+                        font-semibold
+                        cursor-not-allowed
+                        opacity-75
+                        mb-4
+                      "
+                      disabled
                     >
-                      <button 
-                        onClick={() => trackButtonClick('Secure Your Seat', 'Pricing Section')}
-                        className="cart-button w-full bg-black text-white py-6 rounded-full text-2xl font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-[1.02] mb-4"
-                      >
-                        <span className="flex flex-col items-center">
-                          <span>Secure Your Seat Now</span>
-                          <span className="text-base font-medium mt-1">March 21-23, 2025</span>
-                        </span>
-                </button>
-                    </a>
+                      <span className="flex flex-col items-center">
+                        <span>Registration Closed</span>
+                        <span className="text-base font-medium mt-1">Join our waitlist for future events</span>
+                      </span>
+                    </button>
                     <p className="text-sm text-gray-500">Limited spots available for optimal experience</p>
                   </div>
               </div>
@@ -1386,15 +1382,6 @@ function MainContent({ cartUrl }: { cartUrl: string }) {
 }
 
 export default function Home() {
-  const searchParams = useSearchParams();
-  const cartUrl = getCartUrl(Object.fromEntries(searchParams.entries()));
-  
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <main className="bg-black text-[#F8F4F1]">
-        <MainContent cartUrl={cartUrl} />
-      </main>
-    </Suspense>
-  );
+  return <MainContent cartUrl={process.env.NEXT_PUBLIC_CART_URL || '#'} />;
 }
 

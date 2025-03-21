@@ -1077,3 +1077,28 @@ These corrections improve the professionalism and readability of the website con
 - Maintain consistency with the Pacific Time zone across all components
 - Enhance the call-to-action effectiveness with more immediate deadline language
 - Improve conversion potential by emphasizing the immediate closing deadline
+
+### Entry 91: Updated Site for Closed Registration
+
+**Changes Made:**
+- Removed CartClosingBanner component completely
+- Updated all CTA buttons to show "Registration Closed" status:
+  - Changed button styles to gray and disabled state
+  - Removed hover effects and animations
+  - Updated button text to "Registration Closed"
+  - Added "Join our waitlist for future events" subtext
+- Modified navigation button to reflect closed registration
+- Removed all urgency indicators and countdown timers
+- Maintained event dates and other information
+
+**Files Modified:**
+- Deleted: src/components/CartClosingBanner.tsx
+- Modified: src/app/page.tsx
+- Modified: src/components/Nav.tsx
+
+**Purpose:**
+- Clearly communicate that registration is no longer available
+- Maintain professional appearance while showing closed status
+- Provide alternative action for interested visitors (waitlist)
+- Remove time-sensitive elements that are no longer relevant
+- Keep the event information accessible for reference

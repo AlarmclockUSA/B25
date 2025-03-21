@@ -32,36 +32,21 @@ export default function Nav({ scrolled, cartUrl }: NavProps) {
             </div>
 
             {/* CTA Button */}
-            <a 
-              href={cartUrl}
+            <button
+              className="
+                bg-gray-600
+                text-[#F8F4F1]
+                px-6 py-2
+                rounded-full
+                text-sm
+                font-medium
+                cursor-not-allowed
+                opacity-75
+              "
+              disabled
             >
-              <button 
-                onClick={() => trackButtonClick('Register Now', 'Navigation')}
-                className="
-                  cart-button
-                  group relative 
-                  bg-gradient-to-br from-red-600 via-red-500 to-red-700
-                  hover:from-red-500 hover:via-red-600 hover:to-red-800
-                  text-[#F8F4F1] 
-                  px-6 py-3
-                  rounded-xl 
-                  text-sm font-semibold 
-                  transition-all duration-500 
-                  hover:shadow-[0_8px_16px_rgba(220,38,38,0.3)]
-                  animate-pulse
-                "
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-[#F8F4F1]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
-                <span className="relative flex flex-col items-center justify-center">
-                  <span className="flex items-center justify-center gap-2">
-                    Register Now
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </span>
-                </span>
-              </button>
-            </a>
+              Registration Closed
+            </button>
           </div>
         </div>
       </div>
